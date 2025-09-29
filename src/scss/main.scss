@@ -2,7 +2,7 @@
 @use "index" as *;
 
 // подключения компонентов страницы
-@use "./components/header";
+@use "./components/nav";
 
 // тестовые стили, удалите их
 .page__body {

@@ -1,5 +1,146 @@
 <header class="header">
   <div class="container">
-    <h1>Привет</h1>
+    <nav class="header__nav nav">
+      <div class="nav__top">
+        <div class="nav__select select">
+          <label class="nav__select-label" for="city">Ваш город:</label>
+          <button class="nav__select-button select__button" type="button" aria-label="Открыть список городов.">Челябинск</button>
+          <select class="select__original" id="city" name="city" aria-label="Выбор города" required>
+
+            <!--добавить опции-->
+            <option value="asha">Аша</option>
+            <option value="bakal">Бакал</option>
+            <option value="chelyabinsk" selected>Челябинск</option>
+
+
+          </select>
+        </div>
+        <div class="nav__logo-wrapper">
+          <a class="nav__logo logo-image">
+            <img src="../img/logo.svg" width="127" height="44" alt="Логотип компании Neo-Lid.">
+          </a>
+        </div>
+      </div>
+      <div class="nav__bottom">
+        <div class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--sub-menu">
+              <button class="nav__button" type="button">Каталог</button>
+              <ul class="nav__sub-list">
+
+                <!--добавить каталог-->
+
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Токарные станки</a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Акции</a>
+            </li>
+            <li class="nav__item nav__item--sub-menu">
+              <button class="nav__button" type="button">Сервис</button>
+              <ul class="nav__sub-list">
+
+                <!--добавить сервис-->
+
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#"></a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Новости</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">О компании</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">
+                <span>Личный кабинет</span>
+              </a>
+            </li>
+          </ul>
+          <div class="nav__contacts-wrapper">
+            <ul class="nav__socials">
+              <li class="nav__socials-item nav__socials-item--additional">
+                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                  <span class="visually-hidden">Ютуб.</span>
+                </a>
+              </li>
+              <li class="nav__socials-item nav__socials-item--additional">
+                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                  <span class="visually-hidden">Вконтакте.</span>
+                </a>
+              </li>
+              <li class="nav__socials-item nav__socials-item--additional">
+                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                  <span class="visually-hidden">Одноклассники.</span>
+                </a>
+              </li>
+              <li class="nav__socials-item">
+                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                  <span class="visually-hidden">Телеграм.</span>
+                </a>
+              </li>
+              <li class="nav__socials-item">
+                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                  <span class="visually-hidden">Вотсап.</span>
+                </a>
+              </li>
+              <li class="nav__socials-item nav__socials-item--additional">
+                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                  <span class="visually-hidden">Рутуб.</span>
+                </a>
+              </li>
+            </ul>
+            <address class="nav__contacts">
+              <a class="nav__contacts-link" href="mailto:info@neolid.ru">info@neolid.ru</a>
+              <a class="nav__contacts-link" href="tel:+79080857360">+7&nbsp;908&nbsp;085&nbsp;73&nbsp;60</a>
+              <a class="nav__contacts-link" href="tel:+8800XXXXXXX">8&nbsp;800&nbsp;XXX&nbsp;XX&nbsp;XX</a>
+            </address>
+          </div>
+        </div>
+        <button class="nav__burger" type="button">Меню</button>
+        <form class="nav__search search-form">
+          <div class="search-form__field">
+            <div class="search-form__input">
+              <label aria-label="Поиск по сайту">
+                <input type="search" name="search" required>
+              </label>
+            </div>
+            <button class="search-form__btn nav-link-icon" type="submit">
+              <span class="visually-hidden">Искать.</span>
+            </button>
+          </div>
+        </form>
+        <ul class="nav__user-list">
+          <li class="nav__user-item">
+            <a class="nav__user-link nav-link-icon" href="#">
+              <span class="nav__user-text">Сравнение</span>
+            </a>
+          </li>
+          <li class="nav__user-item">
+            <a class="nav__user-link nav-link-icon" href="#">
+              <span class="nav__user-text">Избранное</span>
+            </a>
+          </li>
+          <li class="nav__user-item">
+            <a class="nav__user-link nav-link-icon" href="#">
+              <span class="nav__user-text">Корзина</span>
+              <span class="nav__user-counter" data-counter="cart-counter">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </div>
 </header>
