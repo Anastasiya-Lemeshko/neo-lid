@@ -2,12 +2,9 @@
 @use "index" as *;
 
 // подключения компонентов страницы
+@use "./components/logo-image";
+@use "./components/social-link";
+@use "./components/select";
+@use "./components/search-form";
 @use "./components/nav";
 
-// тестовые стили, удалите их
-.page__body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--vh);
-}

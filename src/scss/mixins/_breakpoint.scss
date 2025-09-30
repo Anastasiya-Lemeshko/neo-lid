@@ -1,31 +1,37 @@
-/* stylelint-disable */
+@use "vars" as *;
 
-@mixin for-desktop {
-  @media (min-width: (1025px)) {
+@mixin vp-390 {
+  @media (min-width: $vp-390) {
     @content;
   }
 }
 
-@mixin big-desktop {
-  @media (max-width: (1440px)) {
+@mixin vp-768 {
+  @media (min-width: $vp-768) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media (max-width: (1024px)) {
+@mixin vp-1024 {
+  @media (min-width: $vp-1024) {
     @content;
   }
 }
 
-@mixin small-tablet {
-  @media (max-width: (768px)) {
+@mixin vp-1280 {
+  @media (min-width: $vp-1280) {
     @content;
   }
 }
 
-@mixin mobile {
-  @media (max-width: (576px)) {
+@mixin vp-1366 {
+  @media (min-width: $vp-1366) {
+    @content;
+  }
+}
+
+@mixin vp-1920 {
+  @media (min-width: $vp-1920) {
     @content;
   }
 }

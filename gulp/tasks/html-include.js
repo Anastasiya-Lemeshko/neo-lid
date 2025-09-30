@@ -9,9 +9,9 @@ export const htmlInclude = () => {
       basepath: '@file',
       maxRecursion: 100
     }))
-    .pipe(typograf({
-      locale: ['ru', 'en-US']
-    }))
+    // .pipe(typograf({
+    //   locale: ['ru', 'en-US'],
+    // }))
     .pipe(app.gulp.dest(app.paths.base.build))
     .pipe(browserSync.stream());
 }

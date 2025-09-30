@@ -5,7 +5,7 @@
         <div class="nav__select select">
           <label class="nav__select-label" for="city">Ваш город:</label>
           <button class="nav__select-button select__button" type="button" aria-label="Открыть список городов.">Челябинск</button>
-          <select class="select__original" id="city" name="city" aria-label="Выбор города" required>
+          <select class="select__original" id="city" name="city" aria-label="Выбор города">
 
             <!--добавить опции-->
             <option value="asha">Аша</option>
@@ -17,14 +17,14 @@
         </div>
         <div class="nav__logo-wrapper">
           <a class="nav__logo logo-image">
-            <img src="../img/logo.svg" width="127" height="44" alt="Логотип компании Neo-Lid.">
+            <img src="../img/logo.svg" width="50" height="16" alt="Логотип компании Neo-Lid.">
           </a>
         </div>
       </div>
       <div class="nav__bottom">
         <div class="nav__menu">
           <ul class="nav__list">
-            <li class="nav__item nav__item--sub-menu">
+            <li class="nav__item nav__item--sub-menu nav__item--catalog">
               <button class="nav__button" type="button">Каталог</button>
               <ul class="nav__sub-list">
 
@@ -58,18 +58,19 @@
               <a class="nav__link" href="#">Новости</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">О компании</a>
+              <a class="nav__link" href="#">О&nbsp;компании</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Контакты</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--account">
               <a class="nav__link" href="#">
                 <span>Личный кабинет</span>
               </a>
             </li>
           </ul>
           <div class="nav__contacts-wrapper">
+            <p class="nav__contacts-text">Свяжитесь с&nbsp;нами</p>
             <ul class="nav__socials">
               <li class="nav__socials-item nav__socials-item--additional">
                 <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
@@ -105,36 +106,33 @@
             <address class="nav__contacts">
               <a class="nav__contacts-link" href="mailto:info@neolid.ru">info@neolid.ru</a>
               <a class="nav__contacts-link" href="tel:+79080857360">+7&nbsp;908&nbsp;085&nbsp;73&nbsp;60</a>
-              <a class="nav__contacts-link" href="tel:+8800XXXXXXX">8&nbsp;800&nbsp;XXX&nbsp;XX&nbsp;XX</a>
+              <a class="nav__contacts-link nav__contacts-link--additional" href="tel:+8800XXXXXXX">8&nbsp;800&nbsp;XXX&nbsp;XX&nbsp;XX</a>
             </address>
           </div>
         </div>
         <button class="nav__burger" type="button">Меню</button>
         <form class="nav__search search-form">
           <div class="search-form__field">
-            <div class="search-form__input">
-              <label aria-label="Поиск по сайту">
-                <input type="search" name="search" required>
-              </label>
-            </div>
-            <button class="search-form__btn nav-link-icon" type="submit">
-              <span class="visually-hidden">Искать.</span>
-            </button>
+            <label class="search-form__label" for="search">Поиск</label>
+            <input class="search-form__input" type="search" name="search" id="search" required>
           </div>
+          <button class="search-form__button" type="submit">
+            <span class="visually-hidden">Искать.</span>
+          </button>
         </form>
         <ul class="nav__user-list">
           <li class="nav__user-item">
-            <a class="nav__user-link nav-link-icon" href="#">
+            <a class="nav__user-link nav__user-link--compare" href="#">
               <span class="nav__user-text">Сравнение</span>
             </a>
           </li>
           <li class="nav__user-item">
-            <a class="nav__user-link nav-link-icon" href="#">
+            <a class="nav__user-link nav__user-link--favorites" href="#">
               <span class="nav__user-text">Избранное</span>
             </a>
           </li>
           <li class="nav__user-item">
-            <a class="nav__user-link nav-link-icon" href="#">
+            <a class="nav__user-link nav__user-link--cart" href="#">
               <span class="nav__user-text">Корзина</span>
               <span class="nav__user-counter" data-counter="cart-counter">0</span>
             </a>
