@@ -1,41 +1,23 @@
 import { closeSubMenu, removeNavToggles, setNavToggles } from './_nav-submenu.js';
-import { isEscapeKey, getScrollWidth } from './../_utils.js';
+import { isEscapeKey, getScrollWidth, setTabIndex, removeTabIndex } from './../_utils.js';
 import { DESKTOP_WIDTH } from "./../_vars.js";
 
 const nav = document.querySelector('.nav');
+const menu = nav ? nav.querySelector('.nav__menu') : null;
 const burgerMenu = nav ? nav.querySelector('.nav__burger') : null;
-const navLinks = nav ? nav.querySelectorAll('.nav__link') : null;
-const navButtons = nav ? nav.querySelectorAll('.nav__button') : null;
+const navLinks = menu ? menu.querySelectorAll('a:not(.nav__sub-link), button:not(.nav__sub-link)') : null;
 const subMenuItems = nav ? nav.querySelectorAll('.nav__item--sub-menu') : null;
 
 let scrollSize = 0;
 
-const removeTabIndex = () => {
-  navLinks.forEach((link) => {
-    link.setAttribute('tabindex', '-1');
-  });
-  navButtons.forEach((button) => {
-    button.setAttribute('tabindex', '-1');
-  });
-};
-
-const setTabIndex = () => {
-  navLinks.forEach((link) => {
-    link.setAttribute('tabindex', '0');
-  });
-  navButtons.forEach((button) => {
-    button.setAttribute('tabindex', '0');
-  });
-};
-
 const openMobileMenu = () => {
   nav.classList.add('nav--menu-opened');
-  burgerMenu.classList.add('button--secondary');
+  burgerMenu.classList.add('nav__burger--active');
   document.body.classList.add('page__scroll-lock');
   document.addEventListener('keydown', onDocumentKeydown);
   document.addEventListener('click', onDocumentClick);
   nav.addEventListener('focusout', onNavFocusOut);
-  setTabIndex();
+  setTabIndex(navLinks);
   setNavToggles();
 
   scrollSize = getScrollWidth();
@@ -44,13 +26,13 @@ const openMobileMenu = () => {
 
 const closeMobileMenu = () => {
   nav.classList.remove('nav--menu-opened');
-  burgerMenu.classList.remove('button--secondary');
+  burgerMenu.classList.remove('nav__burger--active');
   document.body.classList.remove('page__scroll-lock');
   document.body.style.paddingRight = 0;
   document.removeEventListener('keydown', onDocumentKeydown);
   document.removeEventListener('click', onDocumentClick);
   nav.removeEventListener('focusout', onNavFocusOut);
-  removeTabIndex();
+  removeTabIndex(navLinks);
   removeNavToggles();
 
   subMenuItems.forEach((item) => {
@@ -88,20 +70,14 @@ const toggleBurgerMenu = () => {
 };
 
 if (!DESKTOP_WIDTH.matches) {
-  removeTabIndex();
-
-  navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
-      closeMobileMenu();
-    });
-  });
+  removeTabIndex(navLinks);
 }
 
 DESKTOP_WIDTH.addEventListener('change', () => {
   if (DESKTOP_WIDTH.matches) {
-    setTabIndex();
+    setTabIndex(navLinks);
   } else {
-    removeTabIndex();
+    removeTabIndex(navLinks);
   }
 });
 

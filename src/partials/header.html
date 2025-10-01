@@ -22,33 +22,65 @@
         </div>
       </div>
       <div class="nav__bottom">
+        <button class="nav__burger" type="button">Меню</button>
         <div class="nav__menu">
           <ul class="nav__list">
             <li class="nav__item nav__item--sub-menu nav__item--catalog">
-              <button class="nav__button" type="button">Каталог</button>
-              <ul class="nav__sub-list">
+              <div class="nav__catalog nav__with-popup">
+                <button class="nav__button" type="button">Каталог</button>
+                <ul class="nav__sub-list">
 
-                <!--добавить каталог-->
+                  <!--добавить каталог-->
 
-                <li class="nav__sub-item">
-                  <a class="nav__sub-link" href="#">Токарные станки</a>
-                </li>
+                  <li class="nav__sub-item">
+                    <a class="nav__sub-link" href="#">Токарные станки</a>
+                  </li>
 
-              </ul>
+                </ul>
+              </div>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Акции</a>
             </li>
-            <li class="nav__item nav__item--sub-menu">
+            <li class="nav__item nav__item--sub-menu nav__with-popup">
               <button class="nav__button" type="button">Сервис</button>
               <ul class="nav__sub-list">
 
                 <!--добавить сервис-->
 
                 <li class="nav__sub-item">
-                  <a class="nav__sub-link" href="#"></a>
+                  <a class="nav__sub-link" href="#">Прямые поставки оборудования из&nbsp;Китая</a>
                 </li>
-
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Подбор б/у станков</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Ремонт станков</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Написание программ</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Монтаж и настройка станков</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Инструктаж оператора</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Диагностика оборудования</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Заточка инструмента</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Лизинг и кредит</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Trade-in</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a class="nav__sub-link" href="#">Прямые поставки оборудования из Китая</a>
+                </li>
               </ul>
             </li>
             <li class="nav__item">
@@ -73,32 +105,32 @@
             <p class="nav__contacts-text">Свяжитесь с&nbsp;нами</p>
             <ul class="nav__socials">
               <li class="nav__socials-item nav__socials-item--additional">
-                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                <a class="nav__socials-link" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Ютуб.</span>
                 </a>
               </li>
               <li class="nav__socials-item nav__socials-item--additional">
-                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                <a class="nav__socials-link" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Вконтакте.</span>
                 </a>
               </li>
               <li class="nav__socials-item nav__socials-item--additional">
-                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                <a class="nav__socials-link" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Одноклассники.</span>
                 </a>
               </li>
               <li class="nav__socials-item">
-                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                <a class="nav__socials-link" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Телеграм.</span>
                 </a>
               </li>
               <li class="nav__socials-item">
-                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                <a class="nav__socials-link" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Вотсап.</span>
                 </a>
               </li>
               <li class="nav__socials-item nav__socials-item--additional">
-                <a class="social-link" href="#" target="_blank" rel="noreferrer noopener">
+                <a class="nav__socials-link" href="#" target="_blank" rel="noreferrer noopener">
                   <span class="visually-hidden">Рутуб.</span>
                 </a>
               </li>
@@ -110,7 +142,6 @@
             </address>
           </div>
         </div>
-        <button class="nav__burger" type="button">Меню</button>
         <form class="nav__search search-form">
           <div class="search-form__field">
             <label class="search-form__label" for="search">Поиск</label>
@@ -131,11 +162,55 @@
               <span class="nav__user-text">Избранное</span>
             </a>
           </li>
-          <li class="nav__user-item">
+          <li class="nav__user-item nav__with-popup">
             <a class="nav__user-link nav__user-link--cart" href="#">
               <span class="nav__user-text">Корзина</span>
               <span class="nav__user-counter" data-counter="cart-counter">0</span>
             </a>
+            <div class="nav__popup nav__popup--cart">
+              <ul class="nav__popup-list">
+                <li class="nav__popup-product">
+                  <div class="nav__popup-img">
+                    <picture>
+                      <source width="68" height="43" type="image/webp" srcset="../img/popup/product-1@1x.webp 1x, ../img/popup/product-1@1x.webp 2x">
+                      <img src="../img/popup/product-1@1x.png" srcset="../img/popup/product-1@2x.png 2x" width="68" height="43" alt="Изображение товара.">
+                    </picture>
+                  </div>
+                  <p class="nav__popup-name">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</p>
+                  <p class="nav__popup-price">
+                    <span class="nav__popup-text">Стоимость</span>
+                    <span class="nav__popup-value">2476746</span>
+                    <span class="nav__popup-value">₽</span>
+                  </p>
+                </li>
+                <li class="nav__popup-product">
+                  <div class="nav__popup-img">
+                    <picture>
+                      <source width="68" height="43" type="image/webp" srcset="../img/popup/product-1@1x.webp 1x, ../img/popup/product-1@1x.webp 2x">
+                      <img src="../img/popup/product-1@1x.png" srcset="../img/popup/product-1@2x.png 2x" width="68" height="43" alt="Изображение товара.">
+                    </picture>
+                  </div>
+                  <p class="nav__popup-name">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</p>
+                  <p class="nav__popup-price">
+                    <span class="nav__popup-text">Стоимость</span>
+                    <span class="nav__popup-value">2476746</span>
+                    <span class="nav__popup-value">₽</span>
+                  </p>
+                </li>
+              </ul>
+              <button class="nav__popup-close" type="button">
+                <span class="visually-hidden">Закрыть.</span>
+              </button>
+              <p class="nav__popup-total">
+                <span class="nav__popup-text">Итого</span>
+                <span class="nav__popup-value">4953492</span>
+                <span class="nav__popup-value">₽</span>
+              </p>
+              <div class="nav__popup-buttons">
+                <a class="button" href="#">Быстрый заказ</a>
+                <a class="button" href="#">Перейти в&nbsp;корзину</a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>

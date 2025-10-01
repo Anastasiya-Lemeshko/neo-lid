@@ -1,0 +1,10 @@
+@mixin popup {
+  position: absolute;
+  top: calc(100% - 2px);
+  background-color: var(--bg-light);
+  padding: 15px 30px;
+  transform: var(--popup-transform);
+  transform-origin: top;
+  opacity: var(--popup-opacity);
+  transition: opacity 0.4s;
+}

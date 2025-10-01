@@ -1,0 +1,31 @@
+@mixin social-link {
+  display: block;
+  background-color: var(--accent-dark);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  &--youtube {
+    background-image: url("../img/sprite.svg#youtube");
+  }
+
+  &--vk {
+    background-image: url("../img/sprite.svg#vk");
+  }
+
+  &--ok {
+    background-image: url("../img/sprite.svg#ok");
+  }
+
+  &--tg {
+    background-image: url("../img/sprite.svg#tg");
+  }
+
+  &--whatsapp {
+    background-image: url("../img/sprite.svg#whatsapp");
+  }
+
+  &--rutube {
+    background-image: url("../img/sprite.svg#rutube");
+  }
+}

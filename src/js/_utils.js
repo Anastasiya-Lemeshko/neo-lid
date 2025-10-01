@@ -16,10 +16,24 @@ const getScrollWidth = () => {
   return scrollWidth;
 };
 
+const setTabIndex = (array) => {
+  array.forEach((link) => {
+    link.setAttribute('tabindex', '0');
+  });
+};
+
+const removeTabIndex = (array) => {
+  array.forEach((link) => {
+    link.setAttribute('tabindex', '-1');
+  });
+};
+
 export {
   isEscapeKey,
   isArrowDownKey,
   isArrowUpKey,
   isEnterKey,
-  getScrollWidth
+  getScrollWidth,
+  setTabIndex,
+  removeTabIndex
 };

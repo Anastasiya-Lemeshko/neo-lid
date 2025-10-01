@@ -1,11 +1,14 @@
+import {
+  setTabIndex,
+  removeTabIndex
+} from '../_utils.js';
+
 const nav = document.querySelector('.nav');
 const navButtons = nav ? nav.querySelectorAll('.nav__button') : null;
 const navSubLinks = nav ? nav.querySelectorAll('.nav__sub-link') : null;
 
 if (navSubLinks) {
-  navSubLinks.forEach((subLink) => {
-    subLink.setAttribute('tabindex', '-1');
-  });
+  removeTabIndex(navSubLinks);
 }
 
 const openSubMenu = (item) => {
@@ -15,9 +18,7 @@ const openSubMenu = (item) => {
   item.classList.add('nav__item--open');
   menuGroup.style.maxHeight = `${menuGroup.scrollHeight}px`;
 
-  subLinks.forEach((subLink) => {
-    subLink.setAttribute('tabindex', '0');
-  });
+  setTabIndex(subLinks);
 };
 
 const closeSubMenu = (item) => {
@@ -27,9 +28,7 @@ const closeSubMenu = (item) => {
   item.classList.remove('nav__item--open');
   menuGroup.style.maxHeight = null;
 
-  subLinks.forEach((subLink) => {
-    subLink.setAttribute('tabindex', '-1');
-  });
+  removeTabIndex(subLinks);
 };
 
 const onNavSubButtonClick = (evt) => {

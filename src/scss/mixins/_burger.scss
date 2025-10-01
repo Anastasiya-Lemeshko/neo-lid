@@ -1,65 +1,47 @@
-/* stylelint-disable */
+@use "breakpoint" as *;
 
 @mixin burger {
-  --burger-width: 30px;
-  --burger-height: 30px;
-  --burger-line-height: 2px;
-
-  position: relative;
+  --color: var(--white);
+  align-self: start;
+  display: grid;
+  grid-template-columns: 17px 1fr;
+  align-items: center;
+  gap: 0 11px;
+  min-height: 24px;
+  padding: 2px 20px 2px 2px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--color);
+  text-transform: uppercase;
+  background-color: var(--bg-primary);
   border: none;
-  padding: 0;
-  width: var(--burger-width);
-  height: var(--burger-height);
-  color: #000;
-  background-color: transparent;
+  transition: color 0.3s, background-color 0.3s;
   cursor: pointer;
 
   &::before,
   &::after {
+    grid-area: 1 / 1 / 2 / 2;
     content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: var(--burger-line-height);
-    background-color: currentColor;
-    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    transition: color 0.3s;
+    margin: 0 0 1px;
   }
 
   &::before {
-    top: 0;
+    width: 17px;
+    height: 9px;
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
   }
 
   &::after {
-    top: calc(100% - var(--burger-line-height));
-  }
-
-  &__line {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    height: var(--burger-line-height);
-    background-color: currentColor;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease-in-out;
+    width: 17px;
+    height: 1px;
+    background-color: var(--color);
   }
 
   &--active {
-    &::before {
-      top: 50%;
-      transform: rotate(45deg);
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    &::after {
-      top: 50%;
-      transform: rotate(-45deg);
-      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-    }
-
-    .burger__line {
-      transform: scale(0);
-      transition: transform 0.3s ease-in-out;
-    }
+    --color: var(--accent-dark);
+    background-color: var(--bg-light);
   }
 }

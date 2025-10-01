@@ -3,6 +3,8 @@ import {
   isArrowDownKey,
   isArrowUpKey,
   isEnterKey,
+  setTabIndex,
+  removeTabIndex
 } from '../_utils.js';
 
 const selects = document.querySelectorAll('.select');
@@ -34,27 +36,21 @@ const renderCustomSelect = () => {
         customSelect.setAttribute('tabindex', '-1');
       };
 
-      const setTabIndex = () => {
+      const checkTabIndex = () => {
         const options = customSelect.querySelectorAll('.select__item');
 
         if (select.classList.contains('select--open')) {
-          options.forEach((option) => {
-            option.setAttribute('tabindex', '0');
-          });
-
+          setTabIndex(options);
           customSelect.addEventListener('focusout', onSelectFocusOut);
         } else {
-          options.forEach((option) => {
-            option.setAttribute('tabindex', '-1');
-          });
-
+          removeTabIndex(options);
           customSelect.removeEventListener('focusout', onSelectFocusOut);
         }
       };
 
       const openSelect = () => {
         select.classList.add('select--open');
-        setTabIndex();
+        checkTabIndex();
         customSelect.addEventListener('click', onSelectOptionClick);
         document.addEventListener('keydown', onSelectKeydown);
         document.addEventListener('click', onDocumentClick);
@@ -62,7 +58,7 @@ const renderCustomSelect = () => {
 
       const closeSelect = () => {
         select.classList.remove('select--open');
-        setTabIndex();
+        checkTabIndex();
 
         selectButton.focus();
         customSelect.removeEventListener('click', onSelectOptionClick);

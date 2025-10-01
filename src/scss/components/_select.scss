@@ -1,3 +1,5 @@
+@use "index" as *;
+
 .select {
   position: relative;
 }
@@ -22,18 +24,15 @@
 }
 
 .select__list {
-  position: absolute;
+  @include popup;
   top: calc(100% + 5px);
   left: 0;
   width: 100%;
-  max-height: 194px;
+  max-height: 80vh;
   overflow-y: auto;
   margin: 0;
-  padding: 0;
+  padding: 9px 20px;
   list-style-type: none;
-  border-radius: 8px;
-  border: 1px solid #dddddd;
-  background-color: #ffffff;
   transform: scaleY(0);
   opacity: 0.7;
   transform-origin: top;
@@ -50,22 +49,17 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
-  min-height: 48px;
-  padding: 17px 19px;
   font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 1;
   text-align: left;
-  color: #dddddd;
+  color: var(--black);
   border: none;
-  background-color: #ffffff;
-  transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, opacity 0.3s;
   cursor: pointer;
 
   &:focus-visible {
-    color: #ffffff;
-    background-color: #34eeee;
     outline: none;
   }
 
