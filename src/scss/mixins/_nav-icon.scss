@@ -1,0 +1,55 @@
+@use "breakpoint" as *;
+
+@mixin nav-icon {
+  &--account {
+    @include vp-1366 {
+      --mask-image: url("../img/sprite.svg#account");
+    }
+  }
+
+  &--compare {
+    --mask-image: url("../img/sprite.svg#scales");
+  }
+
+  &--favorites {
+    --mask-image: url("../img/sprite.svg#heart");
+  }
+
+  &--cart {
+    --mask-image: url("../img/sprite.svg#cart");
+  }
+
+  &::before {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: center;
+    content: "";
+    width: 23px;
+    height: 24px;
+    background-color: var(--bg-primary);
+
+    @include vp-768 {
+      width: 41px;
+      height: 42px;
+    }
+  }
+
+  &::after {
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: center;
+    justify-self: center;
+    content: "";
+    width: 20px;
+    height: 19px;
+    background-color: var(--white);
+    mask-image: var(--mask-image);
+    mask-size: 20px 19px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+
+    @include vp-1366 {
+      width: 32px;
+      height: 30px;
+      mask-size: 32px 30px;
+    }
+  }
+}

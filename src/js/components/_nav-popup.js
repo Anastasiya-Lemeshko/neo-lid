@@ -1,33 +1,61 @@
-import { setTabIndex, removeTabIndex } from "../_utils.js";
+import { setTabIndex, removeTabIndex, isTabKey } from "../_utils.js";
 import { DESKTOP_WIDTH } from "../_vars.js";
 
 const nav = document.querySelector('.nav');
 const popupItems = nav ? nav.querySelectorAll('.nav__with-popup') : null;
+const authButton = nav ? nav.querySelector('.nav__popup-login') : null;
+const loginFormPopup = nav ? nav.querySelector('.nav__popup--login-form') : null;
 
 let isAddListener = false;
 let isFocusIn = false;
 
-const onPopupEnter = (evt) => {
-  if (!isFocusIn) {
-    const popup = evt.target.closest('.nav__with-popup');
-    const links = popup.querySelectorAll('a');
-    popup.classList.add('nav__with-popup--active');
-    setTabIndex(links);
-    isFocusIn = true;
-  }
+const onAuthButtonClick = () => {
+  loginFormPopup.classList.remove('nav__popup--hidden');
 };
 
 const onPopupLeave = (evt) => {
   const popup = evt.target.closest('.nav__with-popup');
   const links = popup.querySelectorAll('a');
+  const closeButton = popup.querySelector('.nav__popup-close')
   popup.classList.remove('nav__with-popup--active');
   removeTabIndex(links);
+
+  if (closeButton) {
+    closeButton.removeEventListener('click', onPopupLeave);
+  }
+
+  if (popup.classList.contains('nav__item--account')) {
+    authButton.removeEventListener('click', onAuthButtonClick);
+    loginFormPopup.classList.add('nav__popup--hidden');
+  }
+
   isFocusIn = false;
 };
 
+const onPopupEnter = (evt) => {
+  if (!isFocusIn) {
+    const popup = evt.target.closest('.nav__with-popup');
+    const links = popup.querySelectorAll('a');
+    const closeButton = popup.querySelector('.nav__popup-close')
+    popup.classList.add('nav__with-popup--active');
+    setTabIndex(links);
+
+    if (closeButton) {
+      closeButton.addEventListener('click', onPopupLeave);
+    }
+
+    if (popup.classList.contains('nav__item--account')) {
+      authButton.addEventListener('click', onAuthButtonClick);
+    }
+
+    isFocusIn = true;
+  }
+};
+
+
 const onPopupFocusOut = (evt) => {
   const popup = evt.target.closest('.nav__with-popup');
-  if (evt.relatedTarget === null || !popup.contains(evt.relatedTarget)) {
+  if (isTabKey(evt) && (evt.relatedTarget === null || !popup.contains(evt.relatedTarget))) {
     onPopupLeave(evt);
   }
 }
@@ -45,7 +73,7 @@ const openPopup = () => {
   }
 };
 
-const removepopup = () => {
+const removePopup = () => {
   popupItems.forEach((item) => {
     item.removeEventListener('mouseenter', onPopupEnter);
     item.removeEventListener('focusin', onPopupEnter);
@@ -61,7 +89,7 @@ DESKTOP_WIDTH.addEventListener('change', () => {
     openPopup();
   }
   if (popupItems && !DESKTOP_WIDTH.matches && isAddListener) {
-    removepopup();
+    removePopup();
   }
 });
 

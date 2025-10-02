@@ -3,8 +3,10 @@
   top: calc(100% - 2px);
   background-color: var(--bg-light);
   padding: 15px 30px;
+  max-height: 80vh;
   transform: var(--popup-transform);
   transform-origin: top;
   opacity: var(--popup-opacity);
   transition: opacity 0.4s;
+  z-index: 100;
 }

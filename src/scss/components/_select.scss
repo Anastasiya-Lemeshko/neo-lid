@@ -27,7 +27,6 @@
   @include popup;
   top: calc(100% + 5px);
   left: 0;
-  width: 100%;
   max-height: 80vh;
   overflow-y: auto;
   margin: 0;
@@ -37,7 +36,7 @@
   opacity: 0.7;
   transform-origin: top;
   transition: transform 0.3s, opacity 0.3s;
-  z-index: 30;
+  z-index: 5;
 }
 
 .select--open .select__list {
