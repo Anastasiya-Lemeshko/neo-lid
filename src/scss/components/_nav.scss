@@ -66,6 +66,7 @@
   @include vp-1366 {
     grid-template-columns: 127px 235px 1fr min-content;
     gap: 10px;
+    padding: 5px 0 3px;
   }
 }
 
@@ -148,8 +149,7 @@
 .nav__catalog {
   @include vp-1366 {
     position: relative;
-    justify-self: end;
-    align-self: start;
+    place-self: start end;
     min-width: 182px;
     transition: min-width 0.3s;
     z-index: 10;
@@ -167,6 +167,7 @@
 .nav__catalog .nav__button {
   @include vp-1366 {
     @include burger;
+
     grid-template-columns: 22px 1fr;
     gap: 0 14px;
     width: 100%;
@@ -197,6 +198,7 @@
 .nav__catalog:hover .nav__button,
 .nav__catalog:focus-within .nav__button {
   --color: var(--accent-dark);
+
   background-color: var(--bg-light);
 }
 
@@ -273,6 +275,7 @@
 
   @include vp-1366 {
     @include popup;
+
     min-width: 372px;
     overflow-y: auto;
     z-index: 30;
@@ -366,6 +369,7 @@
 
 .nav__socials-link {
   @include social-link;
+
   width: 33px;
   height: 33px;
 
@@ -471,7 +475,9 @@
 
 .nav__user-link {
   --mask-image: none;
+
   @include nav-icon;
+
   position: relative;
   display: grid;
 
@@ -535,6 +541,7 @@
 .nav__with-popup {
   --popup-transform: scaleY(0);
   --popup-opacity: 0;
+
   position: relative;
 
   &--active {
@@ -544,39 +551,45 @@
 }
 
 .nav__popup {
+  display: none;
+
   @include vp-1366 {
     @include popup;
+
+    display: block;
   }
 }
 
 .nav__user-item .nav__popup {
-  right: 0;
+  @include vp-1366 {
+    right: 0;
 
-  &--unauth {
-    padding: 20px 50px 27px 20px;
-  }
+    &--unauth {
+      padding: 20px 50px 27px 20px;
+    }
 
-  &--auth {
-    min-width: 291px;
-    padding: 20px 20px 35px;
-  }
+    &--auth {
+      min-width: 291px;
+      padding: 20px 20px 35px;
+    }
 
-  &--login-form {
-    min-width: 546px;
-    padding: 42px 36px 15px;
-  }
+    &--login-form {
+      min-width: 546px;
+      padding: 42px 36px 15px;
+    }
 
-  &--cart,
-  &--compare {
-    display: grid;
-    grid-template-columns: 1fr 24px;
-    gap: 0 22px;
-    padding: 29px 21px;
-    width: 548px;
-  }
+    &--cart,
+    &--compare {
+      display: grid;
+      grid-template-columns: 1fr 24px;
+      gap: 0 22px;
+      padding: 29px 21px;
+      width: 548px;
+    }
 
-  &--hidden {
-    display: none;
+    &--hidden {
+      display: none;
+    }
   }
 }
 
@@ -689,6 +702,7 @@
 .nav__popup-login,
 .nav__popup-auth-name {
   --mask-image: url("../img/sprite.svg#account");
+
   @include nav-icon;
 
   display: grid;

@@ -35,8 +35,7 @@
 
   &::after {
     grid-area: 1 / 1 / 2 / 2;
-    align-self: center;
-    justify-self: center;
+    place-self: center;
     content: "";
     width: 20px;
     height: 19px;
@@ -47,9 +46,9 @@
     mask-repeat: no-repeat;
 
     @include vp-1366 {
-      width: 32px;
+      width: 29px;
       height: 30px;
-      mask-size: 32px 30px;
+      mask-size: 29px 30px;
     }
   }
 }

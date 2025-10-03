@@ -29,6 +29,30 @@ const removeTabIndex = (array) => {
   });
 };
 
+const addSwiperClass = (swiper, el) => {
+  const swiperWrapper = swiper.querySelector(`.${el}swiper-wrapper`);
+  const swiperSlides = swiper.querySelectorAll(`.${el}slide`);
+
+  swiper.classList.add('swiper');
+  swiperWrapper.classList.add('swiper-wrapper');
+  swiperWrapper.classList.remove('no-swiper');
+  swiperSlides.forEach((slide) => {
+    slide.classList.add('swiper-slide');
+  });
+};
+
+const removeSwiperClass = (swiper, el) => {
+  const swiperWrapper = swiper.querySelector(`.${el}swiper-wrapper`);
+  const swiperSlides = swiper.querySelectorAll(`.${el}slide`);
+
+  swiper.classList.remove('swiper');
+  swiperWrapper.classList.remove('swiper-wrapper');
+  swiperWrapper.classList.add('no-swiper');
+  swiperSlides.forEach((slide) => {
+    slide.classList.remove('swiper-slide');
+  });
+};
+
 export {
   isEscapeKey,
   isArrowDownKey,
@@ -37,5 +61,7 @@ export {
   isTabKey,
   getScrollWidth,
   setTabIndex,
-  removeTabIndex
+  removeTabIndex,
+  addSwiperClass,
+  removeSwiperClass
 };

@@ -1,0 +1,21 @@
+@mixin slide-layout {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+@mixin slide-container {
+  flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+}
+
+@mixin slide-img-height {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}

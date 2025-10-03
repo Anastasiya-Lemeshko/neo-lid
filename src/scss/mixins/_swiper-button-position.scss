@@ -1,0 +1,13 @@
+@mixin swiper-button-position {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  z-index: 1;
+
+  &--next {
+    left: unset;
+    right: 0;
+    transform: translate(50%, -50%) rotate(90deg);
+  }
+}

@@ -1,0 +1,53 @@
+@use "index" as *;
+
+.button-swiper {
+  --color-bg: var(--black);
+  --color-arrow: var(--white);
+
+  position: relative;
+  display: block;
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  border: none;
+  background-color: var(--transparent);
+  transform: rotate(-90deg);
+  cursor: pointer;
+
+  @include vp-390 {
+    width: 30px;
+    height: 30px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    background-color: var(--color-bg);
+    opacity: 0.6;
+  }
+
+  &::after {
+    mask-image: url("../img/sprite.svg#arrow");
+    mask-position: center;
+    mask-size: 7px 7px;
+    mask-repeat: no-repeat;
+    background-color: var(--color-arrow);
+  }
+
+  &--next {
+    transform: rotate(90deg);
+  }
+
+  &--light {
+    --color-bg: var(--white);
+    --color-arrow: var(--grey-dark);
+  }
+}

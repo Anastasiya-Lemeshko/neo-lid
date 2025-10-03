@@ -2,6 +2,7 @@
 
 @mixin burger {
   --color: var(--white);
+
   align-self: start;
   display: grid;
   grid-template-columns: 17px 1fr;
@@ -42,6 +43,7 @@
 
   &--active {
     --color: var(--accent-dark);
+
     background-color: var(--bg-light);
   }
 }

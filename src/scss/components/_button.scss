@@ -19,4 +19,9 @@
   &:focus-visible {
     outline: none;
   }
+
+  &--light {
+    color: var(--black);
+    background-color: var(--white);
+  }
 }

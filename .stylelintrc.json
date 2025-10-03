@@ -119,7 +119,7 @@
         "severity": "warning"
       }
     ],
-    "color-hex-length": "short",
+    "color-hex-length": null,
     "color-no-hex": null,
     "color-no-invalid-hex": true,
     "comment-empty-line-before": [
