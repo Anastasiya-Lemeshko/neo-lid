@@ -1,10 +1,8 @@
 @use "breakpoint" as *;
 
-@mixin nav-icon {
+@mixin icon {
   &--account {
-    @include vp-1366 {
-      --mask-image: url("../img/sprite.svg#account");
-    }
+    --mask-image: url("../img/sprite.svg#account");
   }
 
   &--compare {
@@ -20,6 +18,7 @@
   }
 
   &::before {
+    display: block;
     grid-area: 1 / 1 / 2 / 2;
     justify-self: center;
     content: "";
@@ -34,6 +33,7 @@
   }
 
   &::after {
+    display: block;
     grid-area: 1 / 1 / 2 / 2;
     place-self: center;
     content: "";
@@ -46,6 +46,25 @@
     mask-repeat: no-repeat;
 
     @include vp-1366 {
+      width: 29px;
+      height: 30px;
+      mask-size: 29px 30px;
+    }
+  }
+}
+
+@mixin adaptive-icon {
+  @include icon;
+
+  &::before {
+    @include vp-768 {
+      width: 41px;
+      height: 42px;
+    }
+  }
+
+  &::after {
+    @include vp-768 {
       width: 29px;
       height: 30px;
       mask-size: 29px 30px;

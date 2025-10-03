@@ -53,6 +53,13 @@ const removeSwiperClass = (swiper, el) => {
   });
 };
 
+const getSwiperClass = (swiper) => {
+  const className = swiper.className.split(' ').find(cls =>
+    cls.includes('swiper') && cls !== 'swiper'
+  );
+  return className ? className.replace('swiper', '') : null;
+};
+
 export {
   isEscapeKey,
   isArrowDownKey,
@@ -63,5 +70,6 @@ export {
   setTabIndex,
   removeTabIndex,
   addSwiperClass,
-  removeSwiperClass
+  removeSwiperClass,
+  getSwiperClass
 };

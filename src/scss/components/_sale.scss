@@ -1,0 +1,47 @@
+@use "index" as *;
+
+.sale {
+  margin: 30px 0 25px;
+
+  @include vp-1366 {
+    margin: 79px 0;
+  }
+}
+
+.sale__header {
+  @include vp-1024 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+
+.sale__title {
+  @include title;
+
+  margin: 0 0 20px;
+}
+
+.sale__title-accent {
+  font-size: 18px;
+  color: var(--accent);
+  vertical-align: top;
+}
+
+.sale__link {
+  display: none;
+
+  @include vp-1024 {
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
+}
+
+.sale__swiper-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

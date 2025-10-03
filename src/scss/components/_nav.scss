@@ -476,7 +476,7 @@
 .nav__user-link {
   --mask-image: none;
 
-  @include nav-icon;
+  @include adaptive-icon;
 
   position: relative;
   display: grid;
@@ -703,7 +703,7 @@
 .nav__popup-auth-name {
   --mask-image: url("../img/sprite.svg#account");
 
-  @include nav-icon;
+  @include adaptive-icon;
 
   display: grid;
   grid-template-columns: min-content 1fr;

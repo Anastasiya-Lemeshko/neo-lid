@@ -1,0 +1,14 @@
+@use "breakpoint" as *;
+
+@mixin title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--black);
+
+  @include vp-1024 {
+    font-size: 50px;
+  }
+}
