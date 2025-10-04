@@ -1,3 +1,9 @@
+import {
+  SLIDES_COUNT,
+  DESKTOP_WIDTH,
+  TABLET_WIDTH
+} from './_vars.js';
+
 const isEscapeKey = (evt) => evt.key === 'Escape';
 const isArrowDownKey = (evt) => evt.key === 'ArrowDown';
 const isArrowUpKey = (evt) => evt.key === 'ArrowUp';
@@ -60,6 +66,39 @@ const getSwiperClass = (swiper) => {
   return className ? className.replace('swiper', '') : null;
 };
 
+const findActiveSlides = (index, activeIndex, numberOfActiveSlides) => {
+  for (let i = 0; i < numberOfActiveSlides; i++) {
+    if (index === activeIndex + i) {
+      return true;
+    }
+  }
+  return false;
+};
+
+const setSlidesTabIndex = (swiper, countVisibleSlides) => {
+  swiper.slides.forEach((slide, index) => {
+
+    const isActive = findActiveSlides(index, swiper.activeIndex, countVisibleSlides);
+    slide.querySelectorAll('a, button, input, textarea, select, [tabindex]')
+      .forEach((el) => {
+        el.tabIndex = isActive ? 0 : -1;
+      });
+  });
+};
+
+const checkVisibleSlides = (block) => {
+  if (SLIDES_COUNT[block]) {
+    if (DESKTOP_WIDTH.matches) {
+      return SLIDES_COUNT[block].desktop;
+    } else if (TABLET_WIDTH.matches) {
+      return SLIDES_COUNT[block].tablet;
+    }
+    return SLIDES_COUNT[block].mobile;
+  } else {
+    return SLIDES_COUNT.default;
+  }
+};
+
 export {
   isEscapeKey,
   isArrowDownKey,
@@ -71,5 +110,7 @@ export {
   removeTabIndex,
   addSwiperClass,
   removeSwiperClass,
-  getSwiperClass
+  getSwiperClass,
+  setSlidesTabIndex,
+  checkVisibleSlides
 };

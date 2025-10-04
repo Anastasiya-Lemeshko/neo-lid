@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Autoplay, EffectFade } from 'swiper/modules';
-import { addSwiperClass, removeSwiperClass } from './../_utils.js';
-import { DESKTOP_WIDTH } from "./../_vars.js";
+import { addSwiperClass, removeSwiperClass, setSlidesTabIndex, checkVisibleSlides } from './../_utils.js';
+import { DESKTOP_WIDTH } from './../_vars.js';
 
 const promo = document.querySelector('.promo')
 const promoMainSwiper = promo ? promo.querySelector('.promo__main-swiper') : null;
@@ -98,6 +98,17 @@ const initPromoSwiper = () => {
       navigation: {
         nextEl: '.promo__service-button--next',
         prevEl: '.promo__service-button--prev',
+      },
+
+      on: {
+        init: function () {
+          const numberOfVisibleSlides = checkVisibleSlides('promo');
+          setSlidesTabIndex(this, numberOfVisibleSlides);
+        },
+        slideChange: function () {
+          const numberOfVisibleSlides = checkVisibleSlides('promo');
+          setSlidesTabIndex(this, numberOfVisibleSlides);
+        }
       },
     });
   }

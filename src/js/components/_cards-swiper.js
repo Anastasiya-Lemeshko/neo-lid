@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import { Pagination } from 'swiper/modules';
-import { addSwiperClass, removeSwiperClass, getSwiperClass } from './../_utils.js';
+import { addSwiperClass, removeSwiperClass, getSwiperClass, setSlidesTabIndex, checkVisibleSlides } from './../_utils.js';
 import { TABLET_WIDTH } from "./../_vars.js";
 
 const sections = document.querySelectorAll('[data-swiper="cards"]');
@@ -29,6 +29,25 @@ const initCardsSwiper = () => {
           allowTouchMove: true,
           slidesPerView: 1,
           spaceBetween: 10,
+
+          pagination: {
+            el: '.sale__swiper-pagination',
+            bulletElement: 'button',
+            bulletClass: 'sale__pagination-bullet',
+            bulletActiveClass: 'sale__pagination-bullet--active',
+            clickable: true,
+          },
+
+          on: {
+            init: function () {
+              const numberOfVisibleSlides = checkVisibleSlides('sale');
+              setSlidesTabIndex(this, numberOfVisibleSlides);
+            },
+            slideChange: function () {
+              const numberOfVisibleSlides = checkVisibleSlides('sale');
+              setSlidesTabIndex(this, numberOfVisibleSlides);
+            }
+          },
         });
       };
 
