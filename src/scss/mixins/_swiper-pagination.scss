@@ -1,0 +1,63 @@
+@use "interactive-states" as *;
+
+@mixin swiper-pagination {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin swiper-pagination-button {
+  --button-color: var(--grey-light);
+
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+  max-width: 100%;
+  height: 5px;
+  background-color: var(--button-color);
+  border: none;
+  z-index: 3;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  @include hover-focus {
+    --button-color: var(--bg-primary);
+
+    outline: none;
+  }
+
+  @include active {
+    --button-color: var(--accent-dark);
+  }
+
+  @include disabled {
+    --button-color: var(--grey);
+
+    opacity: 0.5;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-color: var(--transparent);
+    z-index: -1;
+  }
+
+  &--active {
+    --button-color: var(--accent-dark);
+
+    @include hover-focus {
+      --button-color: var(--accent-dark);
+    }
+  }
+}

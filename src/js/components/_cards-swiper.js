@@ -26,25 +26,25 @@ const initCardsSwiper = () => {
           modules: [Pagination],
           direction: 'horizontal',
           speed: 500,
-          allowTouchMove: true,
+          allowTouchMove: false,
           slidesPerView: 1,
           spaceBetween: 10,
 
           pagination: {
-            el: '.sale__swiper-pagination',
+            el: `.${sectionClass}swiper-pagination`,
             bulletElement: 'button',
-            bulletClass: 'sale__pagination-bullet',
-            bulletActiveClass: 'sale__pagination-bullet--active',
+            bulletClass: `${sectionClass}pagination-bullet`,
+            bulletActiveClass: `${sectionClass}pagination-bullet--active`,
             clickable: true,
           },
 
           on: {
             init: function () {
-              const numberOfVisibleSlides = checkVisibleSlides('sale');
+              const numberOfVisibleSlides = checkVisibleSlides('cards');
               setSlidesTabIndex(this, numberOfVisibleSlides);
             },
             slideChange: function () {
-              const numberOfVisibleSlides = checkVisibleSlides('sale');
+              const numberOfVisibleSlides = checkVisibleSlides('cards');
               setSlidesTabIndex(this, numberOfVisibleSlides);
             }
           },
@@ -59,12 +59,36 @@ const initCardsSwiper = () => {
         }
       };
 
+      const initImgSwiper = () => {
+        const imgSwipers = section.querySelectorAll('.card__visual-swiper');
+
+        if (imgSwipers.length) {
+          imgSwipers.forEach((imgSwiper) => {
+            new Swiper(imgSwiper, {
+              modules: [Pagination],
+              direction: 'horizontal',
+              speed: 500,
+              allowTouchMove: true,
+              slidesPerView: 1,
+              spaceBetween: 5,
+
+              pagination: {
+                el: '.card__visual-swiper-pagination',
+                bulletElement: 'button',
+                bulletClass: 'card__visual-pagination-bullet',
+                bulletActiveClass: 'card__visual-pagination-bullet--active',
+                clickable: true,
+              },
+            });
+          });
+        }
+      };
+
       checkSectionSwiper();
+      initImgSwiper();
       TABLET_WIDTH.addEventListener('change', checkSectionSwiper);
     });
   }
 };
 
-initCardsSwiper()
-
-// export { initPromoSwiper };
+export { initCardsSwiper };

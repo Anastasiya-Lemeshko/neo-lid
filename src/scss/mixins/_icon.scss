@@ -22,13 +22,13 @@
     grid-area: 1 / 1 / 2 / 2;
     justify-self: center;
     content: "";
-    width: 23px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background-color: var(--bg-primary);
 
-    @include vp-768 {
-      width: 41px;
-      height: 42px;
+    @include vp-1366 {
+      width: 36px;
+      height: 36px;
     }
   }
 
@@ -37,11 +37,11 @@
     grid-area: 1 / 1 / 2 / 2;
     place-self: center;
     content: "";
-    width: 20px;
-    height: 19px;
+    width: 18px;
+    height: 17px;
     background-color: var(--white);
     mask-image: var(--mask-image);
-    mask-size: 20px 19px;
+    mask-size: 18px 17px;
     mask-position: center;
     mask-repeat: no-repeat;
 
@@ -57,6 +57,9 @@
   @include icon;
 
   &::before {
+    width: 23px;
+    height: 24px;
+
     @include vp-768 {
       width: 41px;
       height: 42px;
@@ -64,6 +67,10 @@
   }
 
   &::after {
+    width: 20px;
+    height: 19px;
+    mask-size: 20px 19px;
+
     @include vp-768 {
       width: 29px;
       height: 30px;

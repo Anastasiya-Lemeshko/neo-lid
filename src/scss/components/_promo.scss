@@ -1,7 +1,7 @@
 @use "index" as *;
 
 .promo {
-  padding: 31px 0 13px;
+  padding: 31px 0 10px;
   background-color: var(--bg-primary);
 
   @include vp-1366 {
