@@ -3,10 +3,10 @@
 .button {
   box-sizing: border-box;
   display: inline-block;
-  padding: 14px 15px 13px;
+  padding: 8px 15px 7px;
   font-family: inherit;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 12px;
   line-height: 1.2;
   color: var(--white);
   text-align: center;
@@ -16,8 +16,10 @@
   transition: color 0.3s, background-color 0.3s;
   cursor: pointer;
 
-  &:focus-visible {
-    outline: none;
+  @include vp-1024 {
+    padding: 14px 15px 13px;
+    font-weight: 500;
+    font-size: 18px;
   }
 
   &--light {

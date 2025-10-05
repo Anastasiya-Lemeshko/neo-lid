@@ -102,7 +102,7 @@
 }
 
 .card__visual-slide-container img {
-  @include slide-img-height;
+  @include img-contain;
 }
 
 .card__visual-swiper-pagination {

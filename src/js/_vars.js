@@ -20,4 +20,9 @@ export const SLIDES_COUNT = {
     'tablet': 1,
     'desktop': 1
   },
+  'service': {
+    'mobile': 1,
+    'tablet': 1,
+    'desktop': 1
+  },
 };

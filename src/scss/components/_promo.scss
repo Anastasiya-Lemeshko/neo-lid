@@ -116,21 +116,17 @@
 }
 
 .promo__main-slide-container img {
-  @include slide-img-height;
+  @include img-contain;
 }
 
 .promo__main-button {
   margin: 0 12px;
-  padding: 8px 15px 7px;
-  font-weight: 400;
-  font-size: 12px;
 
   @include vp-1024 {
     align-self: end;
     max-width: 352px;
     margin: 0 0 16px;
     padding: 17px 15px 15px;
-    font-weight: 500;
     font-size: 14px;
   }
 }
@@ -211,7 +207,7 @@
 }
 
 .promo__catalog-img img {
-  @include slide-img-height
+  @include img-contain
 }
 
 .promo__catalog-button {
@@ -312,7 +308,7 @@
 }
 
 .promo__service-img img {
-  @include slide-img-height;
+  @include img-contain;
   margin: 0 0 0 auto;
   object-position: right bottom;
 }
@@ -325,16 +321,10 @@
   align-self: end;
   width: 198px;
   margin: 0 0 9px;
-  padding: 8px 15px 7px;
-  font-weight: 400;
-  font-size: 12px;
   line-height: 1.2;
 
   @include vp-1366 {
     width: 352px;
     margin: 0 0 20px;
-    padding: 14px 15px 13px;
-    font-weight: 500;
-    font-size: 18px;
   }
 }

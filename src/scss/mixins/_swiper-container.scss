@@ -1,0 +1,12 @@
+@mixin slide-layout {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+@mixin slide-container {
+  flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+}
+

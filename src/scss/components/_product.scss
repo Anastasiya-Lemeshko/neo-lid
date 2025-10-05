@@ -8,6 +8,36 @@
   }
 }
 
+.product--popular {
+  @include vp-1024 {
+    margin: 79px 0 70px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 44px;
+    }
+  }
+}
+
+.product--news {
+  margin: 27px 0 17px;
+
+  @include vp-1024 {
+    margin: 70px 0 79px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 44px;
+    }
+  }
+}
+
 .product__header {
   @include vp-768 {
     display: flex;

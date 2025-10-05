@@ -1,0 +1,152 @@
+@use "index" as *;
+
+@use "index" as *;
+
+.service {
+  margin: 30px 0 60px;
+
+  @include vp-1024 {
+    margin: 79px 0;
+  }
+}
+
+.service__title {
+  @include title;
+
+  margin: 0 0 19px;
+
+  @include vp-1366 {
+    margin: 0 0 37px;
+  }
+}
+
+.service__swiper-container {
+  margin: 0 0 8px;
+
+  @include vp-1024 {
+    margin: 0;
+  }
+}
+
+.service__swiper-wrapper {
+  display: flex;
+  margin: 0 0 calc(2px / $vp-390 * 100vw);
+  ;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+  }
+
+  @include vp-1024 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.service__slide {
+  @include slide-layout;
+}
+
+.service__slide:nth-child(n + 6) {
+  display: none;
+
+  @include vp-768 {
+    display: block;
+  }
+}
+
+.service__slide:nth-child(n + 3) {
+  @include vp-768 {
+    display: none;
+  }
+
+  @include vp-1024 {
+    display: block;
+  }
+}
+
+.service__link {
+  @include slide-container;
+
+  display: block;
+  height: 100%;
+  padding: 10px;
+  background-color: var(--bg-light);
+  color: var(--bg-primary);
+
+  @include vp-1366 {
+    min-height: 651px;
+    padding: 20px 30px 5px;
+  }
+}
+
+.service__img {
+  aspect-ratio: 313 / 327;
+  margin: 0 0 16px;
+
+  @include vp-1366 {
+    aspect-ratio: 440 / 480;
+    margin: 0 0 19px;
+  }
+}
+
+.service__img img {
+  @include img-cover
+}
+
+.service__subtitle {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+
+  @include vp-768 {
+    font-size: 25px;
+  }
+
+  @include vp-1366 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 1.2
+  }
+}
+
+.service__swiper-pagination {
+  @include swiper-pagination;
+
+  min-height: 20px;
+
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.service__pagination-bullet {
+  @include swiper-pagination-button;
+
+  @include vp-390 {
+    height: calc(5px / $vp-390 * 100vw);
+  }
+}
+
+.service__link-more {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+
+  @include vp-390 {
+    font-size: calc(12px / $vp-390 * 100vw);
+  }
+
+  @include vp-768 {
+    font-size: 18px;
+    padding: 14px 15px 13px;
+  }
+
+  @include vp-1024 {
+    display: none;
+  }
+}
