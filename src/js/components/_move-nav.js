@@ -18,6 +18,7 @@ const moveNav = () => {
   if (nav && DESKTOP_WIDTH.matches && !isUserNavMoved) {
     navBottom.prepend(catalog);
     navBottom.prepend(logo);
+    navBottom.classList.remove('nav__bottom--no-js');
     navTop.appendChild(menu);
     userList.prepend(account);
     account.classList.remove('nav__item');

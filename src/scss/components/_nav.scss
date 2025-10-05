@@ -68,6 +68,12 @@
     gap: 10px;
     padding: 5px 0 3px;
   }
+
+  &--no-js {
+    @include vp-1366 {
+      display: block;
+    }
+  }
 }
 
 .nav__menu {
@@ -125,6 +131,7 @@
   list-style-type: none;
 
   @include vp-1366 {
+    flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -358,6 +365,7 @@
   list-style-type: none;
 
   @include vp-1366 {
+    min-width: 133px;
     align-self: center;
     gap: 5px;
   }
