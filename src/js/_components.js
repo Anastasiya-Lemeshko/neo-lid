@@ -4,7 +4,7 @@ import { moveNav } from './components/_move-nav.js';
 import { openPopup } from './components/_nav-popup.js';
 import { initPromoSwiper } from './components/_promo-swiper.js';
 import { initCardsSwiper } from './components/_cards-swiper.js';
-import { initServiceSwiper } from './components/_service-swiper.js';
+import { initPaginationSwiper } from './components/_pagination-swiper.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -13,5 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
   openPopup();
   initPromoSwiper();
   initCardsSwiper();
-  initServiceSwiper();
+  initPaginationSwiper();
 });

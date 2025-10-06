@@ -1,0 +1,11 @@
+@mixin link-more {
+  display: block;
+  padding: 10px 8px 17px;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
+  color: var(--black);
+}

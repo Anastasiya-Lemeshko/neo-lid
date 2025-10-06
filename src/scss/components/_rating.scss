@@ -1,0 +1,38 @@
+@use "index" as *;
+
+.rating {
+  display: flex;
+  gap: 5px;
+  margin: 0;
+
+  @include vp-768 {
+    gap: 7px;
+  }
+
+  @include vp-1024 {
+    gap: 9px;
+  }
+}
+
+.rating__icon {
+  display: block;
+  width: 9px;
+  height: 10px;
+  background-image: url("../img/sprite.svg#star-mobile");
+  background-repeat: no-repeat;
+  background-size: 9px 10px;
+  background-position: center;
+
+  @include vp-768 {
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/sprite.svg#star-tablet");
+    background-size: 19px 19px;
+  }
+
+  @include vp-1024 {
+    width: 28px;
+    height: 28px;
+    background-size: 27px 27px;
+  }
+}

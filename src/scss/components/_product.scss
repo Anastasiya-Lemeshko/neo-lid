@@ -12,29 +12,13 @@
   @include vp-1024 {
     margin: 79px 0 70px;
   }
-
-  &__title {
-    margin: 0 0 10px;
-
-    @include vp-1024 {
-      margin: 0 0 44px;
-    }
-  }
 }
 
 .product--news {
   margin: 27px 0 17px;
 
   @include vp-1024 {
-    margin: 70px 0 79px;
-  }
-
-  &__title {
-    margin: 0 0 10px;
-
-    @include vp-1024 {
-      margin: 0 0 44px;
-    }
+    margin: 71px 0 70px;
   }
 }
 
@@ -57,6 +41,15 @@
   }
 }
 
+.product--popular .product__title,
+.product--news .product__title {
+  margin: 0 0 10px;
+
+  @include vp-1024 {
+    margin: 0 0 44px;
+  }
+}
+
 .product__title-accent {
   font-size: 16px;
   color: var(--accent);
@@ -71,15 +64,7 @@
   display: none;
 
   @include vp-768 {
-    display: block;
-    padding: 10px 8px 17px;
-    font-weight: 600;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-underline-offset: 4px;
-    color: var(--black);
+    @include link-more;
   }
 }
 
