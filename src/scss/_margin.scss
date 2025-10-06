@@ -1,0 +1,63 @@
+@use "mixins" as *;
+
+//index
+
+.index {
+  &__sale {
+    margin: 21px 0 2px;
+
+    @include vp-1024 {
+      margin: 59px 0 37px;
+    }
+  }
+
+  &__catalog-list {
+    margin: 0 0 15px;
+
+    @include vp-1024 {
+      margin: 0 0 39px;
+    }
+  }
+
+  &__service {
+    margin: 0 0 45px;
+
+    @include vp-1024 {
+      margin: 0 0 41px;
+    }
+  }
+
+  &__popular {
+    margin: 0 0 12px;
+
+    @include vp-1024 {
+      margin: 0 0 32px;
+    }
+  }
+
+  &__new-products {
+    margin: 0 0 13px;
+
+    @include vp-1024 {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__reviews {
+    margin: 0 0 3px;
+
+    @include vp-1024 {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__news {
+    margin: 0 0 18px;
+
+    @include vp-1024 {
+      margin: 0 0 15px;
+    }
+  }
+
+  &__video {}
+}

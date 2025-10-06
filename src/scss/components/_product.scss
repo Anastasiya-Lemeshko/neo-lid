@@ -1,24 +1,10 @@
 @use "index" as *;
 
 .product {
-  margin: 31px 0 17px;
+  padding: 10px 0 5px;
 
   @include vp-1024 {
-    margin: 79px 0;
-  }
-}
-
-.product--popular {
-  @include vp-1024 {
-    margin: 79px 0 70px;
-  }
-}
-
-.product--news {
-  margin: 27px 0 17px;
-
-  @include vp-1024 {
-    margin: 71px 0 70px;
+    padding: 20px 0;
   }
 }
 
