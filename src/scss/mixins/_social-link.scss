@@ -1,5 +1,7 @@
 @mixin social-link {
   display: block;
+  width: 26px;
+  height: 26px;
   background-color: var(--accent-dark);
   background-position: center;
   background-repeat: no-repeat;

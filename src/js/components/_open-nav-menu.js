@@ -13,7 +13,7 @@ let scrollSize = 0;
 const openMobileMenu = () => {
   nav.classList.add('nav--menu-opened');
   burgerMenu.classList.add('nav__burger--active');
-  document.body.classList.add('page__scroll-lock');
+  document.body.style.overflow = 'hidden';
   document.addEventListener('keydown', onDocumentKeydown);
   document.addEventListener('click', onDocumentClick);
   nav.addEventListener('focusout', onNavFocusOut);
@@ -27,7 +27,7 @@ const openMobileMenu = () => {
 const closeMobileMenu = () => {
   nav.classList.remove('nav--menu-opened');
   burgerMenu.classList.remove('nav__burger--active');
-  document.body.classList.remove('page__scroll-lock');
+  document.body.style.overflow = 'visible';
   document.body.style.paddingRight = 0;
   document.removeEventListener('keydown', onDocumentKeydown);
   document.removeEventListener('click', onDocumentClick);

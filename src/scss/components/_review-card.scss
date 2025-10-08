@@ -90,7 +90,7 @@
   margin: 0;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.15;
 
   @include vp-390 {
     font-size: calc(12px / $vp-390 * 100vw);
