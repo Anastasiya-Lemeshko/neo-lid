@@ -71,6 +71,7 @@
 
   textarea {
     padding: 10px 20px 16px;
+    resize: none;
 
     @include vp-768 {
       padding: 10px 20px 14px;
