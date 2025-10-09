@@ -11,7 +11,7 @@
 }
 
 @mixin swiper-pagination-button {
-  --button-color: var(--grey-light);
+  --button-color: var(--grey);
 
   position: relative;
   display: block;
@@ -36,7 +36,7 @@
   }
 
   @include disabled {
-    --button-color: var(--grey);
+    --button-color: var(--grey-middle);
 
     opacity: 0.5;
   }

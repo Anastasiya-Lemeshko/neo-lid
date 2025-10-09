@@ -9,7 +9,7 @@
   }
 
   @include vp-1024 {
-    padding: 81px 0 38px;
+    padding: 81px 0 54px;
   }
 
   .container {
@@ -57,11 +57,12 @@
 }
 
 .companies__swiper-box {
-  padding: 15px var(--container-offset-small);
+  margin: 0 0 3px;
+  padding: 11px var(--container-offset-small) 8px;
   background-color: var(--bg-primary);
 
   @include vp-390 {
-    padding: 20px var(--container-offset-mobile);
+    padding: 11px var(--container-offset-mobile) 8px;
   }
 
   @include vp-768 {
@@ -117,12 +118,11 @@
 }
 
 .companies__slide-container {
-  aspect-ratio: 137 / 120;
+  aspect-ratio: 1 / 1;
   padding: 10px;
   background-color: var(--bg-light);
 
   @include vp-768 {
-    aspect-ratio: 205 / 221;
     padding: 16px 21px 17px 19px;
   }
 }

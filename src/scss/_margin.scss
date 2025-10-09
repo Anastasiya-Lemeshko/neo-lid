@@ -68,7 +68,7 @@
   }
 
   &__companies {
-    margin: 0 0 4px;
+    margin: 0 0 2px;
 
     @include vp-1024 {
       margin: 0 0 81px;
@@ -80,6 +80,14 @@
 
     @include vp-1024 {
       margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 40px;
+
+    @include vp-1024 {
+      margin: 0 0 80px;
     }
   }
 }

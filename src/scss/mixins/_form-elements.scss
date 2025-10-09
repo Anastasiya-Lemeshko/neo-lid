@@ -3,7 +3,7 @@
 @mixin input {
   --transform: scaleY(1) translateY(0);
   --opacity: 1;
-  --field-color: var(--grey-extra-light);
+  --field-color: var(--grey-light);
 
   display: grid;
   align-items: center;
@@ -25,7 +25,7 @@
     padding: 0 20px;
     font-weight: 500;
     font-size: 14px;
-    color: var(--grey);
+    color: var(--grey-middle);
     transform-origin: top;
     transform: var(--transform);
     opacity: var(--opacity);

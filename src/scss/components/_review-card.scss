@@ -26,7 +26,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;
-  color: var(--grey-middle);
+  color: var(--grey-dark);
 
   @include vp-390 {
     font-size: calc(12px / $vp-390 * 100vw);

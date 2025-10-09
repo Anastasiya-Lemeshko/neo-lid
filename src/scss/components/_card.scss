@@ -138,7 +138,7 @@
   margin: 0 0 19px;
   font-weight: 500;
   font-size: 12px;
-  color: var(--grey);
+  color: var(--grey-middle);
   letter-spacing: -0.01em;
 
   @include vp-1366 {
@@ -171,7 +171,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 1.2;
-  color: var(--grey);
+  color: var(--grey-middle);
 
   @include vp-1366 {
     font-size: 25px;
