@@ -9,11 +9,9 @@ const loginFormPopup = nav ? nav.querySelector('.nav__popup--login-form') : null
 
 let isAddListener = false;
 let isFocusIn = false;
-let isFormActive = false;
 
 const onAuthButtonClick = () => {
   loginFormPopup.classList.remove('nav__popup--hidden');
-  isFormActive = true;
 };
 
 const onPopupLeave = (evt) => {
@@ -31,7 +29,7 @@ const onPopupLeave = (evt) => {
     closeButton.removeEventListener('click', onPopupLeave);
   }
 
-  if (popup.classList.contains('nav__item--account')) {
+  if (popup === accountItem && ((evt.target === accountItem) || (evt.target === closeButton))) {
     authButton.removeEventListener('click', onAuthButtonClick);
     loginFormPopup.classList.add('nav__popup--hidden');
   }
@@ -62,7 +60,7 @@ const onPopupEnter = (evt) => {
 const onPopupFocusOut = (evt) => {
   const popup = evt.target.closest('.nav__with-popup');
 
-  if ((evt.relatedTarget === null || !popup.contains(evt.relatedTarget)) && !isFormActive) {
+  if ((evt.relatedTarget === null || !popup.contains(evt.relatedTarget))) {
     onPopupLeave(evt);
   }
 }

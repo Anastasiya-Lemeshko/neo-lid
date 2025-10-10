@@ -336,7 +336,7 @@
 }
 
 .nav__sub-link {
-@include interactive-link-dark;
+  @include interactive-link-dark;
 
   display: block;
   margin-left: 16px;
@@ -608,6 +608,8 @@
     &--login-form {
       min-width: 546px;
       padding: 42px 36px 15px;
+      transform: scaleY(1);
+      opacity: 1;
     }
 
     &--cart,
