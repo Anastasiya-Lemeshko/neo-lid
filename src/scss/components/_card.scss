@@ -149,6 +149,8 @@
 }
 
 .card__title {
+  @include interactive-link-light;
+
   flex-grow: 1;
   display: block;
   margin: 0 0 19px;
@@ -202,6 +204,8 @@
 }
 
 .card__button {
+  @include interactive-button-light;
+
   padding: 7px 10px 6px;
   font-size: 14px;
 

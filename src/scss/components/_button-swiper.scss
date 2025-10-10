@@ -3,6 +3,7 @@
 .button-swiper {
   --color-bg: var(--black);
   --color-arrow: var(--white);
+  --opacity: 0.6;
 
   position: relative;
   display: block;
@@ -31,7 +32,8 @@
 
   &::before {
     background-color: var(--color-bg);
-    opacity: 0.6;
+    opacity: var(--opacity);
+    transition: opacity 0.3s;
   }
 
   &::after {
@@ -49,5 +51,15 @@
   &--light {
     --color-bg: var(--white);
     --color-arrow: var(--grey-extra-dark);
+  }
+
+  @include hover-focus {
+    --opacity: 1;
+
+    outline: none;
+  }
+
+  @include active {
+    --opacity: 0.8;
   }
 }

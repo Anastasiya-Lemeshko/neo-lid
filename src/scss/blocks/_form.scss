@@ -191,6 +191,10 @@
   }
 }
 
+.form--modal .form__button {
+  @include interactive-button-light;
+}
+
 .form__contacts {
   display: flex;
   align-items: center;
@@ -247,6 +251,8 @@
 }
 
 .form__contacts-link {
+  @include interactive-link-dark;
+
   display: block;
   font-style: normal;
   font-weight: 500;
@@ -261,4 +267,8 @@
   @include vp-1024 {
     font-size: 18px;
   }
+}
+
+.form--modal .form__contacts-link {
+  @include interactive-link-light;
 }

@@ -1,9 +1,11 @@
 @use "breakpoint" as *;
+@use "interactive-states" as *;
 
 @mixin input {
   --transform: scaleY(1) translateY(0);
   --opacity: 1;
   --field-color: var(--grey-light);
+  --color: var(--grey-middle);
 
   display: grid;
   align-items: center;
@@ -17,6 +19,11 @@
     --opacity: 0;
   }
 
+  &:has(input:hover) span,
+  &:has(textarea:hover) span {
+    --color: var(--accent-dark);
+  }
+
   span {
     position: relative;
     grid-area: 1 / 1 / 2 / 2;
@@ -25,11 +32,11 @@
     padding: 0 20px;
     font-weight: 500;
     font-size: 14px;
-    color: var(--grey-middle);
+    color: var(--color);
     transform-origin: top;
     transform: var(--transform);
     opacity: var(--opacity);
-    transition: transform .3s, opacity .3s;
+    transition: transform 0.3s, opacity 0.3s, color 0.3s;
     z-index: 1;
     cursor: pointer;
 
@@ -40,6 +47,10 @@
     @include vp-1024 {
       margin: 2px 0 0;
       font-size: 18px;
+    }
+
+    @include hover {
+      color: var(--accent-dark);
     }
 
     span {
@@ -144,6 +155,15 @@
     @include vp-768 {
       font-size: 14px;
     }
+  }
+
+  &:has(input:focus),
+  &:has(input:focus-visible) {
+    --bg-color: var(--accent-dark-opacity);
+  }
+
+  @include hover {
+    --bg-color: var(--accent-dark-opacity);
   }
 
   &:has(input:checked) {

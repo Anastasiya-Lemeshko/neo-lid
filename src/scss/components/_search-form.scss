@@ -21,7 +21,7 @@
 }
 
 .search-form__label {
-  @include interactive-link;
+  @include interactive-link-dark;
 
   position: relative;
   align-self: center;

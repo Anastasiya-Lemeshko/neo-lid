@@ -1,4 +1,8 @@
+@use "interactive-states" as *;
+
 @mixin link-more {
+  @include interactive-link-light;
+
   display: block;
   padding: 10px 8px 17px;
   font-weight: 600;

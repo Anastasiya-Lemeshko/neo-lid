@@ -58,6 +58,8 @@
 
   @include hover-focus {
     --opacity: 0.4;
+
+    outline: none;
   }
 
   @include active {

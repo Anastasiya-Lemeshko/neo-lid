@@ -97,6 +97,10 @@
   @include vp-1366 {
     font-size: 25px;
   }
+
+  &--link {
+    @include interactive-link-light;
+  }
 }
 
 .footer__nav {
@@ -148,6 +152,8 @@
 }
 
 .footer__link {
+  @include interactive-link-light;
+
   display: block;
   margin: 0;
   font-weight: 400;
@@ -315,6 +321,8 @@
 }
 
 .footer__privacy {
+  @include interactive-link-dark;
+
   display: block;
   font-weight: 400;
   font-size: 10px;

@@ -70,6 +70,7 @@
 
 .service__link {
   @include slide-container;
+  @include interactive-button-dark;
 
   display: block;
   height: 100%;

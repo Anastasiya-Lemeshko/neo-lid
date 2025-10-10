@@ -32,6 +32,15 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
+a:not([href]) {
+  cursor: default;
+}
+
 .btn-reset {
   border: none;
   padding: 0;

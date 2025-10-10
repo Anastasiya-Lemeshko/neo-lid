@@ -51,6 +51,8 @@
 }
 
 .news__link {
+  @include interactive-button-light;
+
   display: block;
   padding: 10px;
   color: var(--white);

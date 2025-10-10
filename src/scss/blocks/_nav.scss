@@ -228,7 +228,7 @@
 
 .nav__link,
 .nav__button {
-  @include interactive-link;
+  @include interactive-link-dark;
 
   display: block;
   width: fit-content;
@@ -337,7 +337,7 @@
 }
 
 .nav__sub-link {
-@include interactive-link;
+@include interactive-link-dark;
 
   display: block;
   margin-left: 16px;
@@ -428,7 +428,7 @@
 }
 
 .nav__contacts-link {
-  @include interactive-link;
+  @include interactive-link-dark;
 
   display: block;
   font-weight: 500;
@@ -678,7 +678,7 @@
 }
 
 .nav__popup-product-link {
-  @include interactive-link;
+  @include interactive-link-dark;
 
   display: grid;
   grid-template-columns: 68px 192px 1fr;
@@ -818,7 +818,7 @@
 }
 
 .nav__popup-label {
-  @include interactive-link;
+  @include interactive-link-dark;
 
   position: relative;
   grid-area: 1 / 1 / 2 / 2;
@@ -846,7 +846,7 @@
 }
 
 .nav__popup-form-link {
-  @include interactive-link;
+  @include interactive-link-dark;
 
   display: block;
   width: fit-content;
@@ -857,7 +857,7 @@
 }
 
 .nav__popup-compare-link {
-  @include interactive-link;
+  @include interactive-link-dark;
 
   font-weight: 600;
   font-size: 18px;

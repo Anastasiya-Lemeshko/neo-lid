@@ -50,7 +50,7 @@
 }
 
 .select__item {
-  @include interactive-link;
+  @include interactive-link-dark;
 
   box-sizing: border-box;
   display: block;

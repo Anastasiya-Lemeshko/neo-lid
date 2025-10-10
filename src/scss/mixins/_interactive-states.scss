@@ -39,9 +39,8 @@
 
 // базовые стили состояний
 
-@mixin interactive-link {
+@mixin interactive-link-dark {
   transition: color 0.3s;
-  cursor: pointer;
 
   @include hover-focus {
     color: var(--accent-dark);
@@ -53,9 +52,36 @@
   }
 }
 
+@mixin interactive-link-light {
+  transition: color 0.3s;
+
+  @include hover-focus {
+    color: var(--grey-middle);
+    outline: none;
+  }
+
+  @include active {
+    color: var(--grey-light);
+  }
+}
+
+@mixin interactive-button-dark {
+  transition: background-color 0.3s, color 0.3s;
+
+  @include hover-focus {
+    background-color: var(--bg-primary);
+    color: var(--white);
+    outline: none;
+  }
+
+  @include active {
+    background-color: var(--white);
+    color: var(--accent-dark);
+  }
+}
+
 @mixin interactive-button-light {
   transition: background-color 0.3s, color 0.3s;
-  cursor: pointer;
 
   @include hover-focus {
     background-color: var(--accent-dark);
@@ -69,18 +95,16 @@
   }
 }
 
-@mixin interactive-button-dark {
-  transition: background-color 0.3s, color 0.3s;
+@mixin interactive-opacity {
+  transition: opacity 0.3s;
   cursor: pointer;
 
   @include hover-focus {
-    background-color: var(--bg-primary);
-    color: var(--white);
+    opacity: 0.7;
     outline: none;
   }
 
   @include active {
-    background-color: var(--white);
-    color: var(--accent-dark);
+    opacity: 0.5;
   }
 }

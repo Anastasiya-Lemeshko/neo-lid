@@ -9,6 +9,10 @@
     width: 127px;
     height: 42px;
   }
+
+  &[href] {
+    @include interactive-opacity;
+  }
 }
 
 .logo-image img {

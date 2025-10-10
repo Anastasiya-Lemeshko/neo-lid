@@ -34,6 +34,8 @@
 }
 
 .modal__close-button {
+  @include interactive-opacity;
+
   --cross-color: var(--white);
 
   position: absolute;
