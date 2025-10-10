@@ -38,6 +38,9 @@ const initPaginationSwiper = () => {
           bulletClass: `${sectionClass}pagination-bullet`,
           bulletActiveClass: `${sectionClass}pagination-bullet--active`,
           clickable: true,
+          renderBullet: function (index, className) {
+            return `<button type="button" class="${className}"><span class="visually-hidden">Слайд ${index + 1}</span></button>`;
+          },
         },
 
         autoplay: {

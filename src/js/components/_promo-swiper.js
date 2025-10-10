@@ -81,7 +81,7 @@ const initPromoSwiper = () => {
 
   if (promoServiceSwiper) {
     new Swiper(promoServiceSwiper, {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
       speed: 500,
       direction: 'horizontal',
       loop: true,
@@ -98,6 +98,13 @@ const initPromoSwiper = () => {
       navigation: {
         nextEl: '.promo__service-button--next',
         prevEl: '.promo__service-button--prev',
+      },
+
+      autoplay: {
+        delay: 7000,
+        stopOnLastSlide: false,
+        reverseDirection: false,
+        waitForTransition: true,
       },
 
       on: {

@@ -157,19 +157,9 @@
 }
 
 .promo__catalog-slide {
-  background-color: var(--white);
-}
-
-.promo__catalog-slide-container {
-  padding: 10px;
-
-  @include vp-1366 {
-    padding: 12px 13px 5px 17px;
-  }
-}
-
-.promo__catalog-slide {
   @include slide-layout;
+
+  background-color: var(--white);
 }
 
 .promo__catalog-slide-container {
@@ -177,6 +167,11 @@
 
   display: grid;
   grid-template-rows: min-content 1fr;
+  padding: 10px;
+
+  @include vp-1366 {
+    padding: 12px 13px 5px 17px;
+  }
 }
 
 .promo__catalog-title {
@@ -240,10 +235,14 @@
 }
 
 .promo__service-slide {
+  @include slide-layout;
+
   background-color: var(--accent-dark);
 }
 
 .promo__service-slide-container {
+  @include slide-container;
+
   position: relative;
   display: grid;
   grid-template-rows: min-content 1fr;
@@ -262,14 +261,6 @@
     min-height: 283px;
     padding: 22px 0 0 18px;
   }
-}
-
-.promo__service-slide {
-  @include slide-layout;
-}
-
-.promo__service-slide-container {
-  @include slide-container;
 }
 
 .promo__service-title {
@@ -309,6 +300,7 @@
 
 .promo__service-img img {
   @include img-contain;
+
   margin: 0 0 0 auto;
   object-position: right bottom;
 }

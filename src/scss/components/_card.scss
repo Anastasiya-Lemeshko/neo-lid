@@ -70,6 +70,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 5px;
+  min-width: 77px;
 }
 
 .card__user-button {
@@ -79,7 +80,6 @@
   display: grid;
   padding: 0;
   border: none;
-  background-color: none;
 }
 
 .card__visual-swiper-wrapper {

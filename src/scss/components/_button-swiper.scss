@@ -62,4 +62,12 @@
   @include active {
     --opacity: 0.8;
   }
+
+  @include disabled {
+    --color-bg: var(--grey-middle);
+    --color-arrow: var(--grey-extra-light);
+    --opacity: 0.9;
+    cursor: default;
+    pointer-events: none;
+  }
 }

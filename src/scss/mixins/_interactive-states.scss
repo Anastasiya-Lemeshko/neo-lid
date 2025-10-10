@@ -78,6 +78,13 @@
     background-color: var(--white);
     color: var(--accent-dark);
   }
+
+  @include disabled {
+    background-color: var(--grey-middle);
+    color: var(--grey-extra-light);
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 @mixin interactive-button-light {
@@ -92,6 +99,13 @@
   @include active {
     background-color: var(--white);
     color: var(--accent-dark);
+  }
+
+  @include disabled {
+    background-color: var(--grey-middle);
+    color: var(--grey-extra-light);
+    cursor: default;
+    pointer-events: none;
   }
 }
 

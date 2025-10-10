@@ -1,6 +1,6 @@
 @use "mixins" as *;
 
-//index
+// index
 
 .index {
   &__sale {
@@ -60,10 +60,10 @@
   }
 
   &__video {
-    margin: 0 0 3px;
+    margin: 0 0 1px;
 
     @include vp-1024 {
-      margin: 0 0 18px;
+      margin: 0 0 20px;
     }
   }
 

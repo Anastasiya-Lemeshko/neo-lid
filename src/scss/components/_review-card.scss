@@ -101,6 +101,7 @@
   }
 }
 
-.review-card__name p+p .review-card__text p+p {
+.review-card__name p+p,
+.review-card__text p+p {
   margin-top: 10px;
 }

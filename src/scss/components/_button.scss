@@ -28,4 +28,11 @@
     color: var(--black);
     background-color: var(--white);
   }
+
+  &--disabled {
+    background-color: var(--grey-middle);
+    color: var(--grey-extra-light);
+    cursor: default;
+    pointer-events: none;
+  }
 }

@@ -94,6 +94,11 @@
 
 .video__img {
   grid-area: 1 / 1 / 2 / 2;
+  aspect-ratio: 333 / 304;
+
+  @include vp-768 {
+    aspect-ratio: 500 / 447;
+  }
 }
 
 .video__img img {

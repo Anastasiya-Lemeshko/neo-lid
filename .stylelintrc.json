@@ -4,11 +4,7 @@
     "stylelint-order"
   ],
   "rules": {
-    "order/order": [
-      "custom-properties",
-      "dollar-variables",
-      "at-rules"
-    ],
+    "order/order": null,
     "order/properties-alphabetical-order": null,
     "order/properties-order": null,
     "at-rule-empty-line-before": [
