@@ -35,3 +35,52 @@
     @content;
   }
 }
+
+
+// базовые стили состояний
+
+@mixin interactive-link {
+  transition: color 0.3s;
+  cursor: pointer;
+
+  @include hover-focus {
+    color: var(--accent-dark);
+    outline: none;
+  }
+
+  @include active {
+    color: var(--accent-dark-opacity);
+  }
+}
+
+@mixin interactive-button-light {
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: var(--accent-dark);
+    color: var(--white);
+    outline: none;
+  }
+
+  @include active {
+    background-color: var(--white);
+    color: var(--accent-dark);
+  }
+}
+
+@mixin interactive-button-dark {
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: var(--bg-primary);
+    color: var(--white);
+    outline: none;
+  }
+
+  @include active {
+    background-color: var(--white);
+    color: var(--accent-dark);
+  }
+}

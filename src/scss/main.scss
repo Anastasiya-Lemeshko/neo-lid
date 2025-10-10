@@ -1,27 +1,29 @@
 // базовые подключения
 @use "index" as *;
 
-// подключения компонентов страницы
+// подключения компонентов
 @use "./components/modal";
 @use "./components/logo-image";
 @use "./components/button";
 @use "./components/button-swiper";
 @use "./components/select";
 @use "./components/search-form";
-@use "./components/nav";
 @use "./components/card";
 @use "./components/review-card";
 @use "./components/rating";
-@use "./components/promo";
-@use "./components/product";
-@use "./components/catalog";
-@use "./components/service";
-@use "./components/reviews";
-@use "./components/news";
-@use "./components/video";
-@use "./components/companies";
-@use "./components/about";
-@use "./components/form";
-@use "./components/footer";
 @use "./components/button-scroll-top";
 @use "./components/side-nav";
+
+// подключения секций страницы
+@use "./blocks/nav";
+@use "./blocks/promo";
+@use "./blocks/product";
+@use "./blocks/catalog";
+@use "./blocks/service";
+@use "./blocks/reviews";
+@use "./blocks/news";
+@use "./blocks/video";
+@use "./blocks/companies";
+@use "./blocks/about";
+@use "./blocks/form";
+@use "./blocks/footer";

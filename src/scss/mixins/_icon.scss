@@ -1,6 +1,10 @@
 @use "breakpoint" as *;
+@use "interactive-states" as *;
 
 @mixin icon {
+  --bg-color: var(--bg-primary);
+  --icon-color: var(--white);
+
   &--account {
     --mask-image: url("../img/sprite.svg#account");
   }
@@ -24,7 +28,8 @@
     content: "";
     width: 20px;
     height: 20px;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s;
 
     @include vp-1366 {
       width: 36px;
@@ -39,17 +44,30 @@
     content: "";
     width: 18px;
     height: 17px;
-    background-color: var(--white);
+    background-color: var(--icon-color);
     mask-image: var(--mask-image);
     mask-size: 18px 17px;
     mask-position: center;
     mask-repeat: no-repeat;
+    transition: background-color 0.3s;
 
     @include vp-1366 {
       width: 29px;
       height: 30px;
       mask-size: 29px 30px;
     }
+  }
+
+  @include hover-focus {
+    --bg-color: var(--accent-dark);
+    --icon-color: var(--white);
+
+    outline: none;
+  }
+
+  @include active {
+    --bg-color: var(--white);
+    --icon-color: var(--accent-dark);
   }
 }
 

@@ -1,6 +1,8 @@
 @use "index" as *;
 
 .button {
+  @include interactive-button-dark;
+
   box-sizing: border-box;
   display: inline-block;
   padding: 8px 15px 7px;

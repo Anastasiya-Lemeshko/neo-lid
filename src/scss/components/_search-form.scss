@@ -21,6 +21,8 @@
 }
 
 .search-form__label {
+  @include interactive-link;
+
   position: relative;
   align-self: center;
   grid-area: 1 / 1 / 2 / 2;
@@ -31,8 +33,9 @@
   transform-origin: top;
   transform: var(--transform);
   opacity: var(--opacity);
-  transition: transform .3s, opacity .3s;
+  transition: transform 0.3s, opacity 0.3s, color 0.3s;
   z-index: 1;
+  cursor: pointer;
 
   @include vp-1366 {
     padding: 10px 10px 5px;
@@ -48,13 +51,20 @@
   background-color: var(--white);
   border: 2px solid var(--bg-primary);
   border-right: none;
+  cursor: pointer;
 
   @include vp-768 {
     height: 42px;
   }
+
+  @include focus {
+    outline: none;
+  }
 }
 
 .search-form__button {
+  @include interactive-button-light;
+
   position: relative;
   width: 23px;
   height: 24px;

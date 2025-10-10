@@ -1,19 +1,26 @@
-import { setTabIndex, removeTabIndex, isTabKey } from "../_utils.js";
+import { setTabIndex, removeTabIndex } from "../_utils.js";
 import { DESKTOP_WIDTH } from "../_vars.js";
 
 const nav = document.querySelector('.nav');
 const popupItems = nav ? nav.querySelectorAll('.nav__with-popup') : null;
 const authButton = nav ? nav.querySelector('.nav__popup-login') : null;
+const accountItem = nav ? nav.querySelector('.nav__item--account') : null;
 const loginFormPopup = nav ? nav.querySelector('.nav__popup--login-form') : null;
 
 let isAddListener = false;
 let isFocusIn = false;
+let isFormActive = false;
 
 const onAuthButtonClick = () => {
   loginFormPopup.classList.remove('nav__popup--hidden');
+  isFormActive = true;
 };
 
 const onPopupLeave = (evt) => {
+  const activeElement = document.activeElement;
+  const isInputFocused = activeElement.tagName === 'INPUT';
+  if (isInputFocused) return;
+
   const popup = evt.target.closest('.nav__with-popup');
   const links = popup.querySelectorAll('a');
   const closeButton = popup.querySelector('.nav__popup-close')
@@ -52,10 +59,10 @@ const onPopupEnter = (evt) => {
   }
 };
 
-
 const onPopupFocusOut = (evt) => {
   const popup = evt.target.closest('.nav__with-popup');
-  if (isTabKey(evt) && (evt.relatedTarget === null || !popup.contains(evt.relatedTarget))) {
+
+  if ((evt.relatedTarget === null || !popup.contains(evt.relatedTarget)) && !isFormActive) {
     onPopupLeave(evt);
   }
 }
