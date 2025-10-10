@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import { addSwiperClass, removeSwiperClass, setSlidesTabIndex, checkVisibleSlides, getSwiperClass } from '../_utils.js';
 import { TABLET_WIDTH } from "../_vars.js";
 
@@ -8,9 +8,10 @@ const sections = document.querySelectorAll('[data-swiper="pagination"]');
 const initPaginationSwiper = () => {
   if (!sections.length) return;
 
-  sections.forEach((section) => {
+  sections.forEach((section, index) => {
     const sectionClass = getSwiperClass(section);
     let swiperContainer = null;
+    let autoplayDelay = 10000 + index * 1000;
 
     const destroyPaginationSwiper = (swiper, el) => {
       if (swiperContainer) {
@@ -24,7 +25,7 @@ const initPaginationSwiper = () => {
       addSwiperClass(section, sectionClass);
 
       swiperContainer = new Swiper(section, {
-        modules: [Pagination],
+        modules: [Pagination, Autoplay],
         direction: 'horizontal',
         speed: 500,
         allowTouchMove: true,
@@ -37,6 +38,13 @@ const initPaginationSwiper = () => {
           bulletClass: `${sectionClass}pagination-bullet`,
           bulletActiveClass: `${sectionClass}pagination-bullet--active`,
           clickable: true,
+        },
+
+        autoplay: {
+          delay: autoplayDelay,
+          stopOnLastSlide: false,
+          reverseDirection: false,
+          waitForTransition: true,
         },
 
         on: {
