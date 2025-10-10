@@ -6,63 +6,63 @@ import { TABLET_WIDTH } from "../_vars.js";
 const sections = document.querySelectorAll('[data-swiper="pagination"]');
 
 const initPaginationSwiper = () => {
-  if (sections.length) {
-    sections.forEach((section) => {
-      const sectionClass = getSwiperClass(section);
-      let swiperContainer = null;
+  if (!sections.length) return;
 
-      const destroyPaginationSwiper = (swiper, el) => {
-        if (swiperContainer) {
-          swiperContainer.destroy();
-          swiperContainer = null;
-          removeSwiperClass(swiper, el);
-        }
-      };
+  sections.forEach((section) => {
+    const sectionClass = getSwiperClass(section);
+    let swiperContainer = null;
 
-      const initPaginationSwiper = () => {
-        addSwiperClass(section, sectionClass);
+    const destroyPaginationSwiper = (swiper, el) => {
+      if (swiperContainer) {
+        swiperContainer.destroy();
+        swiperContainer = null;
+        removeSwiperClass(swiper, el);
+      }
+    };
 
-        swiperContainer = new Swiper(section, {
-          modules: [Pagination],
-          direction: 'horizontal',
-          speed: 500,
-          allowTouchMove: true,
-          slidesPerView: 1,
-          spaceBetween: 10,
+    const initPaginationSwiper = () => {
+      addSwiperClass(section, sectionClass);
 
-          pagination: {
-            el: `.${sectionClass}swiper-pagination`,
-            bulletElement: 'button',
-            bulletClass: `${sectionClass}pagination-bullet`,
-            bulletActiveClass: `${sectionClass}pagination-bullet--active`,
-            clickable: true,
+      swiperContainer = new Swiper(section, {
+        modules: [Pagination],
+        direction: 'horizontal',
+        speed: 500,
+        allowTouchMove: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+
+        pagination: {
+          el: `.${sectionClass}swiper-pagination`,
+          bulletElement: 'button',
+          bulletClass: `${sectionClass}pagination-bullet`,
+          bulletActiveClass: `${sectionClass}pagination-bullet--active`,
+          clickable: true,
+        },
+
+        on: {
+          init: function () {
+            const numberOfVisibleSlides = checkVisibleSlides('default');
+            setSlidesTabIndex(this, numberOfVisibleSlides);
           },
+          slideChange: function () {
+            const numberOfVisibleSlides = checkVisibleSlides('default');
+            setSlidesTabIndex(this, numberOfVisibleSlides);
+          }
+        },
+      });
+    };
 
-          on: {
-            init: function () {
-              const numberOfVisibleSlides = checkVisibleSlides('default');
-              setSlidesTabIndex(this, numberOfVisibleSlides);
-            },
-            slideChange: function () {
-              const numberOfVisibleSlides = checkVisibleSlides('default');
-              setSlidesTabIndex(this, numberOfVisibleSlides);
-            }
-          },
-        });
-      };
+    const checkPaginationSwiper = () => {
+      if (TABLET_WIDTH.matches && swiperContainer) {
+        destroyPaginationSwiper(section, sectionClass);
+      } else if (!TABLET_WIDTH.matches && !swiperContainer) {
+        initPaginationSwiper();
+      }
+    };
 
-      const checkPaginationSwiper = () => {
-        if (TABLET_WIDTH.matches && swiperContainer) {
-          destroyPaginationSwiper(section, sectionClass);
-        } else if (!TABLET_WIDTH.matches && !swiperContainer) {
-          initPaginationSwiper();
-        }
-      };
-
-      checkPaginationSwiper();
-      TABLET_WIDTH.addEventListener('change', checkPaginationSwiper);
-    });
-  }
+    checkPaginationSwiper();
+    TABLET_WIDTH.addEventListener('change', checkPaginationSwiper);
+  });
 };
 
 export { initPaginationSwiper };

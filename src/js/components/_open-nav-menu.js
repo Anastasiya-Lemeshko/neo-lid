@@ -60,6 +60,8 @@ function onDocumentClick(evt) {
 }
 
 const toggleBurgerMenu = () => {
+  if (!burgerMenu) return;
+
   burgerMenu.addEventListener('click', () => {
     if (nav.classList.contains('nav--menu-opened')) {
       closeMobileMenu();

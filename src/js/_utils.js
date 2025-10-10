@@ -99,6 +99,14 @@ const checkVisibleSlides = (block) => {
   }
 };
 
+const debounce = (callback, timeoutDelay = 500) => {
+  let timeoutId;
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+};
+
 export {
   isEscapeKey,
   isArrowDownKey,
@@ -112,5 +120,6 @@ export {
   removeSwiperClass,
   getSwiperClass,
   setSlidesTabIndex,
-  checkVisibleSlides
+  checkVisibleSlides,
+  debounce
 };
