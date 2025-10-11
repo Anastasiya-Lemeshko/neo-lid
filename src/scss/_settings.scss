@@ -119,3 +119,21 @@ a:not([href]) {
 .accordion-content {
   @include accordion-content;
 }
+
+// sitemap
+
+.sitemap {
+  padding: 50px 0;
+  color: var(--black);
+}
+
+.sitemap li:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.sitemap a {
+  @include interactive-link-dark;
+
+  font-size: 20px;
+  color: inherit;
+}
