@@ -115,3 +115,7 @@ a:not([href]) {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.accordion-content {
+  @include accordion-content;
+}

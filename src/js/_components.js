@@ -9,6 +9,7 @@ import { moveForm } from './components/_move-form.js';
 import { setModals } from './components/_modal.js';
 import { addScrollButton } from './components/_button-scroll-top.js';
 import { addSideNav } from './components/_side-nav.js';
+import { openVisibleFontCardContent, setAccordeonToggles } from './components/_accordion.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -22,4 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setModals();
   addScrollButton();
   addSideNav();
+  openVisibleFontCardContent();
+  setAccordeonToggles();
 });

@@ -1,0 +1,10 @@
+@mixin accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s, max-height 0.4s;
+  opacity: 0;
+
+  &--opened {
+    opacity: 1;
+  }
+}

@@ -1,11 +1,7 @@
 @use "index" as *;
 
 .news {
-  padding: 10px 0 5px;
-
-  @include vp-1024 {
-    padding: 20px 0;
-  }
+  @include block-padding;
 
   .container {
     @include vp-768 {

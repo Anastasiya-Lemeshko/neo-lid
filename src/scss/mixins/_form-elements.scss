@@ -100,6 +100,10 @@
       }
     }
   }
+
+  &--error {
+    --color: var(--accent);
+  }
 }
 
 @mixin control {

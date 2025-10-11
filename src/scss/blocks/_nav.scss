@@ -326,6 +326,8 @@
 }
 
 .nav__sub-item:not(:last-child) {
+  margin-bottom: 7px;
+
   @include vp-1366 {
     margin-bottom: 15px;
   }

@@ -1,11 +1,7 @@
 @use "index" as *;
 
 .service {
-  padding: 10px 0 5px;
-
-  @include vp-1024 {
-    padding: 20px 0;
-  }
+  @include block-padding;
 }
 
 .service__title {
@@ -66,49 +62,13 @@
   }
 }
 
-.service__link {
+.service__card {
   @include slide-container;
-  @include interactive-button-dark;
 
-  display: block;
   height: 100%;
-  padding: 10px;
-  background-color: var(--bg-light);
-  color: var(--bg-primary);
 
   @include vp-1366 {
     min-height: 651px;
-    padding: 20px 30px 5px;
-  }
-}
-
-.service__img {
-  aspect-ratio: 313 / 327;
-  margin: 0 0 16px;
-
-  @include vp-1366 {
-    aspect-ratio: 440 / 480;
-    margin: 0 0 19px;
-  }
-}
-
-.service__img img {
-  @include img-cover
-}
-
-.service__subtitle {
-  margin: 0;
-  font-weight: 500;
-  font-size: 18px;
-
-  @include vp-768 {
-    font-size: 25px;
-  }
-
-  @include vp-1366 {
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 1.2
   }
 }
 
