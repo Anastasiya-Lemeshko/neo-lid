@@ -1,20 +1,32 @@
 @use "index" as *;
 
-.catalog {
+.categories-list {
   @include block-padding;
 }
 
-.catalog__title {
+.categories-list__title {
   @include title;
 
   margin: 0 0 10px;
+  font-size: 30px;
+
+  @include vp-768 {
+    font-size: 42px;
+  }
 
   @include vp-1024 {
-    margin: 0 0 18px;
+    font-size: 62px;
   }
 }
 
-.catalog__list {
+.categories-list__breadcrumbs {
+  margin: 0 0 6px;
+}
+
+.categories-list__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -33,40 +45,13 @@
   }
 }
 
-.catalog__item {
-  margin-bottom: 9px;
-
-  @include vp-768 {
-    margin-bottom: 0;
-  }
-}
-
-.catalog__item:nth-child(n + 7) {
-  display: none;
-
-  @include vp-768 {
-    display: block;
-  }
-}
-
-.catalog__item:nth-child(n + 10) {
-  @include vp-768 {
-    display: none;
-  }
-
-  @include vp-1024 {
-    display: block;
-  }
-}
-
-.catalog__card {
+.categories-list__card {
   @include catalog-card;
 
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto;
-  align-items: center;
-  gap: 17px;
-  padding: 5px;
+  grid-template-rows: 1fr minmax(36px, auto);
+  justify-items: center;
+  min-height: 170px;
+  height: 100%;
 
   @include vp-768 {
     grid-template-columns: auto;
@@ -90,7 +75,7 @@
   }
 }
 
-.catalog__img {
+.categories-list__img {
   aspect-ratio: 142 / 105;
   width: calc(142px / $vp-390 * 100vw);
 
@@ -106,19 +91,20 @@
   }
 }
 
-.catalog__img img {
+.categories-list__img img {
   @include img-contain;
 }
 
-.catalog__subtitle {
+.categories-list__subtitle {
+  align-self: center;
   margin: 0;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.2;
-  word-break: break-word;
+  font-size: 14px;
+  text-align: center;
+  color: var(--black);
 
   @include vp-390 {
-    font-size: calc(18px / $vp-390 * 100vw);
+    font-size: calc(14px / $vp-390 * 100vw);
   }
 
   @include vp-768 {
@@ -129,24 +115,5 @@
 
   @include vp-1366 {
     font-size: 25px;
-  }
-}
-
-.catalog__link-more {
-  display: block;
-  width: 100%;
-  margin: 11px auto 0;
-
-  @include vp-390 {
-    font-size: calc(12px / $vp-390 * 100vw);
-  }
-
-  @include vp-768 {
-    font-size: 18px;
-    padding: 14px 15px 13px;
-  }
-
-  @include vp-1024 {
-    display: none;
   }
 }

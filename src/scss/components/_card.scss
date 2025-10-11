@@ -215,3 +215,7 @@
     font-size: 18px;
   }
 }
+
+.card__button-container>*:only-child {
+  grid-column: 1 / 3;
+}

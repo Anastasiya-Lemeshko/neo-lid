@@ -1,0 +1,40 @@
+@use "index" as *;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs__item {
+  position: relative;
+}
+
+.breadcrumbs__item:not(:last-child) {
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -4px;
+    content: "";
+    width: 1px;
+    height: calc(100% - 4px);
+    background-color: var(--grey-middle);
+  }
+}
+
+.breadcrumbs__link {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--grey-middle);
+
+  @include vp-768 {
+    font-size: 14px;
+  }
+}

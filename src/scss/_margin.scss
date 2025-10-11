@@ -91,3 +91,19 @@
     }
   }
 }
+
+// categories
+
+.categories {
+  &__categories-list {
+    margin: 5px 0 15px;
+
+    @include vp-1024 {
+      margin: 59px 0 37px;
+    }
+  }
+
+  &__popular {
+    margin: 0 0 35px;
+  }
+}

@@ -9,12 +9,12 @@
 @use "./components/select";
 @use "./components/search-form";
 @use "./components/card";
-@use "./components/catalog-card";
 @use "./components/review-card";
 @use "./components/service-card";
 @use "./components/rating";
 @use "./components/button-scroll-top";
 @use "./components/side-nav";
+@use "./components/breadcrumbs";
 
 // подключения секций страницы
 @use "./blocks/nav";
@@ -29,3 +29,5 @@
 @use "./blocks/about";
 @use "./blocks/form";
 @use "./blocks/footer";
+@use "./blocks/categories-list";
+@use "./blocks/latest";

@@ -1,0 +1,24 @@
+@use "interactive-states" as *;
+
+@mixin catalog-card {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr minmax(30px, auto);
+  align-items: end;
+  padding: 5px 5px 10px;
+  background-color: var(--bg-light);
+  color: var(--black);
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  @include hover-focus {
+    color: var(--white);
+    background-color: var(--accent-dark);
+    outline: none;
+  }
+
+  @include active {
+    color: var(--white);
+    background-color: var(--bg-primary);
+  }
+}
