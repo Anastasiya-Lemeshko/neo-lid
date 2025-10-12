@@ -1,18 +1,7 @@
 @use "index" as *;
 
 .categories-list__title {
-  @include title;
-
-  margin: 0 0 10px;
-  font-size: 30px;
-
-  @include vp-768 {
-    font-size: 42px;
-  }
-
-  @include vp-1024 {
-    font-size: 62px;
-  }
+  @include title-h1;
 }
 
 .categories-list__breadcrumbs {
@@ -80,7 +69,11 @@
 
 .categories-list__img {
   aspect-ratio: 142 / 105;
-  width: calc(142px / $vp-390 * 100vw);
+  width: 142px;
+
+  @include vp-390 {
+    width: calc(142px / $vp-390 * 100vw);
+  }
 
   @include vp-768 {
     aspect-ratio: 273 / 247;

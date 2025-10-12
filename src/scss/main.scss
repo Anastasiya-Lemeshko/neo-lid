@@ -6,9 +6,7 @@
 @use "./components/logo-image";
 @use "./components/button";
 @use "./components/button-swiper";
-@use "./components/select";
 @use "./components/search-form";
-@use "./components/card";
 @use "./components/review-card";
 @use "./components/service-card";
 @use "./components/rating";
@@ -20,7 +18,7 @@
 @use "./blocks/nav";
 @use "./blocks/promo";
 @use "./blocks/product";
-@use "./blocks/catalog";
+@use "./blocks/catalog-list";
 @use "./blocks/service";
 @use "./blocks/reviews";
 @use "./blocks/news";
@@ -31,3 +29,5 @@
 @use "./blocks/footer";
 @use "./blocks/categories-list";
 @use "./blocks/latest";
+@use "./blocks/subcatalog-list";
+@use "./blocks/catalog-filters";

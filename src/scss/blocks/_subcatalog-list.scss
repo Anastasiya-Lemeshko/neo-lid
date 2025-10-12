@@ -1,0 +1,136 @@
+@use "index" as *;
+
+.subcatalog-list__title {
+  @include title-h1;
+}
+
+.subcatalog-list__title-accent {
+  @include title-h1-accent;
+}
+
+.subcatalog-list__breadcrumbs {
+  margin: 0 0 9px;
+}
+
+.subcatalog-list__swiper-wrapper {
+  display: flex;
+  margin: 0 0 calc(2px / $vp-390 * 100vw);
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+  }
+
+  @include vp-1024 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.subcatalog-list__slide {
+  @include slide-layout;
+
+  &--additional {
+    @include vp-768 {
+      display: none;
+    }
+  }
+}
+
+.subcatalog-list__card {
+  @include catalog-card;
+
+  grid-template-rows: 1fr minmax(44px, auto);
+  gap: 13px;
+  min-height: 273px;
+  padding: 20px 5px 10px;
+
+  @include vp-768 {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr minmax(30px, auto);
+    align-items: end;
+    height: 100%;
+    min-height: 225px;
+    gap: 1px;
+    padding: 5px 5px 10px;
+  }
+
+  @include vp-1024 {
+    min-height: 200px;
+  }
+
+  @include vp-1366 {
+    grid-template-rows: 1fr minmax(43px, auto);
+    justify-items: center;
+    min-height: 348px;
+    padding: 5px 5px 15px;
+  }
+}
+
+.subcatalog-list__img {
+  aspect-ratio: 217 / 179;
+  width: 217px;
+
+  @include vp-390 {
+    width: calc(217px / $vp-390 * 100vw);
+  }
+
+  @include vp-768 {
+    aspect-ratio: 273 / 247;
+    width: unset;
+    align-self: end;
+  }
+
+  @include vp-1366 {
+    width: 273px;
+    height: 247px;
+  }
+}
+
+.subcatalog-list__img img {
+  @include img-contain;
+}
+
+.subcatalog-list__subtitle {
+  align-self: start;
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: var(--black);
+
+  @include vp-390 {
+    font-size: calc(18px / $vp-390 * 100vw);
+  }
+
+  @include vp-768 {
+    align-self: start;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  @include vp-1366 {
+    font-size: 25px;
+  }
+}
+
+.subcatalog-list__swiper-pagination {
+  @include swiper-pagination;
+
+  min-height: 20px;
+
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.subcatalog-list__pagination-bullet {
+  @include swiper-pagination-button;
+
+  @include vp-390 {
+    height: calc(5px / $vp-390 * 100vw);
+  }
+}

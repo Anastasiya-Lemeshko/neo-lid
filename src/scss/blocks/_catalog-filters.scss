@@ -1,0 +1,21 @@
+@use "index" as *;
+
+.catalog__filters {
+  @include block-padding;
+}
+
+.catalog-filters__tags {
+  @include tags-list;
+}
+
+.catalog-filters__select {
+  @include select-standard;
+
+  &--additional {
+    display: none;
+  }
+}
+
+.catalog-filters__view {
+  display: none;
+}

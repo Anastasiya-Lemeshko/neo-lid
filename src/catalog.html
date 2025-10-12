@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html', {"isHomepage": false})
+  <main class="page__main catalog">
+    <div class="catalog__subcatalog-list">
+      @include('partials/subcatalog-list.html')
+    </div>
+    <div class="catalog__catalog-filters">
+      @include('partials/catalog-filters.html')
+    </div>
+    <div class="catalog__latest">
+      @include('partials/latest.html')
+    </div>
+    <div class="catalog__callback-form">
+      @include('partials/callback-form.html')
+    </div>
+  </main>
+  @include('partials/footer.html')
+  @include('partials/modal-callback-form.html')
+</body>
+
+</html>

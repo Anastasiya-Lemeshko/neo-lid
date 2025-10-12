@@ -127,3 +127,15 @@
     }
   }
 }
+
+// catalog
+
+.catalog {
+  &__subcatalog-list {
+    margin: 5px 0 15px;
+
+    @include vp-1024 {
+      margin: -7px 0 40px;
+    }
+  }
+}

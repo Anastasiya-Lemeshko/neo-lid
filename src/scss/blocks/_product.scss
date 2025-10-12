@@ -33,13 +33,7 @@
 }
 
 .product__title-accent {
-  font-size: 16px;
-  color: var(--accent);
-  vertical-align: top;
-
-  @include vp-1366 {
-    font-size: 32px;
-  }
+  @include title-accent;
 }
 
 .product__link {
@@ -89,6 +83,10 @@
 
 .product__slide-container {
   @include slide-container;
+}
+
+.product__card {
+  @include card;
 }
 
 .product__swiper-pagination {

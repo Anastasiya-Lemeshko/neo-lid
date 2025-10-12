@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 1fr minmax(30px, auto);
+  justify-items: center;
   align-items: end;
   padding: 5px 5px 10px;
   background-color: var(--bg-light);

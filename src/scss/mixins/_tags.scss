@@ -1,0 +1,61 @@
+@use "interactive-states" as *;
+
+@mixin tag-link {
+  display: block;
+  padding: 10px 9px;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--accent-dark);
+
+  @include interactive-button-dark;
+}
+
+@mixin tag-link-more {
+  @include tag-link;
+
+  display: grid;
+  grid-template-columns: 11px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  color: var(--black);
+  background-color: var(--grey-light);
+
+  &::before {
+    grid-area: 1 / 1 / 2 / 2;
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    box-shadow: 5px 0 0 var(--accent), 10px 0 0 var(--accent);
+  }
+}
+
+@mixin tags-list {
+  &-title {
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text-dark);
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &-link {
+    @include tag-link;
+
+    &--more {
+      @include tag-link-more;
+    }
+  }
+}

@@ -36,3 +36,7 @@
 .latest__slide-container {
   @include slide-container;
 }
+
+.latest__card {
+  @include card-small;
+}

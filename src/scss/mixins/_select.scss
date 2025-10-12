@@ -1,0 +1,138 @@
+@use "breakpoint" as *;
+@use "popup" as *;
+@use "interactive-states" as *;
+
+@mixin select-small {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  @include vp-1366 {
+    margin: 8px 0 0;
+  }
+
+  &-label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &-button {
+    --arrow-color: var(--bg-primary);
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 17px;
+    gap: 2px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    background-color: var(--transparent);
+    transition: color 0.3s;
+    cursor: pointer;
+
+    @include hover-focus {
+      --arrow-color: var(--accent-dark);
+
+      color: var(--accent-dark);
+      outline: none;
+    }
+
+    @include active {
+      --arrow-color: var(--accent-dark-opacity);
+
+      color: var(--accent-dark-opacity);
+    }
+
+    &::after {
+      grid-area: 1 / 2 / 2 / 3;
+      content: "";
+      width: 17px;
+      height: 11px;
+      margin: 2px 0 0;
+      background-color: var(--arrow-color);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-image: url("../img/sprite.svg#city-select-arrow");
+      mask-size: 17px 11px;
+      transform: scaleY(1);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+  }
+
+  .select__list {
+    @include popup;
+
+    top: calc(100% + 5px);
+    left: 0;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 9px 20px;
+    list-style-type: none;
+    transform: scaleY(0);
+    opacity: 0.7;
+    transform-origin: top;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 15;
+
+    @include vp-1024 {
+      width: max-content;
+    }
+  }
+
+  .select__item {
+    @include interactive-link-dark;
+
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin: 0 0 5px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    text-align: left;
+    color: var(--black);
+    border: none;
+    transition: color 0.3s, opacity 0.3s;
+    cursor: pointer;
+  }
+
+  &.select--open .select__button::after {
+    transform: scaleY(-1);
+  }
+
+  &.select--open .select__list {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@mixin select-standard {
+  @include select-small;
+
+  display: block;
+
+  &-label {
+    display: block;
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text-dark);
+  }
+
+  &-button {
+    width: 100%;
+    padding: 13px 14px;
+    text-align: left;
+    border: 2px solid var(--bg-primary);
+  }
+
+  .select__list {
+    top: 100%;
+    max-height: 170px;
+    width: 100%;
+  }
+}

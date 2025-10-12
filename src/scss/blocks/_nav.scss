@@ -18,54 +18,7 @@
 }
 
 .nav__select {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-
-  @include vp-1366 {
-    margin: 8px 0 0;
-  }
-}
-
-.nav__select-label {
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.nav__select-button {
-  --arrow-color: var(--bg-primary);
-
-  grid-template-columns: 1fr 17px;
-  gap: 2px;
-  padding: 0;
-  font-weight: 500;
-  font-size: 14px;
-  border: none;
-  background-color: var(--transparent);
-  transition: color 0.3s;
-
-  @include hover-focus {
-    --arrow-color: var(--accent-dark);
-
-    color: var(--accent-dark);
-    outline: none;
-  }
-
-  @include active {
-    --arrow-color: var(--accent-dark-opacity);
-
-    color: var(--accent-dark-opacity);
-  }
-}
-
-.nav__select-button::after {
-  width: 17px;
-  height: 11px;
-  margin: 2px 0 0;
-  background-color: var(--arrow-color);
-  mask-image: url("../img/sprite.svg#city-select-arrow");
-  mask-size: 17px 11px;
-  transition: background-color 0.3s, transform 0.3s;
+  @include select-small;
 }
 
 .nav__bottom {
