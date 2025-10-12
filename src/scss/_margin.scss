@@ -99,11 +99,31 @@
     margin: 5px 0 15px;
 
     @include vp-1024 {
-      margin: 59px 0 37px;
+      margin: -7px 0 40px;
     }
   }
 
   &__popular {
     margin: 0 0 35px;
+
+    @include vp-1024 {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 35px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 40px;
+
+    @include vp-1024 {
+      margin: 0 0 56px;
+    }
   }
 }

@@ -1,9 +1,5 @@
 @use "index" as *;
 
-.categories-list {
-  @include block-padding;
-}
-
 .categories-list__title {
   @include title;
 
@@ -21,6 +17,10 @@
 
 .categories-list__breadcrumbs {
   margin: 0 0 6px;
+
+  @include vp-768 {
+    margin: 0 0 19px;
+  }
 }
 
 .categories-list__list {
@@ -33,14 +33,13 @@
 
   @include vp-768 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: stretch;
     gap: 10px;
     margin: 0 0 10px;
   }
 
   @include vp-1024 {
-    grid-template-columns: repeat(4, 1fr);
     margin: 0;
   }
 }
@@ -53,12 +52,16 @@
   min-height: 170px;
   height: 100%;
 
+  @include vp-390 {
+    min-height: calc(170px / $vp-390 * 100vw);
+  }
+
   @include vp-768 {
     grid-template-columns: auto;
     grid-template-rows: 1fr minmax(30px, auto);
     align-items: end;
     height: 100%;
-    min-height: 270px;
+    min-height: 225px;
     gap: 1px;
     padding: 5px 5px 10px;
   }
