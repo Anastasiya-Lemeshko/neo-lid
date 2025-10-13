@@ -71,11 +71,13 @@ const toggleBurgerMenu = () => {
   });
 };
 
-if (!DESKTOP_WIDTH.matches) {
+if (!DESKTOP_WIDTH.matches && navLinks && navLinks.length) {
   removeTabIndex(navLinks);
 }
 
 DESKTOP_WIDTH.addEventListener('change', () => {
+  if (navLinks && !navLinks.length) return;
+
   if (DESKTOP_WIDTH.matches) {
     setTabIndex(navLinks);
   } else {

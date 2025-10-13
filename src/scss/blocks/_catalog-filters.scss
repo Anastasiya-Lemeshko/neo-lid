@@ -19,3 +19,54 @@
 .catalog-filters__view {
   display: none;
 }
+
+.catalog-filters__filter-button {
+  display: grid;
+  grid-template-columns: 1fr 11px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-dark);
+  background-color: var(--transparent);
+  border: none;
+
+  &::after {
+    content: "";
+    width: 11px;
+    height: 10px;
+    mask-image: url("../img/sprite.svg#filter");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: 11px 10px;
+    background-color: var(--accent);
+  }
+}
+
+.catalog-filters__form {
+  position: relative;
+  padding: 28px 0;
+  background-color: var(--bg-light);
+}
+
+.catalog-filters__form-close {
+  @include close-button;
+
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 19px;
+  height: 18px;
+  background-color: var(--accent);
+
+  &::before,
+  &::after {
+    width: 10px;
+    height: 1px;
+  }
+}
+
+.catalog-filters__group-button {
+  @include filter-button;
+}

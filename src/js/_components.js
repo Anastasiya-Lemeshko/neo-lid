@@ -10,6 +10,7 @@ import { setModals } from './components/_modal.js';
 import { addScrollButton } from './components/_button-scroll-top.js';
 import { addSideNav } from './components/_side-nav.js';
 import { openVisibleFontCardContent, setAccordeonToggles } from './components/_accordion.js';
+// import { createRange } from'./components/_range.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -25,4 +26,5 @@ document.addEventListener('DOMContentLoaded', () => {
   addSideNav();
   openVisibleFontCardContent();
   setAccordeonToggles();
+  // createRange(0, 970, 1, 0, 900);
 });

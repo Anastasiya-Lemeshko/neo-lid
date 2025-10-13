@@ -243,13 +243,18 @@
   }
 
   &-visual-slide-container {
-    @include vp-1366 {
+    aspect-ratio: 139 / 116;
+
+    @include vp-768 {
       aspect-ratio: 209 / 193;
     }
   }
 
   &-visual-swiper-pagination {
+    display: none;
+
     @include vp-1366 {
+      display: grid;
       gap: 7px;
       padding: 0 9px 0 6px;
     }
@@ -261,7 +266,19 @@
     }
   }
 
+  &-article {
+    margin: 0 0 10px;
+    font-weight: 400;
+
+    @include vp-1366 {
+      font-weight: 500;
+    }
+  }
+
   &-title {
+    margin: 0 0 14px;
+    font-size: 14px;
+
     @include vp-1366 {
       margin: 0 0 10px;
       font-size: 18px;
@@ -270,8 +287,12 @@
   }
 
   &-button {
+    padding: 3px 15px;
+    font-weight: 400;
+    font-size: 12px;
+
     @include vp-1366 {
-      padding: 3px 15px;
+      font-weight: 500px;
       font-size: 14px;
     }
   }

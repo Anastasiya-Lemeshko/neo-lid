@@ -35,39 +35,14 @@
 
 .modal__close-button {
   @include interactive-opacity;
-
-  --cross-color: var(--white);
+  @include close-button;
 
   position: absolute;
   top: 24px;
   right: 15px;
-  width: 20px;
-  height: 20px;
-  background-color: var(--transparent);
-  border: none;
-  outline: 1px solid var(--transparent);
-  z-index: 1;
-  cursor: pointer;
 
   @include vp-1024 {
     width: 40px;
     height: 40px;
   }
-}
-
-.modal__close-button::before,
-.modal__close-button::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  content: "";
-  width: 18px;
-  height: 2px;
-  background-color: var(--cross-color);
-  z-index: 5;
-}
-
-.modal__close-button::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
 }

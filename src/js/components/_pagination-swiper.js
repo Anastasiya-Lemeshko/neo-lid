@@ -43,12 +43,12 @@ const initPaginationSwiper = () => {
           },
         },
 
-        // autoplay: {
-        //   delay: autoplayDelay,
-        //   stopOnLastSlide: false,
-        //   reverseDirection: false,
-        //   waitForTransition: true,
-        // },
+        autoplay: {
+          delay: autoplayDelay,
+          stopOnLastSlide: false,
+          reverseDirection: false,
+          waitForTransition: true,
+        },
 
         on: {
           init: function () {

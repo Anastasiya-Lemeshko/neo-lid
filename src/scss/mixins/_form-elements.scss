@@ -176,3 +176,17 @@
     --tick-display: block;
   }
 }
+
+@mixin filter-button {
+  width: 100%;
+  padding: 10px 30px 10px 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--white);
+  border: none;
+  background-color: var(--bg-primary);
+}

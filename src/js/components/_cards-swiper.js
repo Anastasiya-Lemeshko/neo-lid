@@ -72,7 +72,7 @@ const initCardsSwiper = () => {
     };
 
     const initImgSwiper = () => {
-      const imgSwipers = section.querySelectorAll('.card__visual-swiper');
+      const imgSwipers = section.querySelectorAll(`.${sectionClass}card-visual-swiper`);
 
       if (imgSwipers.length) {
         imgSwipers.forEach((imgSwiper) => {
@@ -85,10 +85,10 @@ const initCardsSwiper = () => {
             spaceBetween: 5,
 
             pagination: {
-              el: '.card__visual-swiper-pagination',
+              el: `.${sectionClass}card-visual-swiper-pagination`,
               bulletElement: 'button',
-              bulletClass: 'card__visual-pagination-bullet',
-              bulletActiveClass: 'card__visual-pagination-bullet--active',
+              bulletClass: `${sectionClass}card-visual-pagination-bullet`,
+              bulletActiveClass: `${sectionClass}card-visual-pagination-bullet--active`,
               clickable: true,
               renderBullet: function (index, className) {
                 return `<button type="button" class="${className}"><span class="visually-hidden">Слайд ${index + 1}</span></button>`;
