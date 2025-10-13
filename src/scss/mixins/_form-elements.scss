@@ -179,7 +179,7 @@
 
 @mixin filter-button {
   width: 100%;
-  padding: 10px 30px 10px 10px;
+  padding: 10px 70px 10px 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
@@ -189,4 +189,92 @@
   color: var(--white);
   border: none;
   background-color: var(--bg-primary);
+}
+
+@mixin input-number-reset {
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@mixin filter-input {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 5px;
+  background-color: var(--grey-light);
+
+  span,
+  input {
+    height: 36px;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    background-color: var(--grey-light);
+    border: none;
+    cursor: pointer;
+  }
+
+  span {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    min-width: 0;
+    width: 100%;;
+  }
+}
+
+@mixin filter-checkbox {
+  --label-color: var(--black);
+  --label-bg: var(--grey-light);
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+  }
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 36px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--label-color);
+    background-color: var(--label-bg);
+    cursor: pointer;
+  }
+
+  &:has(input:focus),
+  &:has(input:focus-visible) {
+    --label-color: var(--white);
+    --label-bg: var(--accent-dark-opacity);
+  }
+
+  @include hover {
+    --label-color: var(--white);
+    --label-bg: var(--accent-dark-opacity);
+  }
+
+  &:has(input:checked) {
+    --label-color: var(--white);
+    --label-bg: var(--accent-dark);
+  }
 }

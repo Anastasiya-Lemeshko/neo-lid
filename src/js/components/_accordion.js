@@ -15,7 +15,7 @@ const openCardDetails = (evt) => {
   const currentContent = evt.target.parentElement.querySelector('.accordion-content');
 
   currentContent.classList.toggle('accordion-content--opened');
-  evt.target.classList.toggle('button-accordeon--active');
+  evt.target.classList.toggle('accordion-button--active');
 
   if (currentContent.classList.contains('accordion-content--opened')) {
     currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;

@@ -26,3 +26,41 @@ export const SLIDES_COUNT = {
     'desktop': 1
   },
 };
+
+export const FILTER_VALUES = {
+  'default': {
+    'min': 0,
+    'max': 100,
+    'step': 1,
+    'start': 0,
+    'end': 100,
+  },
+  'price': {
+    'min': 2003242,
+    'max': 8234212,
+    'step': 1,
+    'start': 2003242,
+    'end': 8234212,
+  },
+  'height': {
+    'min': 2100,
+    'max': 2300,
+    'step': 1,
+    'start': 2100,
+    'end': 2300,
+  },
+  'width': {
+    'min': 1605,
+    'max': 2300,
+    'step': 1,
+    'start': 1605,
+    'end': 2300,
+  },
+  'length': {
+    'min': 1605,
+    'max': 2300,
+    'step': 1,
+    'start': 1605,
+    'end': 2300,
+  },
+};

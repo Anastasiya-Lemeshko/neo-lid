@@ -29,72 +29,172 @@
           <a class="catalog-filters__tags-link catalog-filters__tags-link--more" href="#">Смотреть еще</a>
         </li>
       </ul>
-      <div class="catalog-filters__wrapper">
-        <div class="catalog-filters__controls">
-          <div class="catalog-filters__selects">
-            <div class="catalog-filters__select select">
-              <label class="catalog-filters__select-label" for="select-sort">Сортировка</label>
-              <button class="catalog-filters__select-button select__button" type="button" aria-label="Выполнить сортировку.">По умолчанию</button>
-              <select class="select__original" id="select-sort" name="sort" aria-label="Варианты сортировки">
-                <option value="default">По умолчанию</option>
-                <option value="a-z">А-Я</option>
-                <option value="z-a">Я-А</option>
-                <option value="cheap">Дешевле</option>
-                <option value="expensive">Дороже</option>
-                <option value="rating">С высоким рейтингом</option>
-              </select>
-            </div>
-            <div class="catalog-filters__select catalog-filters__select--additional select">
-              <label class="catalog-filters__select-label" for="select-number">Сортировка</label>
-              <button class="catalog-filters__select-button select__button" type="button" aria-label="Выполнить сортировку."></button>
-              <select class="select__original" id="select-number" name="view-number" aria-label="Варианты сортировки">
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select>
-            </div>
+    </div>
+    <div class="catalog-filters__wrapper">
+      <div class="catalog-filters__controls">
+        <div class="catalog-filters__selects">
+          <div class="catalog-filters__select select">
+            <label class="catalog-filters__select-label" for="select-sort">Сортировка</label>
+            <button class="catalog-filters__select-button select__button" type="button" aria-label="Выполнить сортировку.">По умолчанию</button>
+            <select class="select__original" id="select-sort" name="sort" aria-label="Варианты сортировки">
+              <option value="default">По умолчанию</option>
+              <option value="a-z">А-Я</option>
+              <option value="z-a">Я-А</option>
+              <option value="cheap">Дешевле</option>
+              <option value="expensive">Дороже</option>
+              <option value="rating">С высоким рейтингом</option>
+            </select>
           </div>
-          <div class="catalog-filters__view">
-            <button class="catalog-filters__view-toggle catalog-filters__view-toggle--grid" type="button">
-              <span class="visually-hidden">Показать сеткой.</span>
-            </button>
-            <button class="catalog-filters__view-toggle catalog-filters__view-toggle--list" type="button">
-              <span class="visually-hidden">Показать подробным списком.</span>
-            </button>
-            <button class="catalog-filters__view-toggle catalog-filters__view-toggle--short" type="button">
-              <span class="visually-hidden">Показать коротким списком .</span>
-            </button>
+          <div class="catalog-filters__select catalog-filters__select--additional select">
+            <label class="catalog-filters__select-label" for="select-number">Сортировка</label>
+            <button class="catalog-filters__select-button select__button" type="button" aria-label="Выполнить сортировку."></button>
+            <select class="select__original" id="select-number" name="view-number" aria-label="Варианты сортировки">
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
           </div>
         </div>
-        <div class="catalog-filters__filter">
-          <button class="catalog-filters__filter-button" type="button">Поиск по фильтрам</button>
-          <form class="catalog-filters__form" action="" method="get">
-            <button class="catalog-filters__form-close" type="button">
-              <span class="visually-hidden">Закрыть фильтры.</span>
-            </button>
-            <div class="catalog-filters__form-groups">
-              <div class="catalog-filters__group">
-                <button class="catalog-filters__group-button">Цена ₽</button>
-                <div class="catalog-filters__group-range range">
-                  <div class="range__container"></div>
-                  <div class="range__inputs">
-                    <div class="range__price">
-                      <label class="range__label" aria-label="Минимальная цена">
-                        <input class="range__input range__input--min" type="number" name="min-price">
-                      </label>
-                    </div>
-                    <div class="range__price">
-                      <label class="range__label" aria-label="Максимальная цена">
-                        <input class="range__input range__input--max" type="number" name="max-price">
-                      </label>
-                    </div>
-                  </div>
-                </div>
+        <div class="catalog-filters__view">
+          <button class="catalog-filters__view-toggle catalog-filters__view-toggle--grid" type="button">
+            <span class="visually-hidden">Показать сеткой.</span>
+          </button>
+          <button class="catalog-filters__view-toggle catalog-filters__view-toggle--list" type="button">
+            <span class="visually-hidden">Показать подробным списком.</span>
+          </button>
+          <button class="catalog-filters__view-toggle catalog-filters__view-toggle--short" type="button">
+            <span class="visually-hidden">Показать коротким списком .</span>
+          </button>
+        </div>
+      </div>
+      <div class="catalog-filters__filter">
+        <button class="catalog-filters__filter-button" type="button">Поиск по фильтрам</button>
+        <form class="catalog-filters__form" action="" method="get">
+          <button class="catalog-filters__form-close" type="button">
+            <span class="visually-hidden">Закрыть фильтры.</span>
+          </button>
+          <div class="catalog-filters__form-groups">
+            <div class="catalog-filters__group">
+              <button class="catalog-filters__group-button accordion-button accordion-button--active">Цена ₽</button>
+              <div class="catalog-filters__group-range range accordion-content accordion-content--opened" data-filter="price">
+                <div class="range__container"></div>
+                <ul class="range__inputs">
+                  <li>
+                    <label class="range__label" aria-label="Минимальная цена">
+                      <span class="range__text">от</span>
+                      <input class="range__input range__input--min" type="number" name="min-price">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="range__label" aria-label="Максимальная цена">
+                      <span class="range__text">до</span>
+                      <input class="range__input range__input--max" type="number" name="max-price">
+                    </label>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="catalog-filters__form-buttons"></div>
-          </form>
-        </div>
+            <div class="catalog-filters__group">
+              <button class="catalog-filters__group-button accordion-button accordion-button--active">Страна производителя</button>
+              <div class="catalog-filters__group-range accordion-content accordion-content--opened">
+                <ul class="catalog-filters__inputs">
+                  <li>
+                    <label class="catalog-filters__field">
+                      <span class="catalog-filters__label">Китай</span>
+                      <input class="catalog-filters__input" type="checkbox" name="china">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="catalog-filters__field">
+                      <span class="catalog-filters__label">Россия</span>
+                      <input class="catalog-filters__input" type="checkbox" name="russia" checked>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalog-filters__group">
+              <button class="catalog-filters__group-button accordion-button accordion-button--active">Материал обработки</button>
+              <div class="catalog-filters__group-range accordion-content accordion-content--opened">
+                <ul class="catalog-filters__inputs">
+                  <li>
+                    <label class="catalog-filters__field">
+                      <span class="catalog-filters__label">ЛДСП,МДФ,ДСП</span>
+                      <input class="catalog-filters__input" type="checkbox" name="board">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="catalog-filters__field">
+                      <span class="catalog-filters__label">металл,чугун,сталь</span>
+                      <input class="catalog-filters__input" type="checkbox" name="metal">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalog-filters__group">
+              <button class="catalog-filters__group-button accordion-button accordion-button--active">Высота мм</button>
+              <div class="catalog-filters__group-range range accordion-content accordion-content--opened" data-filter="height">
+                <div class="range__container"></div>
+                <ul class="range__inputs">
+                  <li>
+                    <label class="range__label" aria-label="Минимальная высота">
+                      <span class="range__text">от</span>
+                      <input class="range__input range__input--min" type="number" name="min-height">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="range__label" aria-label="Максимальная высота">
+                      <span class="range__text">до</span>
+                      <input class="range__input range__input--max" type="number" name="max-height">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalog-filters__group">
+              <button class="catalog-filters__group-button accordion-button accordion-button--active">Ширина мм</button>
+              <div class="catalog-filters__group-range range accordion-content accordion-content--opened" data-filter="width">
+                <div class="range__container"></div>
+                <ul class="range__inputs">
+                  <li>
+                    <label class="range__label" aria-label="Минимальная ширина">
+                      <span class="range__text">от</span>
+                      <input class="range__input range__input--min" type="number" name="min-width">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="range__label" aria-label="Максимальная ширина">
+                      <span class="range__text">до</span>
+                      <input class="range__input range__input--max" type="number" name="max-width">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="catalog-filters__group">
+              <button class="catalog-filters__group-button accordion-button accordion-button--active">Длина мм</button>
+              <div class="catalog-filters__group-range range accordion-content accordion-content--opened" data-filter="length">
+                <div class="range__container"></div>
+                <ul class="range__inputs">
+                  <li>
+                    <label class="range__label" aria-label="Минимальная длина">
+                      <span class="range__text">от</span>
+                      <input class="range__input range__input--min" type="number" name="min-length">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="range__label" aria-label="Максимальная длина">
+                      <span class="range__text">до</span>
+                      <input class="range__input range__input--max" type="number" name="max-length">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-filters__form-buttons"></div>
+        </form>
       </div>
     </div>
   </div>

@@ -6,6 +6,12 @@
 
 .catalog-filters__tags {
   @include tags-list;
+
+  margin: 0 0 19px;
+}
+
+.catalog-filters__selects {
+  margin: 0 0 10px;
 }
 
 .catalog-filters__select {
@@ -24,7 +30,8 @@
   display: grid;
   grid-template-columns: 1fr 11px;
   align-items: center;
-  gap: 10px;
+  gap: 19px;
+  margin: 0 0 14px;
   padding: 5px 0;
   font-weight: 500;
   font-size: 14px;
@@ -46,7 +53,7 @@
 
 .catalog-filters__form {
   position: relative;
-  padding: 28px 0;
+  padding: 51px 0;
   background-color: var(--bg-light);
 }
 
@@ -67,6 +74,33 @@
   }
 }
 
+.catalog-filters__group {
+  margin: 0 0 20px;
+}
+
 .catalog-filters__group-button {
   @include filter-button;
+  @include accordion-plus;
+
+  margin: 0 0 3px;
+
+  &::before,
+  &::after {
+    width: 2px;
+    left: unset;
+    right: 40px;
+  }
+}
+
+.catalog-filters__inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-filters__field {
+  @include filter-checkbox;
 }
