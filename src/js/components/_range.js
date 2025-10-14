@@ -1,17 +1,33 @@
 import noUiSlider from 'nouislider';
 import { FILTER_VALUES } from './../_vars.js';
 
-const ranges = document.querySelectorAll('.range');
+const form = document.querySelector('.filter-form');
+const ranges = form ? form.querySelectorAll('.range') : null;
 
 const setFilterRange = () => {
-  if (!ranges && !ranges.length) return;
+  if (!ranges || !ranges.length) return;
+
+  const resetButton = form.querySelector('button[type="reset"]');
+
+  const resetAllSliders = () => {
+    ranges.forEach((range) => {
+      const sliderElement = range.querySelector('.range__container');
+
+      if (sliderElement.noUiSlider) {
+        sliderElement.noUiSlider.reset();
+      }
+    });
+  };
+
+  if (resetButton) {
+    resetButton.addEventListener('click', resetAllSliders);
+  }
 
   ranges.forEach((range) => {
     const sliderElement = range.querySelector('.range__container');
     const valueElement = range.querySelectorAll('.range__input');
     const valueMinElement = range.querySelector('.range__input--min');
     const valueMaxElement = range.querySelector('.range__input--max');
-    // const resetButton = document.querySelector('.filter__button--reset');
 
     const filterType = range.dataset.filter;
     let filterConfig = FILTER_VALUES[filterType];
@@ -19,6 +35,9 @@ const setFilterRange = () => {
     if (!filterConfig) {
       filterConfig = FILTER_VALUES['default'];
     }
+
+    valueMinElement.setAttribute('value', filterConfig.start);
+    valueMaxElement.setAttribute('value', filterConfig.end);
 
     const onSliderUpdate = () => {
       const valueArray = sliderElement.noUiSlider.get();
@@ -47,10 +66,6 @@ const setFilterRange = () => {
       });
     });
 
-    // resetButton.addEventListener('click', () => {
-    //   sliderElement.noUiSlider.reset();
-    // });
-
     createRange(
       filterConfig.min,
       filterConfig.max,
@@ -59,8 +74,6 @@ const setFilterRange = () => {
       filterConfig.end
     );
   });
-
 };
-
 
 export { setFilterRange };

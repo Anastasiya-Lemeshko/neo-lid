@@ -76,7 +76,7 @@ if (!DESKTOP_WIDTH.matches && navLinks && navLinks.length) {
 }
 
 DESKTOP_WIDTH.addEventListener('change', () => {
-  if (navLinks && !navLinks.length) return;
+  if (navLinks || !navLinks.length) return;
 
   if (DESKTOP_WIDTH.matches) {
     setTabIndex(navLinks);

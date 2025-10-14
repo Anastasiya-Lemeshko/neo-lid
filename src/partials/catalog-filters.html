@@ -1,41 +1,41 @@
-<section class="catalog-filters">
+<section class="filters">
   <div class="container">
     <h2 class="visually-hidden">Выбор токарных станков.</h2>
-    <div class="catalog-filters__tags">
-      <p class="catalog-filters__tags-title">Часто ищут</p>
-      <ul class="catalog-filters__tags-list">
-        <li class="catalog-filters__tags-item">
-          <a class="catalog-filters__tags-link" href="#">До 60 мм</a>
+    <div class="filters__tags">
+      <p class="filters__tags-title">Часто ищут</p>
+      <ul class="filters__tags-list">
+        <li class="filters__tags-item">
+          <a class="filters__tags-link" href="#">До 60 мм</a>
         </li>
-        <li class="catalog-filters__tags-item">
-          <a class="catalog-filters__tags-link" href="#">ЛДСП</a>
+        <li class="filters__tags-item">
+          <a class="filters__tags-link" href="#">ЛДСП</a>
         </li>
-        <li class="catalog-filters__tags-item">
-          <a class="catalog-filters__tags-link" href="#">Напольный</a>
+        <li class="filters__tags-item">
+          <a class="filters__tags-link" href="#">Напольный</a>
         </li>
-        <li class="catalog-filters__tags-item">
-          <a class="catalog-filters__tags-link" href="#">С ЧПУ</a>
+        <li class="filters__tags-item">
+          <a class="filters__tags-link" href="#">С ЧПУ</a>
         </li>
-        <li class="catalog-filters__tags-item">
-          <a class="catalog-filters__tags-link" href="#">SL 788</a>
+        <li class="filters__tags-item">
+          <a class="filters__tags-link" href="#">SL 788</a>
         </li>
-        <li class="catalog-filters__tags-item">
-          <a class="catalog-filters__tags-link" href="#">Wood Teck</a>
+        <li class="filters__tags-item">
+          <a class="filters__tags-link" href="#">Wood Teck</a>
         </li>
-        <li class="catalog-filters__tags-item">
-          <a class="catalog-filters__tags-link" href="#">L450</a>
+        <li class="filters__tags-item">
+          <a class="filters__tags-link" href="#">L450</a>
         </li>
-        <li class="catalog-filters__tags-item catalog-filters__tags-item--more">
-          <a class="catalog-filters__tags-link catalog-filters__tags-link--more" href="#">Смотреть еще</a>
+        <li class="filters__tags-item filters__tags-item--more">
+          <a class="filters__tags-link filters__tags-link--more" href="#">Смотреть еще</a>
         </li>
       </ul>
     </div>
-    <div class="catalog-filters__wrapper">
-      <div class="catalog-filters__controls">
-        <div class="catalog-filters__selects">
-          <div class="catalog-filters__select select">
-            <label class="catalog-filters__select-label" for="select-sort">Сортировка</label>
-            <button class="catalog-filters__select-button select__button" type="button" aria-label="Выполнить сортировку.">По умолчанию</button>
+    <div class="filters__wrapper">
+      <div class="filters__controls">
+        <div class="filters__selects">
+          <div class="filters__select select">
+            <label class="filters__select-label" for="select-sort">Сортировка</label>
+            <button class="filters__select-button select__button" type="button" aria-label="Выполнить сортировку.">По умолчанию</button>
             <select class="select__original" id="select-sort" name="sort" aria-label="Варианты сортировки">
               <option value="default">По умолчанию</option>
               <option value="a-z">А-Я</option>
@@ -45,9 +45,9 @@
               <option value="rating">С высоким рейтингом</option>
             </select>
           </div>
-          <div class="catalog-filters__select catalog-filters__select--additional select">
-            <label class="catalog-filters__select-label" for="select-number">Сортировка</label>
-            <button class="catalog-filters__select-button select__button" type="button" aria-label="Выполнить сортировку."></button>
+          <div class="filters__select filters__select--additional select">
+            <label class="filters__select-label" for="select-number">Сортировка</label>
+            <button class="filters__select-button select__button" type="button" aria-label="Выполнить сортировку."></button>
             <select class="select__original" id="select-number" name="view-number" aria-label="Варианты сортировки">
               <option value="25">25</option>
               <option value="50">50</option>
@@ -55,86 +55,84 @@
             </select>
           </div>
         </div>
-        <div class="catalog-filters__view">
-          <button class="catalog-filters__view-toggle catalog-filters__view-toggle--grid" type="button">
+        <div class="filters__view">
+          <button class="filters__view-toggle filters__view-toggle--grid" type="button">
             <span class="visually-hidden">Показать сеткой.</span>
           </button>
-          <button class="catalog-filters__view-toggle catalog-filters__view-toggle--list" type="button">
+          <button class="filters__view-toggle filters__view-toggle--list" type="button">
             <span class="visually-hidden">Показать подробным списком.</span>
           </button>
-          <button class="catalog-filters__view-toggle catalog-filters__view-toggle--short" type="button">
+          <button class="filters__view-toggle filters__view-toggle--short" type="button">
             <span class="visually-hidden">Показать коротким списком .</span>
           </button>
         </div>
       </div>
-      <div class="catalog-filters__filter">
-        <button class="catalog-filters__filter-button" type="button">Поиск по фильтрам</button>
-        <form class="catalog-filters__form" action="" method="get">
-          <button class="catalog-filters__form-close" type="button">
+      <div class="filters__filter filters__filter--opened">
+        <button class="filters__filter-button" type="button">Поиск по фильтрам</button>
+        <form class="filters__form filter-form" action="" method="get">
+          <button class="filters__form-close" type="button">
             <span class="visually-hidden">Закрыть фильтры.</span>
           </button>
-          <div class="catalog-filters__form-groups">
-            <div class="catalog-filters__group">
-              <button class="catalog-filters__group-button accordion-button accordion-button--active">Цена ₽</button>
-              <div class="catalog-filters__group-range range accordion-content accordion-content--opened" data-filter="price">
+          <div class="filters__form-groups">
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Цена ₽</button>
+              <div class="filters__group-range range accordion-content accordion-content--opened" data-filter="price">
                 <div class="range__container"></div>
                 <ul class="range__inputs">
                   <li>
                     <label class="range__label" aria-label="Минимальная цена">
-                      <span class="range__text">от</span>
                       <input class="range__input range__input--min" type="number" name="min-price">
                     </label>
                   </li>
                   <li>
                     <label class="range__label" aria-label="Максимальная цена">
-                      <span class="range__text">до</span>
                       <input class="range__input range__input--max" type="number" name="max-price">
                     </label>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="catalog-filters__group">
-              <button class="catalog-filters__group-button accordion-button accordion-button--active">Страна производителя</button>
-              <div class="catalog-filters__group-range accordion-content accordion-content--opened">
-                <ul class="catalog-filters__inputs">
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Страна производителя</button>
+              <div class="filters__group-range accordion-content accordion-content--opened">
+                <ul class="filters__inputs">
                   <li>
-                    <label class="catalog-filters__field">
-                      <span class="catalog-filters__label">Китай</span>
-                      <input class="catalog-filters__input" type="checkbox" name="china">
+                    <label class="filters__field">
+                      <span class="filters__label">Китай</span>
+                      <input class="filters__input" type="checkbox" name="china">
                     </label>
                   </li>
                   <li>
-                    <label class="catalog-filters__field">
-                      <span class="catalog-filters__label">Россия</span>
-                      <input class="catalog-filters__input" type="checkbox" name="russia" checked>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="catalog-filters__group">
-              <button class="catalog-filters__group-button accordion-button accordion-button--active">Материал обработки</button>
-              <div class="catalog-filters__group-range accordion-content accordion-content--opened">
-                <ul class="catalog-filters__inputs">
-                  <li>
-                    <label class="catalog-filters__field">
-                      <span class="catalog-filters__label">ЛДСП,МДФ,ДСП</span>
-                      <input class="catalog-filters__input" type="checkbox" name="board">
-                    </label>
-                  </li>
-                  <li>
-                    <label class="catalog-filters__field">
-                      <span class="catalog-filters__label">металл,чугун,сталь</span>
-                      <input class="catalog-filters__input" type="checkbox" name="metal">
+                    <label class="filters__field">
+                      <span class="filters__label">Россия</span>
+                      <input class="filters__input" type="checkbox" name="russia" checked>
                     </label>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="catalog-filters__group">
-              <button class="catalog-filters__group-button accordion-button accordion-button--active">Высота мм</button>
-              <div class="catalog-filters__group-range range accordion-content accordion-content--opened" data-filter="height">
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Материал обработки</button>
+              <div class="filters__group-range accordion-content accordion-content--opened">
+                <ul class="filters__inputs">
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">ЛДСП,МДФ,ДСП</span>
+                      <input class="filters__input" type="checkbox" name="board">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">металл,чугун,сталь</span>
+                      <input class="filters__input" type="checkbox" name="metal">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Высота мм</button>
+              <div class="filters__group-range range accordion-content accordion-content--opened" data-filter="height">
                 <div class="range__container"></div>
                 <ul class="range__inputs">
                   <li>
@@ -152,9 +150,9 @@
                 </ul>
               </div>
             </div>
-            <div class="catalog-filters__group">
-              <button class="catalog-filters__group-button accordion-button accordion-button--active">Ширина мм</button>
-              <div class="catalog-filters__group-range range accordion-content accordion-content--opened" data-filter="width">
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Ширина мм</button>
+              <div class="filters__group-range range accordion-content accordion-content--opened" data-filter="width">
                 <div class="range__container"></div>
                 <ul class="range__inputs">
                   <li>
@@ -172,9 +170,9 @@
                 </ul>
               </div>
             </div>
-            <div class="catalog-filters__group">
-              <button class="catalog-filters__group-button accordion-button accordion-button--active">Длина мм</button>
-              <div class="catalog-filters__group-range range accordion-content accordion-content--opened" data-filter="length">
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Длина мм</button>
+              <div class="filters__group-range range accordion-content accordion-content--opened" data-filter="length">
                 <div class="range__container"></div>
                 <ul class="range__inputs">
                   <li>
@@ -192,9 +190,681 @@
                 </ul>
               </div>
             </div>
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Вес нетто , кг</button>
+              <div class="filters__group-range accordion-content accordion-content--opened">
+                <ul class="filters__inputs">
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">100</span>
+                      <input class="filters__input" type="checkbox" name="100-kg">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">500</span>
+                      <input class="filters__input" type="checkbox" name="500-kg">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Вид</button>
+              <div class="filters__group-range accordion-content accordion-content--opened">
+                <ul class="filters__inputs">
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">Вальцовочный</span>
+                      <input class="filters__input" type="checkbox" name="rolling">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Тип</button>
+              <div class="filters__group-range accordion-content accordion-content--opened">
+                <ul class="filters__inputs">
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">Напольный</span>
+                      <input class="filters__input" type="checkbox" name="floor">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Диаметр отверстия в&nbsp;шпинделе</button>
+              <div class="filters__group-range accordion-content accordion-content--opened">
+                <ul class="filters__inputs">
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">45</span>
+                      <input class="filters__input" type="checkbox" name="diameter-45" checked>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">49</span>
+                      <input class="filters__input" type="checkbox" name="diameter-49">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">60</span>
+                      <input class="filters__input" type="checkbox" name="diameter-60">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">65</span>
+                      <input class="filters__input" type="checkbox" name="diameter-65">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">85</span>
+                      <input class="filters__input" type="checkbox" name="diameter-85">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">102</span>
+                      <input class="filters__input" type="checkbox" name="diameter-102">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filters__group">
+              <button class="filters__group-button accordion-button accordion-button--active">Мощность шпинделя, кВт</button>
+              <div class="filters__group-range accordion-content accordion-content--opened">
+                <ul class="filters__inputs">
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">5,5</span>
+                      <input class="filters__input" type="checkbox" name="power-5,5">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">7,5</span>
+                      <input class="filters__input" type="checkbox" name="power-7,5">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">7,5/11</span>
+                      <input class="filters__input" type="checkbox" name="power-7,5-11">
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">11</span>
+                      <input class="filters__input" type="checkbox" name="power-11" checked>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="filters__field">
+                      <span class="filters__label">15</span>
+                      <input class="filters__input" type="checkbox" name="power-15">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="catalog-filters__form-buttons"></div>
+          <div class="filters__form-buttons">
+            <button class="filters__button button" type="submit">Показать товары<span class="filters__count">12</span></button>
+            <button class="filters__button button" type="reset">Сбросить фильтр</button>
+          </div>
         </form>
+      </div>
+      <ul class="filters__list">
+        <li class="filters__card">
+          <div class="filters__card-visual">
+            <div class="filters__card-header">
+              <div class="filters__card-tags">
+                <p class="filters__card-tag filters__card-tag--sale">-19&nbsp;%</p>
+                <p class="filters__card-tag filters__card-tag--label">Популярный</p>
+              </div>
+              <div class="filters__card-user">
+                <button class="filters__card-user-button filters__card-user-button--compare">
+                  <span class="visually-hidden">Добавить к сравнению.</span>
+                </button>
+                <button class="filters__card-user-button filters__card-user-button--favorites">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </div>
+            </div>
+            <div class="filters__card-visual-swiper-container">
+              <div class="filters__card-visual-swiper swiper">
+                <ul class="filters__card-visual-swiper-wrapper swiper-wrapper">
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.webp 1x, ../img/products/product-1-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-1-mobile@1x.webp 1x, ../img/products/product-1-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.png 1x, ../img/products/product-1-tablet@2x.png 2x">
+                        <img src="../img/products/product-1-mobile@1x.png" srcset="../img/products/product-1-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                </ul>
+                <div class="filters__card-visual-swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__card-content">
+            <p class="filters__card-article">Код товара: 2061070410</p>
+            <a class="filters__card-title" href="#">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</a>
+            <p class="filters__card-prices">
+              <span class="filters__card-price filters__card-price--new">2476746 ₽</span>
+              <span class="filters__card-price filters__card-price--old">3054103 ₽</span>
+            </p>
+            <div class="filters__card-button-container">
+              <a class="filters__card-button button button--light" href="#">Быстрый заказ</a>
+              <button class="filters__card-button filters__card-button--cart button button--light" type="button">В корзину</button>
+            </div>
+          </div>
+        </li>
+        <li class="filters__card">
+          <div class="filters__card-visual">
+            <div class="filters__card-header">
+              <div class="filters__card-tags">
+                <p class="filters__card-tag filters__card-tag--sale">-19&nbsp;%</p>
+                <p class="filters__card-tag filters__card-tag--label">Популярный</p>
+              </div>
+              <div class="filters__card-user">
+                <button class="filters__card-user-button filters__card-user-button--compare">
+                  <span class="visually-hidden">Добавить к сравнению.</span>
+                </button>
+                <button class="filters__card-user-button filters__card-user-button--favorites">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </div>
+            </div>
+            <div class="filters__card-visual-swiper-container">
+              <div class="filters__card-visual-swiper swiper">
+                <ul class="filters__card-visual-swiper-wrapper swiper-wrapper">
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.webp 1x, ../img/products/product-1-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-1-mobile@1x.webp 1x, ../img/products/product-1-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.png 1x, ../img/products/product-1-tablet@2x.png 2x">
+                        <img src="../img/products/product-1-mobile@1x.png" srcset="../img/products/product-1-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                </ul>
+                <div class="filters__card-visual-swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__card-content">
+            <p class="filters__card-article">Код товара: 2061070410</p>
+            <a class="filters__card-title" href="#">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</a>
+            <p class="filters__card-prices">
+              <span class="filters__card-price filters__card-price--new">2476746 ₽</span>
+              <span class="filters__card-price filters__card-price--old">3054103 ₽</span>
+            </p>
+            <div class="filters__card-button-container">
+              <a class="filters__card-button button button--light" href="#">Быстрый заказ</a>
+              <button class="filters__card-button filters__card-button--cart button button--light" type="button">В корзину</button>
+            </div>
+          </div>
+        </li>
+        <li class="filters__card">
+          <div class="filters__card-visual">
+            <div class="filters__card-header">
+              <div class="filters__card-tags">
+                <p class="filters__card-tag filters__card-tag--sale">-19&nbsp;%</p>
+                <p class="filters__card-tag filters__card-tag--label">Популярный</p>
+              </div>
+              <div class="filters__card-user">
+                <button class="filters__card-user-button filters__card-user-button--compare">
+                  <span class="visually-hidden">Добавить к сравнению.</span>
+                </button>
+                <button class="filters__card-user-button filters__card-user-button--favorites">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </div>
+            </div>
+            <div class="filters__card-visual-swiper-container">
+              <div class="filters__card-visual-swiper swiper">
+                <ul class="filters__card-visual-swiper-wrapper swiper-wrapper">
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.webp 1x, ../img/products/product-1-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-1-mobile@1x.webp 1x, ../img/products/product-1-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.png 1x, ../img/products/product-1-tablet@2x.png 2x">
+                        <img src="../img/products/product-1-mobile@1x.png" srcset="../img/products/product-1-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                </ul>
+                <div class="filters__card-visual-swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__card-content">
+            <p class="filters__card-article">Код товара: 2061070410</p>
+            <a class="filters__card-title" href="#">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</a>
+            <p class="filters__card-prices">
+              <span class="filters__card-price filters__card-price--new">2476746 ₽</span>
+              <span class="filters__card-price filters__card-price--old">3054103 ₽</span>
+            </p>
+            <div class="filters__card-button-container">
+              <a class="filters__card-button button button--light" href="#">Быстрый заказ</a>
+              <button class="filters__card-button filters__card-button--cart button button--light" type="button">В корзину</button>
+            </div>
+          </div>
+        </li>
+        <li class="filters__card">
+          <div class="filters__card-visual">
+            <div class="filters__card-header">
+              <div class="filters__card-tags">
+                <p class="filters__card-tag filters__card-tag--sale">-19&nbsp;%</p>
+                <p class="filters__card-tag filters__card-tag--label">Популярный</p>
+              </div>
+              <div class="filters__card-user">
+                <button class="filters__card-user-button filters__card-user-button--compare">
+                  <span class="visually-hidden">Добавить к сравнению.</span>
+                </button>
+                <button class="filters__card-user-button filters__card-user-button--favorites">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </div>
+            </div>
+            <div class="filters__card-visual-swiper-container">
+              <div class="filters__card-visual-swiper swiper">
+                <ul class="filters__card-visual-swiper-wrapper swiper-wrapper">
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.webp 1x, ../img/products/product-1-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-1-mobile@1x.webp 1x, ../img/products/product-1-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.png 1x, ../img/products/product-1-tablet@2x.png 2x">
+                        <img src="../img/products/product-1-mobile@1x.png" srcset="../img/products/product-1-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                </ul>
+                <div class="filters__card-visual-swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__card-content">
+            <p class="filters__card-article">Код товара: 2061070410</p>
+            <a class="filters__card-title" href="#">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</a>
+            <p class="filters__card-prices">
+              <span class="filters__card-price filters__card-price--new">2476746 ₽</span>
+              <span class="filters__card-price filters__card-price--old">3054103 ₽</span>
+            </p>
+            <div class="filters__card-button-container">
+              <a class="filters__card-button button button--light" href="#">Быстрый заказ</a>
+              <button class="filters__card-button filters__card-button--cart button button--light" type="button">В корзину</button>
+            </div>
+          </div>
+        </li>
+        <li class="filters__card">
+          <div class="filters__card-visual">
+            <div class="filters__card-header">
+              <div class="filters__card-tags">
+                <p class="filters__card-tag filters__card-tag--sale">-19&nbsp;%</p>
+                <p class="filters__card-tag filters__card-tag--label">Популярный</p>
+              </div>
+              <div class="filters__card-user">
+                <button class="filters__card-user-button filters__card-user-button--compare">
+                  <span class="visually-hidden">Добавить к сравнению.</span>
+                </button>
+                <button class="filters__card-user-button filters__card-user-button--favorites">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </div>
+            </div>
+            <div class="filters__card-visual-swiper-container">
+              <div class="filters__card-visual-swiper swiper">
+                <ul class="filters__card-visual-swiper-wrapper swiper-wrapper">
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.webp 1x, ../img/products/product-1-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-1-mobile@1x.webp 1x, ../img/products/product-1-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.png 1x, ../img/products/product-1-tablet@2x.png 2x">
+                        <img src="../img/products/product-1-mobile@1x.png" srcset="../img/products/product-1-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                </ul>
+                <div class="filters__card-visual-swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__card-content">
+            <p class="filters__card-article">Код товара: 2061070410</p>
+            <a class="filters__card-title" href="#">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</a>
+            <p class="filters__card-prices">
+              <span class="filters__card-price filters__card-price--new">2476746 ₽</span>
+              <span class="filters__card-price filters__card-price--old">3054103 ₽</span>
+            </p>
+            <div class="filters__card-button-container">
+              <a class="filters__card-button button button--light" href="#">Быстрый заказ</a>
+              <button class="filters__card-button filters__card-button--cart button button--light" type="button">В корзину</button>
+            </div>
+          </div>
+        </li>
+        <li class="filters__card">
+          <div class="filters__card-visual">
+            <div class="filters__card-header">
+              <div class="filters__card-tags">
+                <p class="filters__card-tag filters__card-tag--sale">-19&nbsp;%</p>
+                <p class="filters__card-tag filters__card-tag--label">Популярный</p>
+              </div>
+              <div class="filters__card-user">
+                <button class="filters__card-user-button filters__card-user-button--compare">
+                  <span class="visually-hidden">Добавить к сравнению.</span>
+                </button>
+                <button class="filters__card-user-button filters__card-user-button--favorites">
+                  <span class="visually-hidden">Добавить в избранное.</span>
+                </button>
+              </div>
+            </div>
+            <div class="filters__card-visual-swiper-container">
+              <div class="filters__card-visual-swiper swiper">
+                <ul class="filters__card-visual-swiper-wrapper swiper-wrapper">
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.webp 1x, ../img/products/product-1-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-1-mobile@1x.webp 1x, ../img/products/product-1-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.png 1x, ../img/products/product-1-tablet@2x.png 2x">
+                        <img src="../img/products/product-1-mobile@1x.png" srcset="../img/products/product-1-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.png 1x, ../img/products/product-2-tablet@2x.png 2x">
+                        <img src="../img/products/product-2-mobile@1x.png" srcset="../img/products/product-2-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                  <li class="filters__card-visual-slide swiper-slide">
+                    <div class="filters__card-visual-slide-container">
+                      <picture>
+                        <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
+                        <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
+                        <source width="479" height="395" type="image/png" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.png 1x, ../img/products/product-3-tablet@2x.png 2x">
+                        <img src="../img/products/product-3-mobile@1x.png" srcset="../img/products/product-3-mobile@2x.png 2x" width="299" height="209" alt="Товар 1.">
+                      </picture>
+                    </div>
+                  </li>
+                </ul>
+                <div class="filters__card-visual-swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="filters__card-content">
+            <p class="filters__card-article">Код товара: 2061070410</p>
+            <a class="filters__card-title" href="#">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</a>
+            <p class="filters__card-prices">
+              <span class="filters__card-price filters__card-price--new">2476746 ₽</span>
+              <span class="filters__card-price filters__card-price--old">3054103 ₽</span>
+            </p>
+            <div class="filters__card-button-container">
+              <a class="filters__card-button button button--light" href="#">Быстрый заказ</a>
+              <button class="filters__card-button filters__card-button--cart button button--light" type="button">В корзину</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="filters__footer">
+        <section class="filters__pagination">
+          <h3 class="visually-hidden">Пагинация.</h3>
+          <ul class="filters__pagination-list">
+            <li class="filters__pagination-item">
+              <span class="filters__pagination-link filters__pagination-link--current">1</span>
+            </li>
+            <li class="filters__pagination-item">
+              <a class="filters__pagination-link" href="#">2</a>
+            </li>
+          </ul>
+          <a class="filters__pagination-button filters__pagination-button--next" href="#">>
+            <span class="visually-hidden">Вперёд</span>
+          </a>
+          <a class="filters__pagination-button filters__pagination-button--last" href="#">>|
+            <span class="visually-hidden">На последнюю страницу.</span>
+          </a>
+        </section>
+        <a class="filters__link-more" href="#">Показать больше</a>
       </div>
     </div>
   </div>

@@ -11,6 +11,7 @@ import { addScrollButton } from './components/_button-scroll-top.js';
 import { addSideNav } from './components/_side-nav.js';
 import { openVisibleFontCardContent, setAccordeonToggles } from './components/_accordion.js';
 import { setFilterRange } from'./components/_range.js';
+import { moveFilters } from './components/_filters.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -27,4 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
   addSideNav();
   openVisibleFontCardContent();
   setAccordeonToggles();
+  moveFilters();
 });
