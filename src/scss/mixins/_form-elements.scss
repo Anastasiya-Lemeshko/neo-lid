@@ -189,6 +189,27 @@
   color: var(--white);
   border: none;
   background-color: var(--bg-primary);
+
+  @include vp-768 {
+    font-size: 16px;
+  }
+
+  @include vp-1024 {
+    padding: 10px 35px 10px 10px;
+    font-size: 18px;
+  }
+
+  &::before,
+  &::after {
+    left: unset;
+    right: 40px;
+    width: 2px;
+
+    @include vp-1024 {
+      height: 20px;
+      right: 18px;
+    }
+  }
 }
 
 @mixin input-number-reset {

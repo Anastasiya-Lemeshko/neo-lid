@@ -66,6 +66,19 @@ const getSwiperClass = (swiper) => {
   return className ? className.replace('swiper', '') : null;
 };
 
+const getBlockClass = (element) => {
+  const className = element.className.split(' ').find(cls =>
+    cls.includes('__') && !cls.endsWith('__')
+  );
+
+  if (className) {
+    const prefix = className.split('__')[0] + '__';
+    return prefix;
+  }
+
+  return null;
+};
+
 const findActiveSlides = (index, activeIndex, numberOfActiveSlides) => {
   for (let i = 0; i < numberOfActiveSlides; i++) {
     if (index === activeIndex + i) {
@@ -119,6 +132,7 @@ export {
   addSwiperClass,
   removeSwiperClass,
   getSwiperClass,
+  getBlockClass,
   setSlidesTabIndex,
   checkVisibleSlides,
   debounce

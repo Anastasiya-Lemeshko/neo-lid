@@ -2,6 +2,10 @@
 
 .catalog {
   @include block-padding;
+
+  @include vp-1024 {
+    padding: 0;
+  }
 }
 
 .catalog__title {

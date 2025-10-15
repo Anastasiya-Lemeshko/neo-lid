@@ -1,0 +1,55 @@
+@use 'interactive-states' as *;
+
+@mixin view-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  &-toggle {
+    --icon-color: var(--accent-dark);
+    --icon: url("../img/sprite.svg#view-grid");
+
+    position: relative;
+    width: 46px;
+    height: 46px;
+    background-color: var(--bg-light);
+    transition: background-color 0.3s;
+    border: none;
+
+    @include hover-focus {
+      --icon-color: var(--accent);
+    }
+
+    @include active {
+      background-color: var(--accent-dark);
+    }
+
+    &.view-toggle--active {
+      --icon-color: var(--accent);
+    }
+
+    &--list {
+      --icon: url("../img/sprite.svg#view-list");
+    }
+
+    &--short {
+      --icon: url("../img/sprite.svg#view-short");
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+      width: 20px;
+      height: 20px;
+      mask-image: var(--icon);
+      mask-position: center;
+      mask-size: 100% 100%;
+      mask-repeat: no-repeat;
+      background-color: var(--icon-color);
+      transition: background-color 0.3s;
+    }
+  }
+}

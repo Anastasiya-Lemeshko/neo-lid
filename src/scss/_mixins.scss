@@ -12,11 +12,11 @@
 @forward "./mixins/swiper-pagination";
 @forward "./mixins/img-position";
 @forward "./mixins/accordion";
+@forward "./mixins/visually-hidden";
 
 // элементы
 
 @forward "./mixins/burger";
-@forward "./mixins/social-link";
 @forward "./mixins/popup";
 @forward "./mixins/icon";
 @forward "./mixins/links";
@@ -28,3 +28,4 @@
 @forward "./mixins/tags";
 @forward "./mixins/close-button";
 @forward "./mixins/pagination";
+@forward "./mixins/view-toggles";

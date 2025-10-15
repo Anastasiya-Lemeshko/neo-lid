@@ -10,6 +10,10 @@
 
 .subcatalog-list__breadcrumbs {
   margin: 0 0 9px;
+
+  @include vp-1024 {
+    margin: 0 0 38px;
+  }
 }
 
 .subcatalog-list__swiper-wrapper {
@@ -67,6 +71,7 @@
     justify-items: center;
     min-height: 348px;
     padding: 5px 5px 15px;
+    letter-spacing: 0.02em;
   }
 }
 

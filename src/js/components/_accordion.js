@@ -12,10 +12,11 @@ const openVisibleFontCardContent = () => {
 const openCardDetails = (evt) => {
   evt.preventDefault();
 
-  const currentContent = evt.target.parentElement.querySelector('.accordion-content');
+  const currentButton = evt.target.closest('button');
+  const currentContent = currentButton.parentElement.querySelector('.accordion-content');
 
   currentContent.classList.toggle('accordion-content--opened');
-  evt.target.classList.toggle('accordion-button--active');
+  currentButton.classList.toggle('accordion-button--active');
 
   if (currentContent.classList.contains('accordion-content--opened')) {
     currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;

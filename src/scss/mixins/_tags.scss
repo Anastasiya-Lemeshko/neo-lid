@@ -1,15 +1,35 @@
 @use "interactive-states" as *;
+@use "breakpoint" as *;
+@use "vars" as *;
 
 @mixin tag-link {
+  @include interactive-button-dark;
+
   display: block;
   padding: 10px 9px;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
+  text-align: center;
   color: var(--white);
   background-color: var(--accent-dark);
 
-  @include interactive-button-dark;
+  @include vp-1024 {
+    font-size: calc(18px / $vp-1920 * 100vw);
+    letter-spacing: 0.01em;
+  }
+
+  @include vp-1366 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10px 5px;
+  }
+
+  @include vp-1920 {
+    font-size: 18px;
+  }
 }
 
 @mixin tag-link-more {
@@ -22,6 +42,10 @@
   padding: 10px 24px;
   color: var(--black);
   background-color: var(--grey-light);
+
+  @include vp-1366 {
+    padding: 10px 5px;
+  }
 
   &::before {
     grid-area: 1 / 1 / 2 / 2;
@@ -40,6 +64,11 @@
     font-weight: 500;
     font-size: 18px;
     color: var(--text-dark);
+
+    @include vp-1024 {
+      margin: 0 0 13px;
+      font-size: 25px;
+    }
   }
 
   &-list {
@@ -49,6 +78,13 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    @include vp-1366 {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      align-items: stretch;
+      gap: 10px;
+    }
   }
 
   &-link {

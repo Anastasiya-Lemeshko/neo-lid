@@ -8,10 +8,6 @@
   align-items: center;
   gap: 3px;
 
-  @include vp-1366 {
-    margin: 8px 0 0;
-  }
-
   &-label {
     font-weight: 500;
     font-size: 14px;
@@ -134,5 +130,18 @@
     top: 100%;
     max-height: 170px;
     width: 100%;
+    background-color: var(--grey-light);
+
+    @include vp-1024 {
+      max-height: 500px;
+    }
+  }
+
+  .select__item {
+    background-color: var(--grey-light);
+
+    @include vp-1024 {
+      margin: 0 0 15px;
+    }
   }
 }
