@@ -5,6 +5,8 @@ const filtersWrapper = filters ? filters.querySelector('.filters__wrapper') : nu
 const controls = filters ? filters.querySelector('.filters__controls') : null;
 const filterPanel = filters ? filters.querySelector('.filters__filter') : null;
 const filterButton = filters ? filters.querySelector('.filters__filter-button') : null;
+const filterView = filters ? filters.querySelector('.filters__view') : null;
+const filterList = filters ? filters.querySelector('.filters__list') : null;
 let isFilterMoved = false;
 
 const moveFilters = () => {
@@ -31,6 +33,35 @@ if (filterButton && filterPanel) {
   });
 }
 
+const setFilterToggles = () => {
+  if (!filterView || !filterList) return;
+
+  const animateToggle = () => {
+    filterList.classList.add('filters__list--hidden');
+    setTimeout(() => {
+      filterList.classList.remove('filters__list--hidden');
+    }, 500);
+  };
+
+  filterView.addEventListener('click', (evt) => {
+    const button = evt.target.closest('button');
+
+    filterView.querySelector('.view-toggle--active').classList.remove('view-toggle--active');
+    button.classList.add('view-toggle--active');
+
+    if (button.classList.contains('filters__view-toggle--list')) {
+      filterList.classList.add('filters__list--list');
+      filterList.classList.remove('filters__list--grid', 'filters__list--short');
+    } else if (button.classList.contains('filters__view-toggle--short')) {
+      filterList.classList.remove('filters__list--grid', 'filters__list--list');
+      filterList.classList.add('filters__list--short');
+    } else {
+      filterList.classList.remove('filters__list--short', 'filters__list--list');
+      filterList.classList.add('filters__list--grid');
+    }
+  });
+};
+
 TABLET_WIDTH.addEventListener('change', moveFilters);
 
-export { moveFilters };
+export { moveFilters, setFilterToggles };

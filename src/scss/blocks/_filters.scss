@@ -17,7 +17,7 @@
 .filters__wrapper {
   @include vp-768 {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: auto 1fr;
     grid-template-rows: minmax(0, min-content) auto;
     gap: 40px 10px;
   }
@@ -271,6 +271,8 @@
   margin: 0 0 21px;
   padding: 0;
   list-style-type: none;
+  transition: opacity 1s;
+  opacity: 1;
 
   &--grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -281,6 +283,12 @@
   }
 
   &--list {
+    @include vp-1024 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  &--short {
     @include vp-1024 {
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
@@ -313,6 +321,13 @@
   }
 }
 
+.filters__list--short .filters__card {
+  @include card-transformer;
+
+  @include vp-1024 {
+    @include card-short;
+  }
+}
 
 .filters__footer {
   display: flex;
