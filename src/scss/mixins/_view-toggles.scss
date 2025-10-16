@@ -13,18 +13,21 @@
     width: 46px;
     height: 46px;
     background-color: var(--bg-light);
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, outline 0.3s;
     border: none;
+    outline: 1px solid var(--transparent);
 
     @include hover-focus {
       --icon-color: var(--accent);
+
+      outline: 1px solid var(--accent-dark);
     }
 
     @include active {
       background-color: var(--accent-dark);
     }
 
-    &.view-toggle--active {
+    &--active {
       --icon-color: var(--accent);
     }
 

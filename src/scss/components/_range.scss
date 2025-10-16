@@ -24,31 +24,29 @@
 .noUi-handle {
   border: none;
   border-radius: 50%;
-  background: white;
+  background-color: white;
   box-shadow: 0 3px 6px -3px var(--grey-shadow);
-  ;
+  transition: background-color 0.3s;
   cursor: pointer;
-  transition: none;
 
-  // &:focus-visible,
-  // &:hover {
-  //   background: radial-gradient(circle, #ddd5f3 8px, white 8px);
-  // }
+  @include hover-focus {
+    outline: none;
+    background-color: var(--accent-dark);
+  }
 
-  // &:active {
-  //   background: radial-gradient(circle, $accent-primary 8px, white 8px);
-  // }
+  @include active {
+    background-color: var(--bg-primary);
+  }
 }
 
-// [disabled] .noUi-connect {
-//   background: $grey-basic;
-// }
+[disabled] .noUi-connect {
+  background-color: var(--grey-middle);
+}
 
-// [disabled].noUi-handle,
-// [disabled] .noUi-handle {
-//   border: 2px solid $grey-basic;
-//   background-color: $white;
-// }
+[disabled].noUi-handle,
+[disabled] .noUi-handle {
+  background-color: var(--grey-light);
+}
 
 .noUi-horizontal .noUi-handle {
   width: 24px;

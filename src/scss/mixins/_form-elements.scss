@@ -106,6 +106,19 @@
   }
 }
 
+@mixin input-number-reset {
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
 @mixin control {
   --border: 1px solid var(--black);
   --bg-color: var(--transparent);
@@ -189,6 +202,7 @@
   color: var(--white);
   border: none;
   background-color: var(--bg-primary);
+  transition: background-color 0.3s;
 
   @include vp-768 {
     font-size: 16px;
@@ -210,36 +224,54 @@
       right: 18px;
     }
   }
-}
 
-@mixin input-number-reset {
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    appearance: none;
-    margin: 0;
-  }
-
-  &[type='number'] {
-    -moz-appearance: textfield;
+  @include hover-focus {
+    outline: none;
+    background-color: var(--accent-dark);
   }
 }
 
 @mixin filter-input {
+  --label-color: var(--black);
+  --label-bg: var(--grey-light);
+
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   gap: 2px;
   height: 36px;
   padding: 5px 10px;
-  background-color: var(--grey-light);
+  background-color: var(--label-bg);
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &:has(input:focus),
+  &:has(input:focus-visible) {
+    --label-color: var(--white);
+    --label-bg: var(--accent-dark-opacity);
+  }
+
+  @include hover {
+    --label-color: var(--white);
+    --label-bg: var(--accent-dark-opacity);
+  }
+
+  &:has(input:disabled) {
+    --label-color: var(--grey-light);
+    --label-bg: var(--grey-middle);
+
+    pointer-events: none;
+    cursor: default;
+  }
 
   span,
   input {
     font-weight: 500;
     font-size: 14px;
     text-align: center;
-    background-color: var(--grey-light);
+    color: var(--label-color);
+    background-color: var(--transparent);
+    transition: color 0.3s;
     border: none;
     cursor: pointer;
   }
@@ -259,6 +291,10 @@
       grid-column: 1 / 3;
       text-align: center;
     }
+
+    @include focus {
+      outline: none;
+    }
   }
 
   &:has(span) {
@@ -276,6 +312,10 @@
     height: 1px;
     margin: -1px;
     clip: rect(0 0 0 0);
+
+    @include focus {
+      outline: none;
+    }
   }
 
   span {
@@ -290,6 +330,7 @@
     line-height: 1.2;
     color: var(--label-color);
     background-color: var(--label-bg);
+    transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
   }
 
@@ -307,5 +348,24 @@
   &:has(input:checked) {
     --label-color: var(--white);
     --label-bg: var(--accent-dark);
+
+    @include hover {
+      --label-color: var(--white);
+      --label-bg: var(--bg-primary);
+    }
+  }
+
+  &:has(input:checked:focus),
+  &:has(input:checked:focus-visible) {
+    --label-color: var(--white);
+    --label-bg: var(--bg-primary);
+  }
+
+  &:has(input:disabled) {
+    --label-color: var(--grey-light);
+    --label-bg: var(--grey-middle);
+
+    pointer-events: none;
+    cursor: default;
   }
 }

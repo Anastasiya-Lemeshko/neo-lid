@@ -138,4 +138,60 @@
       margin: -6px 0 20px;
     }
   }
+
+  &__catalog-filters {
+    margin: 0 0 3px;
+
+    @include vp-1024 {
+      margin: 0 0 41px;
+    }
+  }
+
+  &__faq {
+    margin: 0 0 12px;
+
+    @include vp-1024 {
+      margin: 0 0 71px;
+    }
+  }
+
+  &__reviews {
+    margin: 0 0 5px;
+
+    @include vp-1024 {
+      margin: 0 0 19px;
+    }
+  }
+
+  &__news {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 33px;
+    }
+  }
+
+  &__companies {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 72px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 18px;
+
+    @include vp-1024 {
+      margin: 0 0 61px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 79px;
+    }
+  }
 }

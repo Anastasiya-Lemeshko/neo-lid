@@ -46,8 +46,8 @@ const setFilterToggles = () => {
   filterView.addEventListener('click', (evt) => {
     const button = evt.target.closest('button');
 
-    filterView.querySelector('.view-toggle--active').classList.remove('view-toggle--active');
-    button.classList.add('view-toggle--active');
+    filterView.querySelector('.filters__view-toggle--active').classList.remove('filters__view-toggle--active');
+    button.classList.add('filters__view-toggle--active');
 
     if (button.classList.contains('filters__view-toggle--list')) {
       filterList.classList.add('filters__list--list');

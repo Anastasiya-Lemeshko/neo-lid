@@ -105,7 +105,6 @@
   font-weight: 500;
   font-size: 18px;
   text-align: center;
-  color: var(--black);
 
   @include vp-390 {
     font-size: calc(18px / $vp-390 * 100vw);
