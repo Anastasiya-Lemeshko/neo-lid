@@ -92,6 +92,7 @@
     text-align: left;
     color: var(--black);
     border: none;
+    background-color: var(--transparent);
     transition: color 0.3s, opacity 0.3s;
     cursor: pointer;
   }
@@ -138,7 +139,7 @@
   }
 
   .select__item {
-    background-color: var(--grey-light);
+    background-color: var(--transparent);
 
     @include vp-1024 {
       margin: 0 0 15px;

@@ -49,16 +49,24 @@ const setFilterToggles = () => {
     filterView.querySelector('.filters__view-toggle--active').classList.remove('filters__view-toggle--active');
     button.classList.add('filters__view-toggle--active');
 
-    if (button.classList.contains('filters__view-toggle--list')) {
-      filterList.classList.add('filters__list--list');
-      filterList.classList.remove('filters__list--grid', 'filters__list--short');
-    } else if (button.classList.contains('filters__view-toggle--short')) {
-      filterList.classList.remove('filters__list--grid', 'filters__list--list');
-      filterList.classList.add('filters__list--short');
-    } else {
-      filterList.classList.remove('filters__list--short', 'filters__list--list');
-      filterList.classList.add('filters__list--grid');
-    }
+    filterList.classList.remove('filters__list--animated');
+    filterList.classList.add('filters__list--hidden');
+
+    setTimeout(() => {
+      if (button.classList.contains('filters__view-toggle--list')) {
+        filterList.classList.add('filters__list--list');
+        filterList.classList.remove('filters__list--grid', 'filters__list--short');
+      } else if (button.classList.contains('filters__view-toggle--short')) {
+        filterList.classList.remove('filters__list--grid', 'filters__list--list');
+        filterList.classList.add('filters__list--short');
+      } else {
+        filterList.classList.remove('filters__list--short', 'filters__list--list');
+        filterList.classList.add('filters__list--grid');
+      }
+
+      filterList.classList.add('filters__list--animated');
+      filterList.classList.remove('filters__list--hidden');
+    }, 50);
   });
 };
 

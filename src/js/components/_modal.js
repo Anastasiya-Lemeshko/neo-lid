@@ -51,7 +51,8 @@ const setModals = () => {
 
     const toggleModal = () => {
       if (button) {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (evt) => {
+          evt.preventDefault();
           openModal();
         });
       }

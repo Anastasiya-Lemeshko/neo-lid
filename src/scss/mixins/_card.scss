@@ -663,7 +663,7 @@
   }
 
   &-button {
-    @include interactive-button-dark;
+    @include interactive-button-light;
 
     display: flex;
     align-items: center;
@@ -767,6 +767,8 @@
   }
 
   &-details-button {
+    @include interactive-link-light;
+
     padding: 0;
     font-weight: 500;
     font-size: 18px;
