@@ -95,3 +95,33 @@
     }
   }
 }
+
+@mixin tag-for-card {
+  display: grid;
+  align-items: center;
+  min-width: 77px;
+  min-height: 20px;
+  margin: 0;
+  padding: 3px 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--accent);
+
+  @include vp-1366 {
+    min-width: 138px;
+    min-height: 36px;
+  }
+
+  &--label {
+    padding: 5px 4px 3px;
+    font-size: 10px;
+    background-color: var(--accent-light);
+
+    @include vp-1366 {
+      font-size: 14px;
+    }
+  }
+}

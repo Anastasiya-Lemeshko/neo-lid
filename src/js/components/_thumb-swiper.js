@@ -15,10 +15,9 @@ const setThumbSwiper = () => {
     const sectionClass = getSwiperClass(mainSwiper);
 
     const thumbSwiperContainer = new Swiper(thumbSwiper, {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 10,
       watchSlidesProgress: true,
-      centeredSlides: true,
       centeredSlidesBounds: true
     });
 
