@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html', {"isHomepage": false})
+  <main class="page__main product-page">
+    <div class="product-page__details">
+      @include('partials/details.html')
+    </div>
+  </main>
+  @include('partials/footer.html')
+  @include('partials/modal-callback-form.html')
+</body>
+
+</html>

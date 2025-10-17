@@ -5,8 +5,8 @@ import { TABLET_WIDTH } from "../_vars.js";
 
 const sections = document.querySelectorAll('[data-swiper="pagination"]');
 
-const initPaginationSwiper = () => {
-  if (!sections.length) return;
+const setPaginationSwiper = () => {
+  if (!sections || !sections.length) return;
 
   sections.forEach((section, index) => {
     const sectionClass = getSwiperClass(section);
@@ -76,4 +76,4 @@ const initPaginationSwiper = () => {
   });
 };
 
-export { initPaginationSwiper };
+export { setPaginationSwiper };

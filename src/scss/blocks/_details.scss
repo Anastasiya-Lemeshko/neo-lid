@@ -1,0 +1,63 @@
+@use "index" as *;
+
+.details__card {
+  background-color: var(--bg-light);
+}
+
+.details__swiper-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.details__slide {
+  @include slide-layout;
+}
+
+.details__slide-container {
+  @include slide-container;
+
+  aspect-ratio: 311 / 192;
+}
+
+.details__slide-container img {
+  @include img-contain;
+}
+
+.details__thumb-swiper-wrapper {
+  margin: 0 0 15px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.details__thumb-slide {
+  animation: appear 0.3s;
+}
+
+.details__thumb-slide--active {
+  display: none;
+}
+
+.details__thumb-slide-container {
+  @include slide-container;
+
+  aspect-ratio: 311 / 192;
+}
+
+.details__thumb-slide-container img {
+  @include img-contain;
+}
+
+.details__swiper-container .details__scrollbar {
+  @include swiper-scrollbar;
+}
+
+
+
+.details__thumb-slide:first-of-type {
+  background-color: red;
+}
+
+.details__thumb-slide:nth-of-type(2) {
+  background-color: blue;
+}

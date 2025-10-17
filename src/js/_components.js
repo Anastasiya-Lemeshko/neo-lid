@@ -4,7 +4,7 @@ import { moveNav } from './components/_move-nav.js';
 import { openPopup } from './components/_nav-popup.js';
 import { initPromoSwiper } from './components/_promo-swiper.js';
 import { initCardsSwiper } from './components/_cards-swiper.js';
-import { initPaginationSwiper } from './components/_pagination-swiper.js';
+import { setPaginationSwiper } from './components/_pagination-swiper.js';
 import { moveForm } from './components/_move-form.js';
 import { setModals } from './components/_modal.js';
 import { addScrollButton } from './components/_button-scroll-top.js';
@@ -12,6 +12,7 @@ import { addSideNav } from './components/_side-nav.js';
 import { openVisibleFontCardContent, setAccordeonToggles } from './components/_accordion.js';
 import { setFilterRange } from'./components/_range.js';
 import { moveFilters, setFilterToggles } from './components/_filters.js';
+import { setThumbSwiper } from './components/_thumb-swiper.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setFilterRange();
   initPromoSwiper();
   initCardsSwiper();
-  initPaginationSwiper();
+  setPaginationSwiper();
   moveForm();
   setModals();
   addScrollButton();
@@ -30,4 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setAccordeonToggles();
   moveFilters();
   setFilterToggles();
+  setThumbSwiper();
 });
