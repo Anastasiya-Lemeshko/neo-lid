@@ -18,7 +18,13 @@ const setThumbSwiper = () => {
       slidesPerView: 3,
       spaceBetween: 10,
       watchSlidesProgress: true,
-      centeredSlidesBounds: true
+      centeredSlidesBounds: true,
+
+      breakpoints: {
+        780: {
+          slidesPerView: 6,
+        },
+      }
     });
 
     const initMainSwiper = () => {

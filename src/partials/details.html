@@ -1,7 +1,7 @@
 <section class="details">
   <div class="container">
-    <h1 class="subcatalog-list__title">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</h1>
-    <ol class="subcatalog-list__breadcrumbs breadcrumbs">
+    <h1 class="details__title">MetalTec CK 40x750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</h1>
+    <ol class="details__breadcrumbs breadcrumbs">
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="index.html">Главная</a>
       </li>
@@ -189,15 +189,15 @@
 
           <div class="details__card-char">
             <a class="details__char-link" href="#">Все&nbsp;характеристики</a>
-            <fieldset class="details__modal">
-              <legend class="details__modal-text">Выберите модель</legend>
-              <label>
-                <span>Пром</span>
+            <fieldset class="details__model">
+              <legend class="details__model-text">Выберите модель</legend>
+              <label class="details__model-radio">
+                <span>ПРОМ</span>
                 <input type="radio" name="model" value="prom" checked>
               </label>
-              <label>
+              <label class="details__model-radio">
                 <span>Стандартная</span>
-                <input type="radio" name="model" value="basic" checked>
+                <input type="radio" name="model" value="basic">
               </label>
             </fieldset>
             <ul class="details__badges">
@@ -212,35 +212,38 @@
               </li>
             </ul>
           </div>
-        </div>
 
-        <div class="details__card-desc">
-          <span>Назначение</span>
-          <p>Токарный станок с&nbsp;ЧПУ MetalTec CK&nbsp;40x750 предназначен для производства различных типов металлических изделий. Данный тип станков широко используется в&nbsp;образовательных учреждениях, на&nbsp;опытных производствах, на&nbsp;предприятиях металлообрабатывающей отрасли.</p>
-        </div>
+          <div class="details__card-desc">
+            <span>Назначение</span>
+            <p>Токарный станок с&nbsp;ЧПУ MetalTec CK&nbsp;40x750 предназначен для производства различных типов металлических изделий. Данный тип станков широко используется в&nbsp;образовательных учреждениях, на&nbsp;опытных производствах, на&nbsp;предприятиях металлообрабатывающей отрасли.</p>
+          </div>
 
-        <div class="details__user-panel">
-          <a class="details__user-button button" href="#">Быстрый заказ</a>
-          <button class="details__user-button button" type="button">В&nbsp;корзину</button>
-          <a class="details__user-button button" href="#">Купить в&nbsp;лизинг</a>
-          <a class="details__user-button button" href="#">Нашли дешевле</a>
-        </div>
+          <div class="details__user-panel">
+            <a class="details__user-button button button--dark" href="#">Быстрый заказ</a>
+            <button class="details__user-button button button--dark" type="button">В&nbsp;корзину</button>
+            <a class="details__user-button button button--dark" href="#">Купить в&nbsp;лизинг</a>
+            <a class="details__user-button button button--dark" href="#">Нашли дешевле</a>
+          </div>
 
-        <div class="details__actions">
-          <button class="details__actions-button" type="button">Сравнить</button>
-          <button class="details__actions-button" type="button">В&nbsp;избранное</button>
-          <button class="details__actions-button" type="button">Поделиться</button>
-          <div class="details__brend">
-            <div class="details__brend-img">
-              <picture>
-                <source width="69" height="70" type="image/webp" srcset="../img/companies/metaltec-small@1x.webp 1x, ../img/companies/metaltec-small@2x.webp 2x">
-                <img src="../img/companies/metaltec-small@1x.jpg" srcset="../img/companies/metaltec-small@2x.jpg 2x" width=69" height="70" alt="Логотип MetalTec.">
-              </picture>
+          <div class="details__actions">
+            <div class="details__actions-buttons">
+              <button class="details__actions-button details__actions-button--compare" type="button">Сравнить</button>
+              <button class="details__actions-button details__actions-button--favorites" type="button">В&nbsp;избранное</button>
+              <button class="details__actions-button details__actions-button--share" type="button">Поделиться</button>
             </div>
-            <p class="details__brend-text">Производитель</p>
-            <p class="details__brend-name">MetalTec</p>
+            <div class="details__brend">
+              <div class="details__brend-img">
+                <picture>
+                  <source width="69" height="70" type="image/webp" srcset="../img/companies/metaltec-small@1x.webp 1x, ../img/companies/metaltec-small@2x.webp 2x">
+                  <img src="../img/companies/metaltec-small@1x.jpg" srcset="../img/companies/metaltec-small@2x.jpg 2x" width=69" height="70" alt="Логотип MetalTec.">
+                </picture>
+              </div>
+              <p class="details__brend-text">Производитель</p>
+              <p class="details__brend-name">MetalTec</p>
+            </div>
           </div>
         </div>
+
 
     </section>
 

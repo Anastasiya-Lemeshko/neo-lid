@@ -13,6 +13,7 @@ import { openVisibleFontCardContent, setAccordeonToggles } from './components/_a
 import { setFilterRange } from'./components/_range.js';
 import { moveFilters, setFilterToggles } from './components/_filters.js';
 import { setThumbSwiper } from './components/_thumb-swiper.js';
+import { moveDetails } from './components/_move-details.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -32,4 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
   moveFilters();
   setFilterToggles();
   setThumbSwiper();
+  moveDetails();
 });

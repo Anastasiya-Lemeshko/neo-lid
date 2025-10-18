@@ -195,3 +195,15 @@
     }
   }
 }
+
+// product-page
+
+.product-page {
+  &__details {
+    margin: 15px 0 13px;
+
+    @include vp-1024 {
+      margin: -6px 0 20px;
+    }
+  }
+}
