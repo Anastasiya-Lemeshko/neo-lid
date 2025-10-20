@@ -16,6 +16,14 @@
   }
 }
 
+.details__card {
+  margin: 0 0 30px;
+
+  @include vp-1024 {
+    margin: 0 0 44px;
+  }
+}
+
 .details__card-wrapper {
   background-color: var(--bg-light);
 
@@ -184,7 +192,7 @@
 .details__swiper-container .details__scrollbar {
   @include swiper-scrollbar;
 
-  margin: 0 10px 10px;
+  margin: 0 10px 11px;
 
   @include vp-1366 {
     margin: 0px 19px 6px;
@@ -308,7 +316,7 @@
 }
 
 .details__card-char {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
 
   @include vp-1366 {
     margin: 0;
@@ -586,4 +594,744 @@
   font-weight: 600;
   font-size: 35px;
   line-height: 1.2;
+}
+
+
+// табы
+
+.details__tablinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  @include vp-1024 {
+    grid-template-columns: repeat(6, 1fr);
+    margin: 0 0 30px;
+  }
+}
+
+.details__tablink {
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  background-color: var(--bg-light);
+
+  @include vp-1024 {
+    padding: 10px 10px 9px;
+    font-size: 14px;
+  }
+
+  @include vp-1366 {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &.tabs__tablink--active {
+    color: var(--white);
+    background-color: var(--accent-dark);
+  }
+}
+
+.details__subtitle {
+  margin: 0 0 20px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @include vp-768 {
+    font-size: 30px;
+  }
+
+  @include vp-1024 {
+    margin: 0 0 40px;
+    font-size: 40px;
+  }
+
+  @include vp-1366 {
+    font-size: 50px;
+  }
+}
+
+// описание
+
+.details__description {
+  margin: 0 0 20px;
+
+  @include vp-1024 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+    margin: 0 0 40px;
+  }
+
+  @include vp-1366 {
+    margin: 0 0 62px;
+  }
+}
+
+.details__description-group {
+  padding: 10px;
+  background-color: var(--bg-light);
+
+  @include vp-768 {
+    padding: 15px 20px;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0;
+    }
+  }
+
+  p {
+    max-width: 618px;
+    margin: 0;
+    font-size: 14px;
+
+    @include vp-1024 {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    @include vp-1366 {
+      font-size: 18px;
+    }
+  }
+
+  p + p {
+    margin-top: 15px;
+
+    @include vp-1024 {
+      margin-top: 25px;
+    }
+  }
+
+  h3 {
+    max-width: 618px;
+    margin: 0 0 8px;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    @include vp-1024 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+  }
+
+  ul {
+    max-width: 490px;
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style-type: none;
+
+    @include vp-1366 {
+      padding: 0 0 0 27px;
+      font-size: 18px;
+    }
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 8px;
+      left: -12px;
+      content: "";
+      width: 3px;
+      height: 3px;
+      background-color: var(--black);
+      border-radius: 50%;
+
+      @include vp-1024 {
+        top: 10px;
+        left: -15px;
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+
+  li:not(:last-child) {
+    margin: 0 0 2px;
+  }
+}
+
+.details__features-swiper-wrapper {
+  display: flex;
+  margin: 0 0 7px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0;
+  }
+
+  @include vp-1024 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.details__features-slide {
+  @include slide-layout;
+}
+
+
+.details__features-card {
+  @include slide-container;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px;
+  background-color: var(--bg-light);
+
+  @include vp-1024 {
+    padding: 15px;
+  }
+
+  @include vp-1366 {
+    padding: 26px 30px 33px;
+  }
+
+  h3 {
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--bg-primary);
+
+    @include vp-768 {
+      min-height: 53px;
+      margin: 0 0 16px;
+      font-weight: 600;
+      font-size: 22px;
+    }
+
+    @include vp-1366 {
+      min-height: 80px;
+      font-size: calc(25px / $vp-1640 * 100vw);
+    }
+
+    @include vp-1640 {
+      font-size: 25px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 10px;
+
+    @include vp-768 {
+      margin-top: 15px;
+    }
+
+    @include vp-1366 {
+      margin-top: 25px;
+    }
+  }
+}
+
+.details__features-img {
+  aspect-ratio: 313 / 327;
+  margin: 0 0 16px;
+
+  @include vp-1366 {
+    aspect-ratio: 442 / 477;
+    margin: 0 0 32px;
+  }
+}
+
+.details__features-img img {
+  @include img-cover
+}
+
+.details__features-swiper-pagination {
+  @include swiper-pagination;
+
+  display: flex;
+  justify-content: space-between;
+  min-height: 20px;
+
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.details__features-pagination-bullet {
+  @include swiper-pagination-button;
+
+  width: 100%;
+
+  @include vp-390 {
+    height: calc(5px / $vp-390 * 100vw);
+  }
+}
+
+// характеристики
+
+.details__char {
+  padding: 10px 10px 30px;
+  background-color: var(--bg-light);
+
+  @include vp-1366 {
+    padding: 22px 33px 20px;
+  }
+}
+
+.details__char .details__subtitle {
+  @include vp-1024 {
+    font-size: 35px;
+  }
+
+  @include vp-1366 {
+    font-size: 35px;
+  }
+}
+
+.details__char-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1024 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 498px));
+    grid-auto-flow: dense;
+    gap: 40px 107px;
+  }
+}
+
+.details__char-group {
+  max-width: 498px;
+
+  &:not(:last-child) {
+    margin: 0 0 25px;
+
+    @include vp-1024 {
+      margin: 0;
+    }
+  }
+
+  p {
+    margin: 0 0 14px;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include vp-1024 {
+      margin: 0 0 8px;
+      font-size: 25px;
+    }
+  }
+
+  dl {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 11px 0 8px;
+    border-bottom: 1px solid var(--grey-middle);
+
+    @include vp-1024 {
+      padding: 10px 0 4px;
+    }
+  }
+
+  dt {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--grey-middle);
+
+    @include vp-1024 {
+      font-size: 18px;
+    }
+  }
+
+  dd {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--black);
+    text-align: right;
+
+    @include vp-1024 {
+      font-size: 18px;
+    }
+  }
+}
+
+// видео
+
+.details__video-player {
+  display: grid;
+  padding: 15px 30px;
+  background-color: var(--grey-light);
+
+  @include vp-1024 {
+    padding: 30px 60px;
+  }
+}
+
+.details__video-img {
+  grid-area: 1 / 1 / 2 / 2;
+  aspect-ratio: 320 / 146;
+
+  @include vp-768 {
+    aspect-ratio: 1397 / 638;
+  }
+}
+
+.details__video-img img {
+  @include img-cover;
+}
+
+.details__video-iframe-wrap {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.details__video-iframe-wrap--hidden {
+  display: none;
+}
+
+.details__video-button-play {
+  @include video-button;
+}
+
+// комплектация
+
+.details__equipment-list {
+  width: 100%;
+  margin: 0 0 10px;
+
+  thead {
+    display: block;
+    margin: 0 0 11px;
+  }
+
+  th {
+    padding: 11px 12px 9px;
+
+    &:first-child {
+      grid-column: 1 / 3;
+      padding: 0;
+
+      @include vp-1024 {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+
+  tr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: var(--bg-light);
+
+    @include vp-1024 {
+      grid-template-columns: 1fr 200px 200px;
+    }
+
+    @include vp-1366 {
+      grid-template-columns: 1fr 246px 246px;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 20px;
+    }
+  }
+
+  thead tr,
+  tfoot tr {
+    background-color: var(--transparent);
+  }
+
+  td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 5px 7px;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+
+    &:first-child {
+      padding-left: 15px;
+      font-size: 18px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      grid-column: 1 / 3;
+
+      @include vp-1024 {
+        grid-column: 1 / 2;
+        justify-content: flex-start;
+        font-size: 25px;
+        text-align: left;
+      }
+    }
+  }
+
+  tfoot {
+    display: block;
+    margin: 10px 0 0;
+  }
+}
+
+.details__equipment-in {
+  position: relative;
+  display: block;
+  width: 19px;
+  height: 19px;
+  background-color: var(--bg-primary);
+  margin: 0 auto;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 11px;
+    height: 1px;
+    background-color: var(--white);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+.details__features-prices {
+  width: 100%;
+  padding: 9px 3px;
+  border: 2px solid var(--bg-primary);
+}
+
+.details__features-price {
+  margin: 0;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+
+  @include vp-768 {
+    font-size: 14px;
+  }
+
+  @include vp-1024 {
+    font-size: 16px;
+  }
+
+  @include vp-1366 {
+    font-size: 18px;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 5px;
+  }
+
+  &--sale {
+    color: var(--accent);
+  }
+}
+
+.details__dimensions {
+  dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 756px;
+    margin: 0;
+    padding: 8px 21px 7px 23px;
+    background-color: var(--bg-light);
+
+    &:not(:last-child) {
+      margin: 0 0 10px;
+    }
+  }
+
+  dt,
+  dd {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+
+    @include vp-768 {
+      font-size: 18px;
+    }
+
+    @include vp-1024 {
+      font-size: 20px;
+    }
+
+    @include vp-1366 {
+      font-size: 25px;
+    }
+  }
+}
+
+// отзывы
+
+.details__tabcontent {
+  .reviews {
+    padding: 0;
+  }
+}
+
+// доставка и оплата
+
+.details__pay-delivery .details__subtitle,
+.details__pay .details__subtitle {
+  margin: 0 0 10px;
+}
+
+.details__pay-delivery-product {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  @include vp-1024 {
+    margin: 0 0 40px;
+    font-size: 25px;
+  }
+}
+
+.details__delivery {
+  padding: 25px 0;
+  color: var(--white);
+  background-color: var(--bg-primary);
+
+  @include vp-1024 {
+    padding: 50px 0;
+  }
+}
+
+.details__delivery-text {
+  max-width: 700px;
+  margin: 0 0 30px;
+
+  @include vp-1024 {
+    max-width: 1010px;
+    margin: 0 0 62px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    @include vp-1024 {
+      font-weight: 500;
+      font-size: 25px;
+    }
+  }
+
+  p + p {
+    margin-top: 10px;
+  }
+}
+
+.details__delivery-companies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1024 {
+    grid-template-columns: repeat(6, 1fr);
+    margin: 0 0 40px;
+  }
+}
+
+.details__delivery-company {
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+  background-color: var(--bg-light);
+
+  @include vp-768 {
+    padding: 20px;
+  }
+}
+
+.details__delivery-company img {
+  @include img-contain;
+}
+
+.details__delivery-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.details__delivery-item {
+  padding: 20px;
+  background-color: var(--bg-light);
+
+  @include vp-1366 {
+    padding: 53px 40px;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 10px;
+
+    @include vp-768 {
+      margin: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--accent-dark);
+
+    @include vp-1024 {
+      font-size: 20px;
+    }
+
+    @include vp-1366 {
+      font-size: 25px;
+    }
+  }
+}
+
+.details__pay {
+  margin: 50px 0 0;
+
+  @include vp-1024 {
+    margin: 100px 0 0;
+  }
 }

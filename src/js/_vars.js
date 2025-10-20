@@ -8,6 +8,8 @@ export default {
 export const TABLET_WIDTH = window.matchMedia('(min-width: 768px)');
 export const DESKTOP_WIDTH = window.matchMedia('(min-width: 1366px)');
 
+export const COUNT_GRID_COLUMNS = 2;
+
 export const SLIDES_COUNT = {
   'default': 1,
   'promo': {
