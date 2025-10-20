@@ -1,5 +1,6 @@
 @use "breakpoint" as *;
 @use "interactive-states" as *;
+@use "icon" as *;
 
 @mixin input {
   --transform: scaleY(1) translateY(0);
@@ -107,7 +108,6 @@
 }
 
 @mixin input-number-reset {
-
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     appearance: none;
@@ -187,6 +187,46 @@
     --border: 1px solid var(--accent);
     --bg-color: var(--accent);
     --tick-display: block;
+  }
+}
+
+@mixin input-file {
+  --bg-color: var(--black);
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 19px 1fr;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  span:first-child {
+    @include icon-small-plus;
+
+    background-color: var(--accent-dark);
+  }
+
+  span:last-of-type {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    transition: color 0.3s;
+
+    @include vp-768 {
+      font-size: 25px;
+    }
+  }
+
+  &:has(input:focus),
+  &:has(input:focus-visible) {
+    --bg-color: var(--accent-dark);
+  }
+
+  @include hover {
+    --bg-color: var(--accent-dark);
   }
 }
 

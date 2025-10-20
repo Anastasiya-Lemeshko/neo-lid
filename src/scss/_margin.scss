@@ -200,10 +200,58 @@
 
 .product-page {
   &__details {
-    margin: 15px 0 13px;
+    margin: 15px 0 31px;
 
     @include vp-1024 {
-      margin: -6px 0 20px;
+      margin: -6px 0 80px;
+    }
+  }
+
+  &__callback-form-with-file {
+    margin: 0 0 39px;
+
+    @include vp-1024 {
+      margin: 0 0 80px;
+    }
+  }
+
+  &__service {
+    margin: 0 0 30px;
+
+    @include vp-1024 {
+      margin: 0 0 87px;
+    }
+  }
+
+  &__additional-equipment {
+    margin: 0 0 35px;
+
+    @include vp-1024 {
+      margin: 0 0 79px;
+    }
+  }
+
+  &__analogues {
+    margin: 0 0 30px;
+
+    @include vp-1024 {
+      margin: 0 0 80px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 56px;
+
+    @include vp-1024 {
+      margin: 0 0 80px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 40px;
+
+    @include vp-1024 {
+      margin: 0 0 80px;
     }
   }
 }

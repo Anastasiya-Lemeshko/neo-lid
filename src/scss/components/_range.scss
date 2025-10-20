@@ -24,7 +24,7 @@
 .noUi-handle {
   border: none;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--white);
   box-shadow: 0 3px 6px -3px var(--grey-shadow);
   transition: background-color 0.3s;
   cursor: pointer;

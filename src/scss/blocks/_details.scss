@@ -79,6 +79,8 @@
 }
 
 .details__rating {
+  @include interactive-link-dark;
+
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
@@ -173,6 +175,12 @@
 
 .details__thumb-slide {
   animation: appear 0.3s;
+  transition: opacity 0.3s;
+  cursor: pointer;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 }
 
 .details__thumb-slide--active {
@@ -195,7 +203,7 @@
   margin: 0 10px 11px;
 
   @include vp-1366 {
-    margin: 0px 19px 6px;
+    margin: 0 19px 6px;
   }
 }
 
@@ -324,6 +332,8 @@
 }
 
 .details__char-link {
+  @include interactive-link-dark;
+
   display: block;
   margin: 0 0 22px;
   font-weight: 500;
@@ -527,6 +537,7 @@
   color: var(--button-color);
   background-color: var(--transparent);
   border: none;
+  transition: color 0.3s;
 
   @include vp-768 {
     font-size: 14px;
@@ -541,10 +552,13 @@
     mask-size: 18px 17px;
     mask-position: center;
     mask-repeat: no-repeat;
+    transition: background-color 0.3s;
   }
 
   @include hover-focus {
     --button-color: var(--accent-dark);
+
+    outline: none;
   }
 
   @include active {
@@ -1096,28 +1110,7 @@
 }
 
 .details__equipment-in {
-  position: relative;
-  display: block;
-  width: 19px;
-  height: 19px;
-  background-color: var(--bg-primary);
-  margin: 0 auto;
-
-  &::before,
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    content: "";
-    width: 11px;
-    height: 1px;
-    background-color: var(--white);
-  }
-
-  &::after {
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
+  @include icon-small-plus;
 }
 
 .details__features-prices {
