@@ -85,26 +85,12 @@
   }
 
   @include vp-1024 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 
 .companies__slide {
   @include slide-layout;
-
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-
-  @include vp-768 {
-    gap: 10px;
-  }
-}
-
-.companies__slide:nth-child(n + 4) {
-  @include vp-768 {
-    display: none;
-  }
 }
 
 .companies__slide-container {

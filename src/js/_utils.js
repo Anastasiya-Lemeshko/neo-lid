@@ -35,6 +35,8 @@ const removeTabIndex = (array) => {
   });
 };
 
+const getSlidesCount = swiperList => swiperList.querySelectorAll('li').length;
+
 const addSwiperClass = (swiper, el) => {
   const swiperWrapper = swiper.querySelector(`.${el}swiper-wrapper`);
   const swiperSlides = swiper.querySelectorAll(`.${el}slide`);
@@ -129,6 +131,7 @@ export {
   getScrollWidth,
   setTabIndex,
   removeTabIndex,
+  getSlidesCount,
   addSwiperClass,
   removeSwiperClass,
   getSwiperClass,

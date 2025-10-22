@@ -17,6 +17,21 @@ export const SLIDES_COUNT = {
     'tablet': 2,
     'desktop': 2
   },
+  'companies': {
+    'mobile': 2,
+    'tablet': 2,
+    'desktop': 2
+  },
+  'delivery': {
+    'mobile': 2,
+    'tablet': 2,
+    'desktop': 2
+  },
+  'latest': {
+    'mobile': 2,
+    'tablet': 2,
+    'desktop': 2
+  },
   'cards': {
     'mobile': 1,
     'tablet': 1,
@@ -26,6 +41,11 @@ export const SLIDES_COUNT = {
     'mobile': 1,
     'tablet': 1,
     'desktop': 1
+  },
+  'navigation': {
+    'mobile': 1,
+    'tablet': 2,
+    'desktop': 2
   },
 };
 

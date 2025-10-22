@@ -22,13 +22,13 @@
 
   @include vp-768 {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 10px;
     margin: 0;
   }
 
   @include vp-1366 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 
@@ -43,19 +43,13 @@
   }
 }
 
-.latest__slide:nth-child(n+3) {
+.latest__slide:nth-child(n+5) {
   @include vp-768 {
     display: none;
   }
 
   @include vp-1366 {
     display: flex;
-  }
-}
-
-.latest__slide:nth-child(n+4) {
-  @include vp-1366 {
-    display: none;
   }
 }
 

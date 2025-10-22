@@ -51,34 +51,14 @@
 
   @include vp-768 {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
     margin: 0;
-  }
-
-  @include vp-1366 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 .product__slide {
   @include slide-layout;
-}
-
-.product__slide:nth-child(n + 3) {
-  @include vp-768 {
-    display: none;
-  }
-
-  @include vp-1366 {
-    display: flex;
-  }
-}
-
-.product__slide:nth-child(n + 4) {
-  @include vp-1366 {
-    display: none;
-  }
 }
 
 .product__slide-container {

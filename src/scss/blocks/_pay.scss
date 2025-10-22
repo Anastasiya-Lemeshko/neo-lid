@@ -1,0 +1,109 @@
+@use "index" as *;
+
+.pay {
+  @include block-padding;
+}
+
+.pay__title {
+  @include title;
+
+  margin: 0 0 10px;
+}
+
+.pay__text {
+  margin: 0 0 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.pay__details {
+  margin: 0 0 30px;
+}
+
+.pay__list {
+  margin: 0;
+  padding: 10px;
+  list-style-type: none;
+  background-color: var(--bg-light);
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  @include vp-1024 {
+    padding: 32px 30px;
+  }
+}
+
+.pay__item {
+  min-height: 162px;
+  padding: 10px;
+  color: var(--white);
+  background-color: var(--bg-primary);
+
+  @include vp-768 {
+    display: grid;
+  }
+
+  @include vp-1024 {
+    min-height: 217px;
+    padding: 10px 20px;
+  }
+
+  @include vp-1366 {
+    padding: 21px 79px 18px;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 10px;
+
+    @include vp-768 {
+      margin: 0;
+    }
+  }
+
+  h3 {
+    max-width: 70%;
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include vp-768 {
+      max-width: 100%;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    @include vp-1024 {
+      font-size: 25px;
+    }
+  }
+
+  p {
+    max-width: 215px;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+
+    @include vp-768 {
+      align-self: end;
+      max-width: 100%;
+      font-size: 14px;
+    }
+
+    @include vp-1024 {
+      font-size: 18px;
+    }
+  }
+
+  p + p {
+    margin-top: 10px;
+  }
+}

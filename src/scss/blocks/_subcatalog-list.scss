@@ -36,12 +36,6 @@
 
 .subcatalog-list__slide {
   @include slide-layout;
-
-  &--additional {
-    @include vp-768 {
-      display: none;
-    }
-  }
 }
 
 .subcatalog-list__card {

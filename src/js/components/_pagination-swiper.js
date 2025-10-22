@@ -10,6 +10,8 @@ const setPaginationSwiper = () => {
 
   sections.forEach((section, index) => {
     const sectionClass = getSwiperClass(section);
+    const sectionName = sectionClass.includes('__') ? sectionClass.split('__')[0] : sectionClass;
+
     let swiperContainer = null;
     let autoplayDelay = 10000 + index * 1000;
 
@@ -29,8 +31,8 @@ const setPaginationSwiper = () => {
         direction: 'horizontal',
         speed: 500,
         allowTouchMove: true,
-        slidesPerView: 1,
-        spaceBetween: 10,
+        slidesPerView: checkVisibleSlides(sectionName),
+        spaceBetween: 20,
 
         pagination: {
           el: `.${sectionClass}swiper-pagination`,

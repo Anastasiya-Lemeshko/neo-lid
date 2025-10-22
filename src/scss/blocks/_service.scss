@@ -44,24 +44,6 @@
   @include slide-layout;
 }
 
-.service__slide:nth-child(n + 6) {
-  display: none;
-
-  @include vp-768 {
-    display: block;
-  }
-}
-
-.service__slide:nth-child(n + 3) {
-  @include vp-768 {
-    display: none;
-  }
-
-  @include vp-1024 {
-    display: block;
-  }
-}
-
 .service__card {
   @include slide-container;
 

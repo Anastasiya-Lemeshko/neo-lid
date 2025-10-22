@@ -48,6 +48,7 @@
   &-user {
     display: flex;
     align-items: flex-start;
+    justify-content: flex-end;
     flex-wrap: wrap;
     gap: 5px;
     min-width: 77px;
@@ -145,11 +146,21 @@
   }
 
   &-prices {
+    display: flex;
+    align-items: flex-end;
     margin: 0 0 13px;
+
+    @include vp-768 {
+      display: block;
+    }
+
+    @include vp-1024 {
+      display: flex;
+    }
   }
 
   &-price {
-    display: inline-block;
+    display: block;
     font-weight: 600;
     font-size: 18px;
     line-height: 1.2;
@@ -242,8 +253,8 @@
   &-visual-swiper-pagination {
     display: none;
 
-    @include vp-1366 {
-      display: grid;
+    @include vp-1024 {
+      display: flex;
       gap: 7px;
       padding: 0 9px 0 6px;
     }

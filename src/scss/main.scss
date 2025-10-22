@@ -15,7 +15,7 @@
 @use "./components/breadcrumbs";
 @use "./components/range";
 @use "./components/tabs";
-@use "./components/pay";
+@use "./components/pay-details";
 
 // подключения секций страницы
 @use "./blocks/nav";
@@ -36,3 +36,5 @@
 @use "./blocks/filters";
 @use "./blocks/faq";
 @use "./blocks/details";
+@use "./blocks/pay-delivery";
+@use "./blocks/pay";

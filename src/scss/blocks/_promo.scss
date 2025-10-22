@@ -202,7 +202,7 @@
 }
 
 .promo__catalog-img img {
-  @include img-contain
+  @include img-contain;
 }
 
 .promo__catalog-button {

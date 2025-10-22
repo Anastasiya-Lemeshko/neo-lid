@@ -16,6 +16,7 @@ import { setThumbSwiper } from './components/_thumb-swiper.js';
 import { moveDetails } from './components/_move-details.js';
 import { setTabs } from './components/_tabs.js';
 import { setGridColumnLayout } from './components/_grid-layout-columns.js';
+import { setNavigationSwiper } from './components/_navigation-swiper.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -38,4 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
   moveDetails();
   setTabs();
   setGridColumnLayout();
+  setNavigationSwiper();
 });

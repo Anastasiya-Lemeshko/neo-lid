@@ -1,0 +1,26 @@
+.delivery {
+  @include block-padding;
+}
+
+.delivery__header {
+  margin: 0 0 20px;
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  p+p {
+    margin-top: 10px
+  }
+}
+
+.delivery__title {
+  @include title;
+
+  margin: 0 0 10px;
+}

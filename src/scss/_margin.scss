@@ -7,12 +7,20 @@
     margin: 21px 0 2px;
 
     @include vp-1024 {
-      margin: 59px 0 37px;
+      margin: 59px 0;
     }
   }
 
-  &__catalog {
+  &__catalog-list {
     margin: 0 0 15px;
+
+    @include vp-1024 {
+      margin: 0 0 58px;
+    }
+  }
+
+  &__support {
+    margin: 0 0 42px;
 
     @include vp-1024 {
       margin: 0 0 39px;
@@ -69,6 +77,10 @@
 
   &__companies {
     margin: 0 0 2px;
+
+    @include vp-768 {
+      margin: 0 0 20px;
+    }
 
     @include vp-1024 {
       margin: 0 0 81px;
