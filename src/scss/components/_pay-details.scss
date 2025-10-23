@@ -17,12 +17,12 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 23px 20px 25px;
+    padding: 23px 20px 19px;
   }
 }
 
 .pay-details__title {
-  margin: 0 0 11px;
+  margin: 0 0 13px;
   font-weight: 500;
   font-size: 18px;
   color: var(--accent-dark);
@@ -41,13 +41,17 @@
 
   @include vp-768 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 48% 52%;
     grid-auto-flow: dense;
     gap: 9px 25px;
   }
 
   @include vp-1366 {
-    margin: 0 0 78px;
+    margin: 0 0 74px;
+  }
+
+  dl {
+    margin: 0;
   }
 
   dl:not(:last-child) {
@@ -87,14 +91,17 @@
 .pay-details__details-button {
   width: 100%;
   padding: 16px;
+  font-weight: 500;
+  font-size: 14px;
 
   @include vp-1024 {
     margin-top: auto;
+    font-size: 18px;
   }
 }
 
 .pay-details__bank {
-  padding: 20px 10px;
+  padding: 20px 10px 30px;
   background-color: var(--bg-light);
 
   @include vp-1024 {
@@ -103,7 +110,7 @@
 }
 
 .pay-details__bank-text {
-  margin: 0 0 37px;
+  margin: 0 0 35px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
@@ -111,7 +118,7 @@
   text-transform: uppercase;
 
   @include vp-1024 {
-    margin: 0 0 78px;
+    margin: 0 0 62px;
     font-size: 25px;
     letter-spacing: 0;
   }
@@ -134,7 +141,7 @@
 }
 
 .pay-details__bank-item:not(:last-child) {
-  margin: 0 0 10px;
+  margin: 0 0 30px;
 
   @include vp-768 {
     margin: 0;
@@ -143,4 +150,6 @@
 
 .pay-details__bank-item img {
   @include img-contain;
+
+  height: unset;
 }

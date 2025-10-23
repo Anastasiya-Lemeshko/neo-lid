@@ -1,3 +1,5 @@
+@use "index" as *;
+
 .delivery {
   @include block-padding;
 }
@@ -7,14 +9,21 @@
 
   p {
     margin: 0;
+    padding-right: 11px;
     font-weight: 500;
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1.22;
     letter-spacing: 0.01em;
     text-transform: uppercase;
+
+    @include vp-1024 {
+      max-width: 1040px;
+      font-size: 25px;
+      letter-spacing: 0;
+    }
   }
 
-  p+p {
+  p + p {
     margin-top: 10px
   }
 }
@@ -23,4 +32,124 @@
   @include title;
 
   margin: 0 0 10px;
+
+  @include vp-1024 {
+    margin: 0 0 19px;
+  }
+}
+
+.delivery__swiper-container {
+  margin: 0 0 30px;
+
+  @include vp-768 {
+    background-color: var(--bg-primary);
+  }
+
+  @include vp-1024 {
+    margin: 0 0 62px;
+  }
+}
+
+.delivery__swiper-group {
+  margin: 0 0 10px;
+  padding: 10px 0;
+  background-color: var(--bg-primary);
+
+  @include vp-768 {
+    padding: 30px 0;
+  }
+
+  @include vp-1366 {
+    padding: 74px 0;
+  }
+}
+
+.delivery__swiper-wrapper {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+.delivery__slide-container {
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+  background-color: var(--bg-light);
+
+  @include vp-1024 {
+    padding: 20px;
+  }
+}
+
+.delivery__slide-container img {
+  @include img-contain;
+}
+
+.delivery__swiper-pagination {
+  @include swiper-pagination;
+
+  padding: 0 var(--container-offset-mobile);
+
+  @include vp-768 {
+    display: none;
+  }
+}
+
+.delivery__pagination-bullet {
+  @include swiper-pagination-button;
+
+  @include vp-390 {
+    height: calc(5px / $vp-390 * 100vw);
+  }
+}
+
+.delivery__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.delivery__item {
+  padding: 20px 35px 18px;
+  background-color: var(--bg-light);
+
+  @include vp-1366 {
+    min-height: 348px;
+    padding: 53px 40px;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 5px;
+
+    @include vp-768 {
+      margin: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--accent-dark);
+
+    @include vp-1024 {
+      font-size: 20px;
+    }
+
+    @include vp-1366 {
+      font-size: 25px;
+    }
+  }
 }

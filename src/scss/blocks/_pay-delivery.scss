@@ -2,6 +2,10 @@
 
 .pay-delivery__title {
   @include title-h1;
+
+  @include vp-1024 {
+    margin: 0 0 15px;
+  }
 }
 
 .pay-delivery__breadcrumbs {
@@ -22,13 +26,18 @@
 }
 
 .pay-delivery__main {
-  margin: 0 0 10px;
+  margin: 0 0 13px;
   background-color: var(--white);
 
   @include vp-768 {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
+    margin: 0 0 10px;
+  }
+
+  @include vp-1024 {
+    gap: 10px 30px;
   }
 }
 
@@ -70,6 +79,8 @@
   @include vp-768 {
     aspect-ratio: 674 / 422;
     grid-area: 1 / 2 / 3 / 3;
+    justify-self: center;
+    max-width: 674px;
     margin: 0;
   }
 }
@@ -159,6 +170,7 @@
 
   @include vp-1024 {
     font-size: 25px;
+    letter-spacing: 0;
   }
 
   @include vp-1640 {
@@ -188,8 +200,6 @@
 
 .pay-delivery__swiper-button {
   @include swiper-button-position;
-
-  top: calc(50% + 10px);
 
   @include vp-768 {
     display: none;
