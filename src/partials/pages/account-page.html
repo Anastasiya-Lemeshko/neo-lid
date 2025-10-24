@@ -1,0 +1,98 @@
+<section class="account">
+  <div class="container">
+    <h1 class="account__title">Личный кабинет</h1>
+    <ol class="account__breadcrumbs breadcrumbs">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <span class="breadcrumbs__link">Личный кабинет</span>
+      </li>
+    </ol>
+    <div class="account__wrapper">
+      <div class="account__tabs tabs">
+        <p class="account__name">Олег Богучарский</p>
+        <ul class="account__tablinks tabs__tablinks">
+          <li class="account__tablinks-item">
+            <button class="account__tablink button tabs__tablink tabs__tablink--active" data-tab="profile" type="button">Мои данные</button>
+          </li>
+          <li class="account__tablinks-item">
+            <button class="account__tablink button tabs__tablink" data-tab="orders" type="button">История заказов</button>
+          </li>
+          <li class="account__tablinks-item">
+            <a class="account__tablink button" href="favorites.html">Избранные товары</a>
+          </li>
+          <li class="account__tablinks-item">
+            <a class="account__tablink button" href="compare.html">Сравнение товаров</a>
+          </li>
+          <li class="account__tablinks-item account__tablinks-item--unauth">
+            <a class="account__tablink button" href="#">Выйти</a>
+          </li>
+        </ul>
+        <div class="account__tabcontents tabs__tabcontents">
+          <div class="account__tabcontent tabs__tabcontent tabs__tabcontent--active" data-tab-content="profile">
+            <form class="account__form" action="" method="post">
+              <fieldset class="account__form-group">
+                <legend class="account__form-title">Ваша учетная запись</legend>
+                <ul class="account__form-list">
+                  <li class="account__form-item">
+                    <label class="account__field">
+                      <span class="account__label">Имя<span class="account__required">*</span></span>
+                      <input class="account__input" type="text" name="name" value="Олег" required>
+                    </label>
+                  </li>
+                  <li class="account__form-item">
+                    <label class="account__field">
+                      <span class="account__label">Фамилия</span>
+                      <input class="account__input" type="text" name="surname" value="Богучарский">
+                    </label>
+                  </li>
+                  <li class="account__form-item">
+                    <label class="account__field">
+                      <span class="account__label">Номер телефона<span class="account__required">*</span></span>
+                      <input class="account__input" type="tel" name="phone" value="+798812313345" required>
+                    </label>
+                  </li>
+                  <li class="account__form-item">
+                    <label class="account__field">
+                      <span class="account__label">Адрес электронной почты</span>
+                      <input class="account__input" type="email" name="email" value="boguchas@masd.ru">
+                    </label>
+                  </li>
+                  <li class="account__form-item">
+                    <label class="account__field">
+                      <span class="account__label">Адрес доставки</span>
+                      <input class="account__input" type="text" name="address" value="г.Шахты , ул.Ильюшина 31">
+                    </label>
+                  </li>
+                  <li class="account__form-item">
+                    <label class="account__field">
+                      <span class="account__label">Пароль</span>
+                      <input class="account__input" type="password" name="password">
+                    </label>
+                  </li>
+                  <li class="account__form-item">
+                    <label class="account__field">
+                      <span class="account__label">Подтверждения пароля</span>
+                      <input class="account__input" type="password" name="password-repeat">
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="account__form-button-container">
+                <button class="account__form-button button" type="submit">Сохранить</button>
+                <a class="account__form-button account__form-button--delete button" href="#">Удалить личный кабинет</a>
+              </div>
+            </form>
+          </div>
+          <div class="account__tabcontent tabs__tabcontent" data-tab-content="orders">
+            <div class="account__no-orders">
+              <p class="account__no-orders-text">Вы еще не&nbsp;совершали покупок</p>
+              <a class="account__no-orders-link button" href="#">Смотреть все товары</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
