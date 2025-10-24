@@ -16,6 +16,7 @@
 @use "./components/range";
 @use "./components/tabs";
 @use "./components/pay-details";
+@use "./components/map";
 
 // подключения секций страницы
 @use "./blocks/nav";
@@ -39,3 +40,5 @@
 @use "./blocks/pay-delivery";
 @use "./blocks/pay";
 @use "./blocks/delivery";
+@use "./blocks/contacts";
+@use "./blocks/company-details";

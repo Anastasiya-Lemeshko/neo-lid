@@ -1,0 +1,17 @@
+@use "index" as *;
+
+.contacts__title {
+  @include title-h1;
+
+  @include vp-1024 {
+    margin: 0 0 16px;
+  }
+}
+
+.contacts__breadcrumbs {
+  margin: 0 0 9px;
+
+  @include vp-1024 {
+    margin: 0 0 20px;
+  }
+}

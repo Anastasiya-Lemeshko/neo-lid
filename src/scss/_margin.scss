@@ -303,3 +303,31 @@
     }
   }
 }
+
+// contacts
+
+.contacts {
+  &__contacts-list {
+    margin: 15px 0 20px;
+
+    @include vp-1024 {
+      margin: 0 0 18px;
+    }
+  }
+
+  &__company-details {
+    margin: 0 0 17px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 40px;
+
+    @include vp-1024 {
+      margin: 0 0 80px;
+    }
+  }
+}

@@ -1,0 +1,167 @@
+@use "index" as *;
+
+.company-details {
+  @include block-padding;
+}
+
+.company-details__title {
+  @include title;
+
+  display: none;
+  margin: 0 0 28px;
+
+  @include vp-768 {
+    display: block;
+  }
+}
+
+.company-details__wrapper {
+  padding: 20px 10px;
+  background-color: var(--bg-light);
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: minmax(0, 45%) minmax(0, 55%);
+    gap: 57px 30px;
+    padding: 20px 20px 40px;
+  }
+}
+
+.company-details__contacts,
+.company-details__details {
+  max-width: 340px;
+  margin: 0 0 30px;
+
+  @include vp-768 {
+    max-width: unset;
+    margin: 0;
+  }
+}
+
+.company-details__details {
+  @include vp-768 {
+    grid-area: 1 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.company-details__details-list {
+  @include vp-1024 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    gap: 10px;
+  }
+}
+
+.company-details__subtitle {
+  margin: 0 0 25px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  @include vp-1024 {
+    margin: 0 0 38px;
+    font-size: 25px;
+  }
+}
+
+.company-details__socials .company-details__subtitle {
+  @include vp-1024 {
+    margin: 0 0 14px;
+  }
+}
+
+.company-details__info {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.company-details__info-item,
+.company-details__details-list dl {
+  &:not(:last-child) {
+    margin: 0 0 10px;
+  }
+}
+
+.company-details__details-list dl {
+  @include vp-768 {
+    &:not(:last-child) {
+      margin: 0;
+    }
+  }
+}
+
+.company-details__address {
+  font-style: normal;
+}
+
+.company-details__label,
+.company-details__details-list dt {
+  margin: 0 0 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+
+  @include vp-1366 {
+    margin: 0 0 3px;
+    font-size: 18px;
+  }
+}
+
+.company-details__text,
+.company-details__details-list dd {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+
+  @include vp-1366 {
+    font-size: 25px;
+  }
+
+  &--link {
+    @include interactive-link-dark;
+
+    display: block;
+    color: var(--black);
+  }
+}
+
+.company-details__details-button {
+  width: 100%;
+  font-size: 14px;
+
+  @include vp-768 {
+    margin: auto 0 0;
+    font-size: 18px;
+  }
+}
+
+.company-details__socials {
+  @include vp-768 {
+    align-self: end;
+  }
+}
+
+.company-details__socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.company-details__socials-link {
+  @include social-link;
+
+  width: 49px;
+  height: 49px;
+}
