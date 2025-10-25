@@ -222,6 +222,8 @@
   @include card;
 
   &-visual {
+    padding: 10px;
+
     @include vp-1024 {
       padding: 41px 18px 4px;
     }
@@ -237,7 +239,9 @@
   }
 
   &-visual-swiper-wrapper {
-    @include vp-1366 {
+    margin: 0;
+
+    @include vp-1024 {
       margin: 0 0 15px;
     }
   }
@@ -261,6 +265,8 @@
   }
 
   &-content {
+    padding: 10px 10px 20px;
+
     @include vp-1366 {
       padding: 11px 10px 16px;
     }

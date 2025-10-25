@@ -36,8 +36,6 @@
 }
 
 .breadcrumbs__link {
-  @include interactive-link-dark;
-
   display: block;
   font-weight: 400;
   font-size: 12px;
@@ -51,4 +49,8 @@
   @include vp-1024 {
     letter-spacing: 0.01em;
   }
+}
+
+a.breadcrumbs__link {
+  @include interactive-link-dark;
 }

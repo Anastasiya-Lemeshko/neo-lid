@@ -6,6 +6,22 @@
 
 .account__breadcrumbs {
   margin: 0 0 21px;
+
+  @include vp-1024 {
+    margin: 0 0 11px;
+  }
+}
+
+.account__tabs {
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: minmax(0, 30%) minmax(0, 70%);
+    gap: 10px;
+
+    @include vp-1366 {
+      grid-template-columns: 373px minmax(0, 1010px);
+    }
+  }
 }
 
 .account__name,
@@ -14,6 +30,11 @@
   font-weight: 500;
   font-size: 18px;
   color: var(--text-dark);
+
+  @include vp-1024 {
+    margin: 0 0 21px;
+    font-size: 25px;
+  }
 }
 
 .account__tablinks {
@@ -23,11 +44,25 @@
   margin: 0 0 30px;
   padding: 0;
   list-style-type: none;
+
+  @include vp-768 {
+    display: block;
+  }
 }
 
 .account__tablinks-item {
   &--unauth {
     grid-column: 1 / 3;
+
+    @include vp-768 {
+      grid-column: unset;
+    }
+  }
+
+  &:not(:last-child) {
+    @include vp-768 {
+      margin: 0 0 10px;
+    }
   }
 }
 
@@ -36,6 +71,17 @@
   padding: 10px;
   color: var(--white);
   background-color: var(--bg-primary);
+
+  @include vp-768 {
+    text-align: left;
+  }
+
+  @include vp-1024 {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
 
   &.tabs__tablink--active {
     color: var(--accent-dark);
@@ -50,9 +96,14 @@
 }
 
 .account__form-list {
- margin: 0 0 20px;
- padding: 0;
- list-style-type: none;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+
+
+  @include vp-1024 {
+    margin: 0 0 38px;
+  }
 }
 
 .account__form-item:not(:last-child) {
@@ -64,6 +115,11 @@
   margin: 0 0 5px;
   font-weight: 500;
   font-size: 14px;
+
+  @include vp-1024 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
 
   span {
     color: var(--accent);
@@ -77,19 +133,53 @@
   font-size: 14px;
   background-color: var(--grey-light);
   border: none;
+
+  @include vp-1024 {
+    padding: 21px 21px 18px;
+    font-size: 18px;
+  }
 }
 
 .account__form-button-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px 20px;
+
+  @include vp-1024 {
+    gap: 10px;
+  }
 }
 
 .account__form-button {
   padding: 8px;
+  font-weight: 500;
+
+  @include vp-1024 {
+    padding: 14px;
+  }
+
+
+  &--delete {
+    color: var(--black);
+    background-color: var(--grey-middle);
+  }
 }
 
-.account__form-delete {
-  color: var(--black);
-  background-color: var(--grey-middle);
+.account__no-orders-text {
+  margin: 0 0 24px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--grey-middle);
+
+  @include vp-1024 {
+    margin: 0 0 21px;
+    font-size: 25px;
+  }
+}
+
+.account__no-orders-link {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-weight: 500;
 }

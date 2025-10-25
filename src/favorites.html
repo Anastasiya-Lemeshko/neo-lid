@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html', {"isHomepage": false})
+  <main class="page__main favorites">
+    <div class="favorites__favorites-page">
+      @include('partials/pages/favorites-page.html')
+    </div>
+    <!-- <div class="contacts__callback-form">
+      @include('partials/callback-form.html')
+    </div> -->
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>

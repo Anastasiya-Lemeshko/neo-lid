@@ -1,0 +1,24 @@
+@use "index" as *;
+
+.favorites__title {
+  @include title;
+
+  margin: 0 0 10px;
+
+  @include vp-1024 {
+    margin: 0 0 38px;
+  }
+}
+
+.favorites__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.favorites__card {
+  @include card-small;
+}
