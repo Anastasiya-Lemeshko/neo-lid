@@ -270,8 +270,8 @@
 
 // pay-delivery
 
-.pay-delivery {
-  &__pay-delivery-about {
+.pay-delivery-page {
+  &__pay-delivery {
     margin: 15px 0 20px;
 
     @include vp-1024 {
@@ -306,8 +306,8 @@
 
 // contacts
 
-.contacts {
-  &__contacts-list {
+.contacts-page {
+  &__contacts {
     margin: 15px 0 20px;
 
     @include vp-1024 {
@@ -334,8 +334,8 @@
 
 // account
 
-.account {
-  &__account-page {
+.account-page {
+  &__account {
     margin: 15px 0 30px;
 
     @include vp-1024 {
@@ -356,6 +356,18 @@
 
     @include vp-1024 {
       margin: 0 0 80px;
+    }
+  }
+}
+
+// favorites
+
+.favorites-page {
+  &__favorites {
+    margin: 15px 0 20px;
+
+    @include vp-1024 {
+      margin: -8px 0 40px;
     }
   }
 }

@@ -5,17 +5,17 @@
 
 <body class="page__body">
   @include('partials/header.html', {"isHomepage": false})
-  <main class="page__main pay-delivery">
-    <div class="pay-delivery__pay-delivery-about">
-      @include('partials/pages/pay-delivery-about.html')
+  <main class="page__main pay-delivery-page">
+    <div class="pay-delivery-page__pay-delivery">
+      @include('partials/pages/pay-delivery.html')
     </div>
-    <div class="pay-delivery__pay">
+    <div class="pay-delivery-page__pay">
       @include('partials/pay.html')
     </div>
-    <div class="pay-delivery__delivery">
+    <div class="pay-delivery-page__delivery">
       @include('partials/delivery.html')
     </div>
-    <div class="pay-delivery__callback-form">
+    <div class="pay-delivery-page__callback-form">
       @include('partials/callback-form.html')
     </div>
   </main>

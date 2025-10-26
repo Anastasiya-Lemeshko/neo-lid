@@ -10,6 +10,10 @@
   }
 }
 
+.favorites__breadcrumbs {
+  margin: 0 0 10px;
+}
+
 .favorites__list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -21,4 +25,13 @@
 
 .favorites__card {
   @include card-small;
+
+  &-user {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  &-user-delete {
+    margin-left: auto;
+  }
 }

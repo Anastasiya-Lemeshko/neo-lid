@@ -133,10 +133,23 @@
   font-size: 14px;
   background-color: var(--grey-light);
   border: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
 
   @include vp-1024 {
     padding: 21px 21px 18px;
     font-size: 18px;
+  }
+
+  @include hover-focus {
+    background-color: var(--grey);
+  }
+
+  @include disabled {
+    color: var(--grey);
+    background-color: var(--grey-extra-light);
+    pointer-events: none;
+    cursor: default;
   }
 }
 

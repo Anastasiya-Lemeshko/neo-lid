@@ -6,10 +6,17 @@
 @use "visually-hidden" as *;
 @use "vars" as *;
 @use "tags" as *;
+@use "close-button" as *;
 
 @mixin card {
   display: flex;
   flex-direction: column;
+
+  &--favorite &-user-button--favorites,
+  &--compare &-user-button--compare {
+    --bg-color: var(--white);
+    --icon-color: var(--bg-primary);
+  }
 
   &-visual {
     padding: 10px 15px 21px 19px;
@@ -61,6 +68,28 @@
     display: grid;
     padding: 0;
     border: none;
+  }
+
+  &-user-delete {
+    @include close-button;
+
+    background-color: var(--accent);
+
+    @include vp-1366 {
+      width: 36px;
+      height: 36px;
+    }
+
+    &::before,
+    &::after {
+      width: 13px;
+      height: 1px;
+
+      @include vp-1366 {
+        width: 25px;
+        height: 2px;
+      }
+    }
   }
 
   &-visual-swiper-wrapper {

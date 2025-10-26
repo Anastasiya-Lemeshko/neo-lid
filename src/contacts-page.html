@@ -5,14 +5,14 @@
 
 <body class="page__body">
   @include('partials/header.html', {"isHomepage": false})
-  <main class="page__main account">
-    <div class="account__account-page">
-      @include('partials/pages/account-page.html')
+  <main class="page__main contacts-page">
+    <div class="contacts-page__contacts">
+      @include('partials/pages/contacts.html')
     </div>
-    <div class="account__latest">
-      @include('partials/latest.html')
+    <div class="contacts-page__company-details">
+      @include('partials/company-details.html')
     </div>
-    <div class="contacts__callback-form">
+    <div class="contacts-page__callback-form">
       @include('partials/callback-form.html')
     </div>
   </main>
