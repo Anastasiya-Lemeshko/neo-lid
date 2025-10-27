@@ -72,8 +72,16 @@
 
   &-user-delete {
     @include close-button;
+    @include interactive-opacity;
 
+    width: 20px;
+    height: 20px;
     background-color: var(--accent);
+
+    @include vp-1024 {
+      width: 26px;
+      height: 26px;
+    }
 
     @include vp-1366 {
       width: 36px;
@@ -265,6 +273,49 @@
   &-user {
     justify-content: flex-end;
     margin-left: auto;
+  }
+
+  &-user-button {
+    @include vp-1366 {
+      width: 26px;
+      height: 26px;
+    }
+
+    &::before {
+      @include vp-1366 {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    &::after {
+      @include vp-1366 {
+        width: 22px;
+        height: 23px;
+        mask-size: 22px 23px;
+      }
+    }
+  }
+
+  &-user-delete {
+    @include close-button;
+
+    background-color: var(--accent);
+
+    @include vp-1366 {
+      width: 26px;
+      height: 26px;
+    }
+
+    &::before,
+    &::after {
+      width: 13px;
+      height: 1px;
+
+      @include vp-1366 {
+        width: 17px;
+      }
+    }
   }
 
   &-visual-swiper-wrapper {

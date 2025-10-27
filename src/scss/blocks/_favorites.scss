@@ -4,10 +4,6 @@
   @include title;
 
   margin: 0 0 10px;
-
-  @include vp-1024 {
-    margin: 0 0 38px;
-  }
 }
 
 .favorites__breadcrumbs {
@@ -21,17 +17,49 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include vp-768 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @include vp-1024 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  @include vp-1366 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
 }
 
 .favorites__card {
   @include card-small;
 
+  &-visual {
+    @include vp-1024 {
+      padding: 5px;
+    }
+  }
+
+  &-visual-swiper-container {
+    @include vp-1024 {
+      padding: 0 10px;
+    }
+  }
+
   &-user {
     justify-content: flex-start;
     width: 100%;
+
+    @include vp-1024 {
+      justify-content: flex-end;
+    }
   }
 
   &-user-delete {
     margin-left: auto;
+
+    @include vp-1024 {
+      margin: 0;
+    }
   }
 }
