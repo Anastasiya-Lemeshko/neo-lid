@@ -47,6 +47,17 @@ export const SLIDES_COUNT = {
     'tablet': 2,
     'desktop': 2
   },
+  'compare': {
+    'mobile': 2,
+    'tablet': 3,
+    'desktop': 3
+  },
+};
+
+export const SLIDER_GAP = {
+  'mobile': 20,
+  'tablet': 10,
+  'desktop': 10
 };
 
 export const FILTER_VALUES = {

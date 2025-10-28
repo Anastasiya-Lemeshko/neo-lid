@@ -42,12 +42,12 @@ const setNavigationSwiper = () => {
         loop: true,
         autoHeight: true,
 
-        // autoplay: {
-        //   delay: autoplayDelay,
-        //   stopOnLastSlide: false,
-        //   reverseDirection: false,
-        //   waitForTransition: true,
-        // },
+        autoplay: {
+          delay: autoplayDelay,
+          stopOnLastSlide: false,
+          reverseDirection: false,
+          waitForTransition: true,
+        },
 
         breakpoints: {
           768: {

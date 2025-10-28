@@ -415,3 +415,15 @@
     }
   }
 }
+
+// compare
+
+.compare-page {
+  &__compare {
+    margin: 15px 0 20px;
+
+    @include vp-1024 {
+      margin: -6px 0 40px;
+    }
+  }
+}

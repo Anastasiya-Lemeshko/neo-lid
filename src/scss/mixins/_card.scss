@@ -498,6 +498,24 @@
     }
   }
 
+  &-user-delete {
+    @include vp-1024 {
+      width: 30px;
+      height: 30px;
+    }
+
+    &::before,
+    &::after {
+      width: 13px;
+      height: 1px;
+
+      @include vp-1024 {
+        width: 22px;
+        height: 1px;
+      }
+    }
+  }
+
   &-content {
     padding: 5px 10px 10px;
 

@@ -108,6 +108,7 @@
 }
 
 @mixin input-number-reset {
+
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     appearance: none;
@@ -187,6 +188,97 @@
     --border: 1px solid var(--accent);
     --bg-color: var(--accent);
     --tick-display: block;
+  }
+}
+
+@mixin control-toggle {
+  --label-color: var(--black);
+  --bg-color: var(--grey);
+  --toggle-transform: translateX(0);
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 53px;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    grid-area: 1 / 2 / 2 / 3;
+    content: "";
+  }
+
+  &::before {
+    width: 53px;
+    height: 22px;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s, color 0.3s;
+
+    @include vp-1024 {
+      height: 28px;
+    }
+  }
+
+  &::after {
+    width: 22px;
+    height: 22px;
+    padding: 2px;
+    background-color: var(--grey-light);
+    background-clip: content-box;
+    transform: var(--toggle-transform);
+    transition: transform 0.3s;
+    z-index: 1;
+
+    @include vp-1024 {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+  }
+
+  span {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--label-color);
+    transition: color 0.3s;
+
+    @include vp-1024 {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  &:has(input:focus),
+  &:has(input:focus-visible) {
+    --label-color: var(--bg-primary);
+    --bg-color: var(--grey-shadow);
+  }
+
+  @include hover {
+    --label-color: var(--bg-primary);
+    --bg-color: var(--grey-shadow);
+  }
+
+  &:has(input:checked) {
+    --label-color: var(--accent-dark);
+    --bg-color: var(--accent-dark);
+    --toggle-transform: translateX(31px);
+
+    @include vp-1024 {
+      --toggle-transform: translateX(25px);
+    }
   }
 }
 
