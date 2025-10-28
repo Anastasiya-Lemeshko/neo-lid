@@ -15,6 +15,8 @@
 }
 
 .compare__swiper-container {
+  --visual-height: 575px;
+
   position: relative;
   margin: 0 0 29px;
 
@@ -24,7 +26,31 @@
 }
 
 .compare__swiper {
-  position: static;
+  &--fixed {
+    position: fixed;
+    top: calc(-1 * var(--visual-height));
+    left: var(--container-offset-small);
+    right: var(--container-offset-small);
+    width: auto;
+    z-index: 8;
+
+    @include vp-390 {
+      left: var(--container-offset-mobile);
+      right: var(--container-offset-mobile);
+    }
+
+    @include vp-768 {
+      left: var(--container-offset-tablet);
+      right: var(--container-offset-tablet);
+    }
+
+    @include vp-1366 {
+      left: var(--container-offset-desktop);
+      right: var(--container-offset-desktop);
+      max-width: calc(var(--content-width) - var(--container-offset-desktop) * 2);
+      margin: 0 auto;
+    }
+  }
 }
 
 .compare__swiper-wrapper {
@@ -190,13 +216,11 @@
 .compare__swiper-button {
   @include swiper-button-position;
 
-  @include vp-768 {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 
-    &::after {
-      mask-size: 14px 14px;
-    }
+  &::after {
+    mask-size: 14px 14px;
   }
 
   @include vp-768 {

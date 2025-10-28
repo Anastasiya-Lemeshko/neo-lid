@@ -18,6 +18,7 @@ import { setTabs } from './components/_tabs.js';
 import { setGridColumnLayout } from './components/_grid-layout-columns.js';
 import { setNavigationSwiper } from './components/_navigation-swiper.js';
 import { setCompareSwiper } from './components/_compare-swiper.js';
+import { setStickyCards } from './components/_compare-sticky.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -42,4 +43,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setGridColumnLayout();
   setNavigationSwiper();
   setCompareSwiper();
+  setStickyCards();
 });
