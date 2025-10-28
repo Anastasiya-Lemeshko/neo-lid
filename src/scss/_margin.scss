@@ -426,4 +426,48 @@
       margin: -6px 0 40px;
     }
   }
+
+  &__reviews {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 18px;
+    }
+  }
+
+  &__news {
+    margin: 0 0 13px;
+
+    @include vp-1024 {
+      margin: 0 0 15px;
+    }
+  }
+
+  &__companies {
+    margin: 0 0 10px;
+
+    @include vp-768 {
+      margin: 0 0 20px;
+    }
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 35px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 40px;
+
+    @include vp-1024 {
+      margin: 0 0 80px;
+    }
+  }
 }

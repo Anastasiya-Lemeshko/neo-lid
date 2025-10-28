@@ -87,6 +87,16 @@
     color: var(--accent-dark);
     background-color: var(--bg-light);
   }
+
+  @include hover-focus {
+    color: var(--white);
+    background-color: var(--accent-dark);
+  }
+
+  @include disabled {
+    color: var(--white);
+    background-color: var(--grey);
+  }
 }
 
 .account__form-group {

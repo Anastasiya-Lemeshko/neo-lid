@@ -35,7 +35,10 @@ const removeTabIndex = (array) => {
   });
 };
 
-const getSlidesCount = swiperList => swiperList.querySelectorAll('li').length;
+const getSlidesCount = (swiper) => {
+  const swiperList = swiper.querySelector('[class*="swiper-wrapper"]');
+  return swiperList.children.length;
+};
 
 const addSwiperClass = (swiper, el) => {
   const swiperWrapper = swiper.querySelector(`.${el}swiper-wrapper`);

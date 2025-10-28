@@ -104,9 +104,13 @@
 
   &-tag {
     @include vp-1366 {
-      min-width: 137px;
+      min-width: 120px;
       min-height: 36px;
       font-size: 14px;
+    }
+
+    @include vp-1640 {
+      min-width: 137px;
     }
   }
 
@@ -184,7 +188,6 @@
   left: calc(var(--container-offset-small) / 2);
   right: calc(var(--container-offset-small) / 2);
   width: auto;
-  height: 30px;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s, visibility 0.3s;

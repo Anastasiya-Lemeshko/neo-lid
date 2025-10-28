@@ -172,7 +172,7 @@ const setCompareSwiper = () => {
       });
     };
 
-    const checkImageSwiper = () => {
+    const checkCharSwiper = () => {
       const isNeedSwiperTablet = getSlidesCount(imageSwiper) > SLIDES_COUNT.compare.tablet;
 
       if (!charSwiperContainer && TABLET_WIDTH.matches && isNeedSwiperTablet) {
@@ -182,8 +182,8 @@ const setCompareSwiper = () => {
       }
     };
 
-    checkImageSwiper();
-    TABLET_WIDTH.addEventListener('change', checkImageSwiper);
+    checkCharSwiper();
+    TABLET_WIDTH.addEventListener('change', checkCharSwiper);
   };
 
   setImageSwiper();
