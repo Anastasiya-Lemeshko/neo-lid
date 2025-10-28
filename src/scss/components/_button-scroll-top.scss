@@ -48,15 +48,6 @@
     opacity: 0.7;
   }
 
-  // &:disabled {
-  //   --icon-color: #{$color-grey-dark};
-
-  //   border: 1px solid $color-grey-light;
-  //   background-color: $color-light;
-  //   opacity: 1;
-  //   cursor: default;
-  // }
-
   &::after {
     position: absolute;
     top: 50%;

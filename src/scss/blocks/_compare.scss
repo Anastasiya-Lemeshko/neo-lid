@@ -152,8 +152,69 @@
   }
 }
 
+.compare__swiper-buttons {
+  position: fixed;
+  top: 50%;
+  left: calc(var(--container-offset-small) / 2);
+  right: calc(var(--container-offset-small) / 2);
+  width: auto;
+  height: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 10;
+
+  @include vp-390 {
+    left: calc(var(--container-offset-mobile) / 2);
+    right: calc(var(--container-offset-mobile) / 2);
+  }
+
+  @include vp-768 {
+    left: calc(var(--container-offset-tablet) / 2);
+    right: calc(var(--container-offset-tablet) / 2);
+  }
+
+  @include vp-1366 {
+    left: calc(var(--container-offset-desktop) / 2);
+    right: calc(var(--container-offset-desktop) / 2);
+    max-width: calc(var(--content-width) - 60px);
+    margin: 0 auto;
+  }
+
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 .compare__swiper-button {
   @include swiper-button-position;
+
+  @include vp-768 {
+    width: 40px;
+    height: 40px;
+
+    &::after {
+      mask-size: 14px 14px;
+    }
+  }
+
+  @include vp-768 {
+    width: 60px;
+    height: 60px;
+
+    &::after {
+      mask-size: 30px 30px;
+    }
+  }
+
+  &--prev {
+    transform: rotate(-90deg);
+  }
+
+  &--next {
+    transform: rotate(90deg);
+  }
 }
 
 .compare__controls {

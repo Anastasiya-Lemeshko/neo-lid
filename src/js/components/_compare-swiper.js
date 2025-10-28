@@ -6,13 +6,41 @@ import {
   removeSwiperClass,
   setSlidesTabIndex,
   checkVisibleSlides,
-  getSwiperClass
+  getSwiperClass,
+  debounce
 } from '../_utils.js';
 import { TABLET_WIDTH, SLIDES_COUNT, SLIDER_GAP } from "../_vars.js";
 
-const compare = document.querySelector('.compare');
+const compare = document.querySelector('.compare__wrapper');
 const imageSwiper = compare ? compare.querySelector('.compare__swiper') : null;
 const charSwiper = compare ? compare.querySelector('.compare__char-swiper') : null;
+const compareButtons = compare ? compare.querySelector('.compare__swiper-buttons') : null;
+
+const onWindowScroll = () => {
+  const compareRect = compare.getBoundingClientRect();
+
+  const visibleTop = Math.max(compareRect.top, 0);
+  const visibleBottom = Math.min(compareRect.bottom, window.innerHeight);
+  const visibleHeight = Math.max(visibleBottom - visibleTop, 0);
+
+  const isCompareVisible = visibleHeight >= window.innerHeight * 0.5;
+
+  if (isCompareVisible) {
+    compareButtons.classList.add('compare__swiper-buttons--visible');
+  } else {
+    compareButtons.classList.remove('compare__swiper-buttons--visible');
+  }
+};
+
+const debouncedOnScrollWindow = debounce(onWindowScroll, 30);
+
+const addWindowListener = () => {
+  window.addEventListener('scroll', debouncedOnScrollWindow);
+};
+
+const removeWindowListener = () => {
+  window.removeEventListener('scroll', debouncedOnScrollWindow);
+};
 
 const setCompareSwiper = () => {
   if (!imageSwiper || !charSwiper) return;
@@ -84,8 +112,10 @@ const setCompareSwiper = () => {
 
       if (!imageSwiperContainer && (!TABLET_WIDTH.matches && isNeedSwiperMobile || TABLET_WIDTH.matches && isNeedSwiperTablet)) {
         initImageSwiper();
+        addWindowListener();
       } else if (TABLET_WIDTH.matches && !isNeedSwiperTablet && imageSwiperContainer) {
         destroyImageSwiper(imageSwiper, sectionClass);
+        removeWindowListener();
       }
     };
 

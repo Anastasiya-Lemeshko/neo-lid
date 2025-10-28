@@ -5,9 +5,8 @@ const footer = document.querySelector('.footer');
 
 const onWindowScroll = () => {
   const scrollPosition = window.pageYOffset;
-  const windowHeight = window.innerHeight;
 
-  const isFooterVisible = footer ? footer.getBoundingClientRect().top < windowHeight : false;
+  const isFooterVisible = footer ? footer.getBoundingClientRect().top < window.innerHeight : false;
 
   if (scrollPosition > 550 && !isFooterVisible) {
     sideNav.classList.add('side-nav--visible');
@@ -18,18 +17,10 @@ const onWindowScroll = () => {
 
 const debouncedOnScrollWindow = debounce(onWindowScroll, 30);
 
-const onScrollButtonClick = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-};
-
 const addSideNav = () => {
   if (!sideNav) return;
 
   window.addEventListener('scroll', debouncedOnScrollWindow);
-  sideNav.addEventListener('click', onScrollButtonClick);
 };
 
 export { addSideNav };
