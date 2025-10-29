@@ -46,15 +46,17 @@ const setCompareSwiper = () => {
   if (!imageSwiper || !charSwiper) return;
 
   const sectionClass = getSwiperClass(imageSwiper);
-  const charLists = charSwiper.querySelectorAll('dl div')
-  const charItem = charSwiper.querySelector('dd');
+  const charLists = charSwiper.querySelectorAll('dl dd')
+  const charItem = charSwiper.querySelector('dd span');
 
   const shiftChar = (index) => {
-    const totalWidth = charItem.clientWidth + SLIDER_GAP.mobile;
+    if (!TABLET_WIDTH.matches) {
+      const totalWidth = charItem.clientWidth + SLIDER_GAP.mobile;
 
-    charLists.forEach((charList) => {
-      charList.style.transform = `translateX(${-1 * totalWidth * index}px)`;
-    });
+      charLists.forEach((charList) => {
+        charList.style.transform = `translateX(${-1 * totalWidth * index}px)`;
+      });
+    }
   };
 
   const setImageSwiper = () => {

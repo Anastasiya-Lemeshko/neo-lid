@@ -5,23 +5,23 @@
 
 <body class="page__body">
   @include('partials/header.html', {"isHomepage": false})
-  <main class="page__main compare-page">
-    <div class="compare-page__compare">
-      @include('partials/pages/compare.html')
+  <main class="page__main favorites-page">
+    <div class="favorites-page__favorites">
+      @include('partials/pages/favorites-page.html')
     </div>
-    <div class="compare-page__reviews">
+    <div class="favorites-page__reviews">
       @include('partials/reviews.html')
     </div>
-    <div class="compare-page__news">
+    <div class="favorites-page__news">
       @include('partials/news.html')
     </div>
-    <div class="compare-page__companies">
+    <div class="favorites-page__companies">
       @include('partials/companies.html')
     </div>
-    <div class="compare-page__latest">
+    <div class="favorites-page__latest">
       @include('partials/latest.html')
     </div>
-    <div class="compare-page__callback-form">
+    <div class="favorites-page__callback-form">
       @include('partials/callback-form.html')
     </div>
   </main>
