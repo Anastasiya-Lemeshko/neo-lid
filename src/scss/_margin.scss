@@ -471,3 +471,23 @@
     }
   }
 }
+
+// cart
+
+.cart-page {
+  &__cart {
+    margin: 15px 0 21px;
+
+    @include vp-1024 {
+      margin: -6px 0 51px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 35px;
+
+    @include vp-1024 {
+      margin: 0 0 70px;
+    }
+  }
+}

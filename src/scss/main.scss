@@ -17,6 +17,7 @@
 @use "./components/tabs";
 @use "./components/pay-details";
 @use "./components/map";
+@use "./components/change-quantity";
 
 // подключения секций страницы
 @use "./blocks/nav";
@@ -45,3 +46,4 @@
 @use "./blocks/account";
 @use "./blocks/favorites";
 @use "./blocks/compare";
+@use "./blocks/cart";

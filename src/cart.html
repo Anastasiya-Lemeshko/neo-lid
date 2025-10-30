@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html', {"isHomepage": false})
+  <main class="page__main cart-page">
+    <div class="cart-page__cart">
+      @include('partials/pages/cart-page.html')
+    </div>
+    <div class="cart-page__latest">
+      @include('partials/latest.html')
+    </div>
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>

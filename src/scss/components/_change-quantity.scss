@@ -1,0 +1,42 @@
+@use "index" as *;
+
+.change-quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.change-quantity__button {
+  @include icon-small-plus;
+
+  width: 24px;
+  height: 24px;
+  border: none;
+  transition: background-color 0.3s;
+
+  @include hover-focus {
+    outline: none;
+    background-color: var(--accent-dark);
+  }
+
+  @include active {
+    background-color: var(--accent-dark-opacity);
+  }
+
+  &--minus {
+    &::after {
+      display: none;
+    }
+  }
+
+  &::before,
+  &::after {
+    height: 2px;
+  }
+}
+
+.change-quantity__count {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 1.2;
+}
