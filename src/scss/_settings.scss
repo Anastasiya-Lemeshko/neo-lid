@@ -134,6 +134,7 @@ a:not([href]) {
 .sitemap a {
   @include interactive-link-dark;
 
+  display: block;
   font-size: 20px;
   color: inherit;
 }

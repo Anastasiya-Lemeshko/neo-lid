@@ -38,6 +38,15 @@
     }
   }
 
+  &--grey {
+    color: var(--black);
+    background-color: var(--grey-middle);
+
+    @include hover-focus {
+      background-color: var(--grey-dark);
+    }
+  }
+
   &--disabled {
     background-color: var(--grey-middle);
     color: var(--grey-extra-light);

@@ -107,7 +107,71 @@
   }
 }
 
+@mixin input-small {
+  span {
+    display: inline-block;
+    margin: 0 0 5px;
+    font-weight: 500;
+    font-size: 14px;
+
+    @include vp-1024 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    span {
+      margin: 0;
+      color: var(--accent);
+    }
+  }
+
+  textarea,
+  input {
+    width: 100%;
+    padding: 7px 21px;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: var(--grey-light);
+    border: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    @include vp-1024 {
+      padding: 21px 21px 18px;
+      font-size: 18px;
+    }
+
+    @include hover-focus {
+      background-color: var(--grey);
+    }
+
+    @include disabled {
+      color: var(--grey);
+      background-color: var(--grey-extra-light);
+      pointer-events: none;
+      cursor: default;
+    }
+
+    &::placeholder {
+      color: var(--grey-middle);
+    }
+  }
+
+  textarea {
+    resize: none;
+
+    @include vp-1024 {
+      padding: 21px 21px 14px;
+    }
+  }
+
+  &--error {
+    --color: var(--accent);
+  }
+}
+
 @mixin input-number-reset {
+
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     appearance: none;

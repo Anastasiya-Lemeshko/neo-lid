@@ -1,7 +1,7 @@
-<section class="cart">
+<section class="checkout">
   <div class="container">
-    <h1 class="cart__title">Корзина</h1>
-    <ol class="cart__breadcrumbs breadcrumbs">
+    <h1 class="checkout__title">Корзина</h1>
+    <ol class="checkout__breadcrumbs breadcrumbs">
       <li class="breadcrumbs__item">
         <a class="breadcrumbs__link" href="index.html">Главная</a>
       </li>
@@ -9,30 +9,19 @@
         <span class="breadcrumbs__link">Корзина</span>
       </li>
     </ol>
-    <div class="cart__wrapper">
-      <div class="cart__select-all">
-        <label class="cart__select-all-control">
-          <span class="cart__select-all-label">Выбрать все</span>
-          <input class="visually-hidden" type="checkbox" name="select-all" checked>
-        </label>
-        <button class="cart__delete-checked" type="button">Удалить выбранные</button>
-      </div>
-      <ul class="cart__list">
-        <li class="cart__card">
-          <div class="cart__card-visual">
-            <label class="cart__card-control">
-              <span class="visually-hidden">Выбрать.</span>
-              <input class="visually-hidden" type="checkbox" name="product-1" checked>
-            </label>
-            <div class="cart__card-tags">
-              <p class="cart__card-tag cart__card-tag--sale">-19&nbsp;%</p>
-              <p class="cart__card-tag cart__card-tag--label">Популярный</p>
+    <div class="checkout__wrapper">
+      <ul class="checkout__list">
+        <li class="checkout__card">
+          <div class="checkout__card-visual">
+            <div class="checkout__card-tags">
+              <p class="checkout__card-tag checkout__card-tag--sale">-19&nbsp;%</p>
+              <p class="checkout__card-tag checkout__card-tag--label">Популярный</p>
             </div>
-            <div class="cart__card-visual-swiper-container" data-swiper="cards">
-              <div class="cart__card-visual-swiper swiper">
-                <ul class="cart__card-visual-swiper-wrapper swiper-wrapper">
-                  <li class="cart__card-visual-slide swiper-slide">
-                    <div class="cart__card-visual-slide-container">
+            <div class="checkout__card-visual-swiper-container" data-swiper="cards">
+              <div class="checkout__card-visual-swiper swiper">
+                <ul class="checkout__card-visual-swiper-wrapper swiper-wrapper">
+                  <li class="checkout__card-visual-slide swiper-slide">
+                    <div class="checkout__card-visual-slide-container">
                       <picture>
                         <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-1-tablet@1x.webp 1x, ../img/products/product-1-tablet@2x.webp 2x">
                         <source width="299" height="209" type="image/webp" srcset="../img/products/product-1-mobile@1x.webp 1x, ../img/products/product-1-mobile@2x.webp 2x">
@@ -41,8 +30,8 @@
                       </picture>
                     </div>
                   </li>
-                  <li class="cart__card-visual-slide swiper-slide">
-                    <div class="cart__card-visual-slide-container">
+                  <li class="checkout__card-visual-slide swiper-slide">
+                    <div class="checkout__card-visual-slide-container">
                       <picture>
                         <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
                         <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
@@ -51,8 +40,8 @@
                       </picture>
                     </div>
                   </li>
-                  <li class="cart__card-visual-slide swiper-slide">
-                    <div class="cart__card-visual-slide-container">
+                  <li class="checkout__card-visual-slide swiper-slide">
+                    <div class="checkout__card-visual-slide-container">
                       <picture>
                         <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
                         <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
@@ -61,8 +50,8 @@
                       </picture>
                     </div>
                   </li>
-                  <li class="cart__card-visual-slide swiper-slide">
-                    <div class="cart__card-visual-slide-container">
+                  <li class="checkout__card-visual-slide swiper-slide">
+                    <div class="checkout__card-visual-slide-container">
                       <picture>
                         <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-2-tablet@1x.webp 1x, ../img/products/product-2-tablet@2x.webp 2x">
                         <source width="299" height="209" type="image/webp" srcset="../img/products/product-2-mobile@1x.webp 1x, ../img/products/product-2-mobile@2x.webp 2x">
@@ -71,8 +60,8 @@
                       </picture>
                     </div>
                   </li>
-                  <li class="cart__card-visual-slide swiper-slide">
-                    <div class="cart__card-visual-slide-container">
+                  <li class="checkout__card-visual-slide swiper-slide">
+                    <div class="checkout__card-visual-slide-container">
                       <picture>
                         <source width="479" height="395" type="image/webp" media="(min-width: 768px)" srcset="../img/products/product-3-tablet@1x.webp 1x, ../img/products/product-3-tablet@2x.webp 2x">
                         <source width="299" height="209" type="image/webp" srcset="../img/products/product-3-mobile@1x.webp 1x, ../img/products/product-3-mobile@2x.webp 2x">
@@ -82,53 +71,61 @@
                     </div>
                   </li>
                 </ul>
-                <div class="cart__card-visual-swiper-pagination"></div>
+                <div class="checkout__card-visual-swiper-pagination"></div>
               </div>
             </div>
-            <button class="cart__card-delete" type="button">
-              <span class="visually-hidden">Удалить из корзины.</span>
-            </button>
           </div>
-          <div class="cart__card-content">
-            <p class="cart__card-article">Код товара: 2061070410</p>
-            <a class="cart__card-title" href="#">MetalTec CK 40&#8288;x&#8288;750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</a>
-            <div class="cart__card-quantity">
-              <p class="cart__card-subtitle">Количество товара</p>
-              <div class="cart__card-quantity-controls change-quantity">
-                <button class="change-quantity__button change-quantity__button--minus" type="button">
-                  <span class="visually-hidden">Уменьшить количество.</span>
-                </button>
-                <span class="change-quantity__count">1</span>
-                <button class="change-quantity__button change-quantity__button--plus" type="button">
-                  <span class="visually-hidden">Увеличить количество.</span>
-                </button>
-              </div>
-            </div>
-            <div class="cart__card-price">
-              <p class="cart__card-subtitle">Финальная цена</p>
-              <p class="cart__card-price-value">2476746&nbsp;₽</p>
+          <div class="checkout__card-content">
+            <p class="checkout__card-article">Код товара: 2061070410</p>
+            <a class="checkout__card-title" href="#">MetalTec CK 40&#8288;x&#8288;750 (Комплектация ПРОМ) токарный станок ЧПУ с&nbsp;прямой станиной</a>
+            <div class="checkout__card-price">
+              <p class="checkout__card-subtitle">Финальная цена</p>
+              <p class="checkout__card-price-value">2476746&nbsp;₽</p>
             </div>
           </div>
         </li>
       </ul>
-      <div class="cart__details">
-        <h2 class="cart__details-title">Детали заказа</h2>
-        <div class="cart__details-content">
-          <ul class="cart__total-list">
-            <li class="cart__position">
-              <p class="cart__item">
-                <span class="cart__item-name"><span class="cart__item-count">1</span>&nbsp;товар</span>
-              </p>
-              <p class="cart__item-price">2476746&nbsp;₽</p>
+      <form class="checkout__form" action="" method="post">
+        <fieldset class="checkout__form-group">
+          <legend class="visually-hidden">Контактные данные</legend>
+          <ul class="checkout__form-list">
+            <li class="checkout__form-item">
+              <label class="checkout__field">
+                <span class="checkout__label">Имя<span class="checkout__required">*</span></span>
+                <input class="checkout__input" type="text" name="name" value="Олег" required>
+              </label>
+            </li>
+            <li class="checkout__form-item">
+              <label class="checkout__field">
+                <span class="checkout__label">Фамилия</span>
+                <input class="checkout__input" type="text" name="surname" value="Богучарский">
+              </label>
+            </li>
+            <li class="checkout__form-item">
+              <label class="checkout__field">
+                <span class="checkout__label">Номер телефона<span class="checkout__required">*</span></span>
+                <input class="checkout__input" type="tel" name="phone" value="+798812313345" required>
+              </label>
+            </li>
+            <li class="checkout__form-item">
+              <label class="checkout__field">
+                <span class="checkout__label">Адрес доставки</span>
+                <input class="checkout__input" type="text" name="address" value="г.Шахты , ул.Ильюшина 31">
+              </label>
+            </li>
+            <li class="checkout__form-item">
+              <label class="checkout__field checkout__field--textarea">
+                <span class="checkout__label">Комментарий</span>
+                <textarea class="checkout__input" name="comment" rows="5" placeholder="Текст"></textarea>
+              </label>
             </li>
           </ul>
-          <div class="cart__total">
-            <p class="cart__total-text">Итого:</p>
-            <p class="cart__total-value">2476746&nbsp;₽</p>
-          </div>
+        </fieldset>
+        <div class="checkout__form-button-container">
+          <a class="checkout__form-button button button--grey" href="../../cart.html">Назад</a>
+          <button class="checkout__form-button button" type="submit">Оформить заказ</button>
         </div>
-        <a class="cart__details-button button" href="checkout.html">Перейти к&nbsp;оформлению</a>
-      </div>
+      </form>
     </div>
   </div>
 </section>

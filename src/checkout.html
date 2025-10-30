@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html', {"isHomepage": false})
+  <main class="page__main checkout-page">
+    <div class="checkout-page__checkout">
+      @include('partials/pages/checkout-page.html')
+    </div>
+    <div class="checkout-page__latest">
+      @include('partials/latest.html')
+    </div>
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>

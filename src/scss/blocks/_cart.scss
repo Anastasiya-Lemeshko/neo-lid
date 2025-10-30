@@ -204,6 +204,12 @@
   }
 }
 
+.cart__card-visual-swiper-container {
+  @include vp-768 {
+    max-width: 324px;
+  }
+}
+
 .cart__card-visual-swiper-wrapper {
   margin: 0;
   padding: 0;
@@ -285,9 +291,13 @@
 }
 
 .cart__card-title {
+  @include interactive-link-dark;
+
+  display: block;
   margin: 0 0 6px;
   font-weight: 500;
   font-size: 14px;
+  color: var(--black);
 
   @include vp-500 {
     margin: 0 0 8px;

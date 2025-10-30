@@ -491,3 +491,35 @@
     }
   }
 }
+
+// checkout
+
+.checkout-page {
+  &__checkout {
+    margin: 15px 0 30px;
+
+    @include vp-1024 {
+      margin: -6px 0 51px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 35px;
+
+    @include vp-1024 {
+      margin: 0 0 70px;
+    }
+  }
+}
+
+// order-complete
+
+.order-complete-page {
+  &__order-complete {
+    margin: 21px 0 60px;
+
+    @include vp-1024 {
+      margin: 38px 0 80px;
+    }
+  }
+}

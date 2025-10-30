@@ -120,47 +120,8 @@
   margin: 0 0 10px;
 }
 
-.account__label {
-  display: block;
-  margin: 0 0 5px;
-  font-weight: 500;
-  font-size: 14px;
-
-  @include vp-1024 {
-    margin: 0 0 10px;
-    font-size: 18px;
-  }
-
-  span {
-    color: var(--accent);
-  }
-}
-
-.account__input {
-  width: 100%;
-  padding: 7px 21px;
-  font-weight: 500;
-  font-size: 14px;
-  background-color: var(--grey-light);
-  border: none;
-  transition: background-color 0.3s;
-  cursor: pointer;
-
-  @include vp-1024 {
-    padding: 21px 21px 18px;
-    font-size: 18px;
-  }
-
-  @include hover-focus {
-    background-color: var(--grey);
-  }
-
-  @include disabled {
-    color: var(--grey);
-    background-color: var(--grey-extra-light);
-    pointer-events: none;
-    cursor: default;
-  }
+.account__field {
+  @include input-small;
 }
 
 .account__form-button-container {
@@ -180,7 +141,6 @@
   @include vp-1024 {
     padding: 14px;
   }
-
 
   &--delete {
     color: var(--black);
