@@ -1,6 +1,6 @@
 @use "index" as *;
 
-.companies {
+.brands {
   padding: 10px 0 5px;
 
   @include vp-768 {
@@ -26,7 +26,7 @@
   }
 }
 
-.companies__title {
+.brands__title {
   @include title;
 
   display: none;
@@ -48,7 +48,7 @@
   }
 }
 
-.companies__title-additional {
+.brands__title-additional {
   display: none;
 
   @include vp-1024 {
@@ -56,7 +56,7 @@
   }
 }
 
-.companies__swiper-box {
+.brands__swiper-box {
   margin: 0 0 3px;
   padding: 11px var(--container-offset-small) 8px;
   background-color: var(--bg-primary);
@@ -70,7 +70,7 @@
   }
 }
 
-.companies__swiper-wrapper {
+.brands__swiper-wrapper {
   display: flex;
   margin: 0 0 calc(2px / $vp-390 * 100vw);
   padding: 0;
@@ -89,11 +89,11 @@
   }
 }
 
-.companies__slide {
+.brands__slide {
   @include slide-layout;
 }
 
-.companies__slide-container {
+.brands__slide-container {
   aspect-ratio: 1 / 1;
   padding: 10px;
   background-color: var(--bg-light);
@@ -103,11 +103,11 @@
   }
 }
 
-.companies__slide-container img {
+.brands__slide-container img {
   @include img-contain;
 }
 
-.companies__swiper-pagination {
+.brands__swiper-pagination {
   @include swiper-pagination;
 
   min-height: 20px;
@@ -122,7 +122,7 @@
   }
 }
 
-.companies__pagination-bullet {
+.brands__pagination-bullet {
   @include swiper-pagination-button;
 
   @include vp-390 {

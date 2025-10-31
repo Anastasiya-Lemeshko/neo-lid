@@ -75,7 +75,7 @@
     }
   }
 
-  &__companies {
+  &__brands {
     margin: 0 0 2px;
 
     @include vp-768 {
@@ -87,7 +87,7 @@
     }
   }
 
-  &__about {
+  &__company {
     margin: 0 0 30px;
 
     @include vp-1024 {
@@ -183,7 +183,7 @@
     }
   }
 
-  &__companies {
+  &__brands {
     margin: 0 0 10px;
 
     @include vp-1024 {
@@ -387,7 +387,7 @@
     }
   }
 
-  &__companies {
+  &__brands {
     margin: 0 0 10px;
 
     @include vp-768 {
@@ -443,7 +443,7 @@
     }
   }
 
-  &__companies {
+  &__brands {
     margin: 0 0 10px;
 
     @include vp-768 {
@@ -520,6 +520,54 @@
 
     @include vp-1024 {
       margin: 38px 0 80px;
+    }
+  }
+}
+
+// about
+
+.about-page {
+  &__about {
+    margin: 7px 0 19px;
+
+    @include vp-1024 {
+      margin: 0 0 59px;
+    }
+  }
+
+  &__gallery {
+    margin: 0 0 30px;
+
+    @include vp-1024 {
+      margin: 38px 0 23px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 22px;
+
+    @include vp-1024 {
+      margin: 0 0 61px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+}
+
+// 404
+
+.page-404 {
+  &__404 {
+    margin: 21px 0 55px;
+
+    @include vp-1024 {
+      margin: 38px 0 86px;
     }
   }
 }

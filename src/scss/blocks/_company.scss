@@ -1,0 +1,143 @@
+@use "index" as *;
+
+.company__title {
+  @include title;
+
+  margin: 0 0 10px;
+
+  @include vp-1024 {
+    margin: 0 0 36px;
+  }
+}
+
+.company__wrapper {
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.company__img {
+  aspect-ratio: 333 / 232;
+  margin: 0 0 20px;
+
+  @include vp-768 {
+    position: relative;
+    aspect-ratio: unset;
+    margin: 0;
+  }
+
+  @include vp-1024 {
+    margin: 6px 0 0;
+  }
+}
+
+.company__img img {
+  @include img-cover;
+
+  @include vp-768 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.company__intro {
+  margin: 0 0 11px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  color: var(--black);
+
+  @include vp-1024 {
+    margin: 0 0 6px;
+    padding-right: 10px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
+
+.company__block {
+  margin: 0 0 5px;
+  padding: 10px 17px 10px 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+  background-color: var(--bg-light);
+
+  @include vp-1024 {
+    padding: 13px 130px 12px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+}
+
+.company__block:last-of-type {
+  margin: 0 0 15px;
+
+  @include vp-1024 {
+    margin: 0 0 7px;
+  }
+}
+
+.company__intro p,
+.company__block p {
+  margin: 0;
+  max-width: 550px;
+
+  @include vp-1024 {
+    max-width: unset;
+  }
+}
+
+.company__intro p + p,
+.company__block p + p {
+  margin-top: 10px;
+}
+
+.company__block ul {
+  margin: 0;
+  padding: 0 0 0 21px;
+  list-style-type: none;
+
+  @include vp-1024 {
+    padding: 0 0 0 27px;
+  }
+}
+
+.company__block li {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 8px;
+    left: -12px;
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color: var(--black);
+    border-radius: 50%;
+
+    @include vp-1024 {
+      top: 10px;
+      left: -15px;
+      width: 4px;
+      height: 4px;
+    }
+  }
+}
+
+.company__block li:not(:last-child) {
+  @include vp-1024 {
+    margin: 0 0 1px;
+  }
+}
+
+.company__modal-button {
+  width: 100%;
+}

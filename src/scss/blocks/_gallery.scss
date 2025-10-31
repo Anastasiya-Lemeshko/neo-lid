@@ -1,0 +1,150 @@
+@use "index" as *;
+
+.gallery {
+  @include block-padding;
+}
+
+.gallery__header {
+  margin: 0 0 16px;
+
+  @include vp-1024 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+  }
+}
+
+.gallery__title {
+  @include title;
+
+  margin: 0 0 10px;
+
+  @include vp-1024 {
+    margin: 0;
+  }
+}
+
+.gallery__tablinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1024 {
+    gap: 10px;
+  }
+}
+
+.gallery__tablinks-item {
+  width: 100%;
+}
+
+.gallery__tablink {
+  @include interactive-button-dark;
+
+  width: 100%;
+  padding: 3px;
+  color: var(--black);
+  background-color: var(--bg-light);
+
+  @include vp-1024 {
+    min-width: 190px;
+    padding: 11px 5px 9px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  @include vp-1366 {
+    min-width: 245px;
+  }
+
+  &--active {
+    color: var(--white);
+    background-color: var(--accent-dark);
+  }
+}
+
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  margin: 0 0 18px;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 10px;
+  }
+}
+
+.gallery__item {
+  display: grid;
+  aspect-ratio: 157 / 141;
+  padding: 6px;
+  background-color: var(--bg-light);
+
+  @include vp-1024 {
+    padding: 20px;
+  }
+
+  &:nth-child(n + 7) {
+    display: none;
+
+    @include vp-768 {
+      display: block;
+    }
+  }
+
+  &:nth-child(n + 13) {
+    @include vp-768 {
+      display: none;
+    }
+
+    @include vp-1024 {
+      display: block;
+    }
+  }
+}
+
+.gallery__video img,
+.gallery__img img {
+  @include img-cover;
+}
+
+.gallery__video-img {
+  grid-area: 1 / 1 / 2 / 2;
+  aspect-ratio: 333 / 304;
+
+  @include vp-768 {
+    aspect-ratio: 500 / 447;
+  }
+}
+
+.gallery__video-img img {
+  @include img-cover;
+}
+
+.gallery__video-iframe-wrap {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.gallery__video-iframe-wrap.hidden {
+  display: none;
+}
+
+.gallery__video-button-play {
+  @include video-button;
+}
+
+.gallery__link-more {
+  width: 100%;
+
+  @include vp-1024 {
+    display: none;
+  }
+}

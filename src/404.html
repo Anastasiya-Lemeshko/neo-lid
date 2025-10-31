@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html', {"isHomepage": false})
+  <main class="page__main page-404">
+    <div class="page-404__404">
+      @include('partials/pages/404.html')
+    </div>
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>

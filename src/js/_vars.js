@@ -17,7 +17,7 @@ export const SLIDES_COUNT = {
     'tablet': 2,
     'desktop': 2
   },
-  'companies': {
+  'brands': {
     'mobile': 2,
     'tablet': 2,
     'desktop': 2

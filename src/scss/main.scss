@@ -28,8 +28,8 @@
 @use "./blocks/reviews";
 @use "./blocks/news";
 @use "./blocks/video";
-@use "./blocks/companies";
-@use "./blocks/about";
+@use "./blocks/brands";
+@use "./blocks/company";
 @use "./blocks/form";
 @use "./blocks/footer";
 @use "./blocks/categories-list";
@@ -49,3 +49,6 @@
 @use "./blocks/cart";
 @use "./blocks/checkout";
 @use "./blocks/order-complete";
+@use "./blocks/about";
+@use "./blocks/gallery";
+@use "./blocks/page-404";
