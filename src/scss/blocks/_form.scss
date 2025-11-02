@@ -90,6 +90,14 @@
     margin: 0 0 39px;
     font-size: 35px;
   }
+
+  span {
+    display: block;
+
+    @include vp-768 {
+      display: inline;
+    }
+  }
 }
 
 .form--modal .form__title {

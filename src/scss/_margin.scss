@@ -19,7 +19,7 @@
     }
   }
 
-  &__support {
+  &__service {
     margin: 0 0 42px;
 
     @include vp-1024 {
@@ -568,6 +568,34 @@
 
     @include vp-1024 {
       margin: 38px 0 86px;
+    }
+  }
+}
+
+// services
+
+.services-page {
+  &__services {
+    margin: 15px 0 26px;
+
+    @include vp-1024 {
+      margin: 0 0 41px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 13px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form-with-file {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 30px;
     }
   }
 }

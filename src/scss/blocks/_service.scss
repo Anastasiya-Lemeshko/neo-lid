@@ -46,6 +46,7 @@
 
 .service__card {
   @include slide-container;
+  @include service-card;
 
   height: 100%;
 

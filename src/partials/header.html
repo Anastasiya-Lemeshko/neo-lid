@@ -39,12 +39,12 @@
           </select>
         </div>
         <div class="nav__logo-wrapper">
-          @if (isHomepage) {
+          @if (typeof isHomepage !== 'undefined') {
           <a class="nav__logo logo-image">
             <img src="../img/logo.svg" width="50" height="16" alt="Логотип компании Neo-Lid.">
           </a>
           }
-          @if (!isHomepage) {
+          @if (typeof isHomepage === 'undefined') {
           <a class="nav__logo logo-image" href="index.html">
             <img src="../img/logo.svg" width="50" height="16" alt="Логотип компании Neo-Lid.">
           </a>

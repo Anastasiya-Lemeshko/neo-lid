@@ -1,6 +1,7 @@
 @use "breakpoint" as *;
 @use "interactive-states" as *;
 @use "icon" as *;
+@use "close-button" as *;
 
 @mixin input {
   --transform: scaleY(1) translateY(0);
@@ -346,26 +347,37 @@
 }
 
 @mixin input-file {
-  --bg-color: var(--black);
+  &-group {
+    --bg-color: var(--black);
 
-  position: relative;
-  display: grid;
-  grid-template-columns: 19px 1fr;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
+    position: relative;
+    display: grid;
+    grid-template-columns: 19px 1fr;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 8px;
+    cursor: pointer;
 
-  span:first-child {
+    &:has(input:focus),
+    &:has(input:focus-visible) {
+      --bg-color: var(--accent-dark);
+    }
+
+    @include hover {
+      --bg-color: var(--accent-dark);
+    }
+  }
+
+  &-icon {
     @include icon-small-plus;
 
     background-color: var(--accent-dark);
   }
 
-  span:last-of-type {
+  &-label {
     display: inline-block;
     font-weight: 500;
     font-size: 18px;
-    line-height: 1.2;
     text-transform: uppercase;
     color: var(--bg-color);
     transition: color 0.3s;
@@ -375,13 +387,50 @@
     }
   }
 
-  &:has(input:focus),
-  &:has(input:focus-visible) {
-    --bg-color: var(--accent-dark);
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .hidden {
+      display: none;
+    }
   }
 
-  @include hover {
-    --bg-color: var(--accent-dark);
+  &-item {
+    display: grid;
+    grid-template-columns: minmax(0, max-content) 20px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &-name {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include vp-1024 {
+      max-width: 300px;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+
+  &-delete {
+    @include close-button;
+    @include interactive-opacity;
+
+    background-color: var(--accent);
+
+    &::before,
+    &::after {
+      width: 13px;
+      height: 1px;
+    }
   }
 }
 

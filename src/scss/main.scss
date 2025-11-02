@@ -8,7 +8,6 @@
 @use "./components/button-swiper";
 @use "./components/search-form";
 @use "./components/review-card";
-@use "./components/service-card";
 @use "./components/rating";
 @use "./components/button-scroll-top";
 @use "./components/side-nav";
@@ -52,3 +51,4 @@
 @use "./blocks/about";
 @use "./blocks/gallery";
 @use "./blocks/page-404";
+@use "./blocks/services";

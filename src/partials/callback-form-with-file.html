@@ -6,10 +6,25 @@
       </div>
       <div class="form__wrapper">
         <p class="form__title">
-          <span class="form__title-top">Задате нам вопрос</span>
+          @if (typeof titleTop !== 'undefined') {
+          <span class="form__title-top">@titleTop</span>
+          }
+          @if (typeof titleTop === 'undefined') {
+          <span class="form__title-top">Задайте нам вопрос</span>
+          }
+          @if (typeof titleBottom !== 'undefined') {
+          <span>@titleBottom</span>
+          }
+          @if (typeof titleBottom === 'undefined') {
           <span>на&nbsp;который вам&nbsp;нужен&nbsp;ответ</span>
+          }
         </p>
-        <p class="form__text">ЗЗадайте свой вопрос в форме, и мы с&nbsp;радостью ответим&nbsp;вам онлайн или по телефону.</p>
+        @if (typeof formText !== 'undefined') {
+        <p class="form__text">@formText</p>
+        }
+        @if (typeof formText === 'undefined') {
+        <p class="form__text">Задайте свой вопрос в форме, и мы с&nbsp;радостью ответим&nbsp;вам онлайн или по телефону.</p>
+        }
         <form class="form__form" action="" method="post">
           <fieldset class="form__group">
             <legend class="visually-hidden">Форма обратной связи.</legend>
@@ -39,11 +54,14 @@
                 </label>
               </li>
               <li class="form__item">
-                <label class="form__file">
-                  <span class="form__icon" aria-hidden="true"></span>
-                  <span class="form__label">Приложите файл</span>
-                  <input class="visually-hidden" type="file" name="file">
-                </label>
+                <div class="form__file file-input">
+                  <label class="form__file-group">
+                    <span class="form__file-icon" aria-hidden="true"></span>
+                    <span class="form__file-label">Приложите файл</span>
+                    <input class="visually-hidden" type="file" name="file">
+                  </label>
+                  <ul class="form__file-list hidden"></ul>
+                </div>
               </li>
               <li class="form__item form__item--control">
                 <label class="form__control">

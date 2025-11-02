@@ -4,7 +4,7 @@
 @include('partials/head.html')
 
 <body class="page__body">
-  @include('partials/header.html', {"isHomepage": false})
+  @include('partials/header.html')
   <main class="page__main product-page">
     <div class="product-page__details">
       @include('partials/pages/details.html')
@@ -13,7 +13,7 @@
       @include('partials/callback-form-with-file.html')
     </div>
     <div class="product-page__service">
-      @include('partials/service.html')
+      @include('partials/service.html', {"title": "Услуги"})
     </div>
     <div class="product-page__additional-equipment">
       @include('partials/additional-equipment.html')

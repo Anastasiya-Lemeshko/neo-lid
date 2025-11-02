@@ -1,0 +1,98 @@
+@use "index" as *;
+
+.services__title {
+  @include title-h1;
+
+  @include vp-1024 {
+    margin: 0 0 15px;
+  }
+}
+
+.services__breadcrumbs {
+  margin: 0 0 19px;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-768 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px 10px;
+  }
+}
+
+.services__card {
+  @include service-card;
+
+  height: 100%;
+  min-height: 227px;
+  padding: 5px;
+
+  @include vp-1024 {
+    padding: 15px;
+  }
+
+  @include vp-1366 {
+    padding: 20px 30px 0;
+  }
+
+  &-img {
+    margin: 0 0 11px;
+
+    @include vp-1366 {
+      margin: 0 0 21px;
+    }
+  }
+
+  &-subtitle {
+    display: grid;
+    align-items: start;
+    min-height: 48px;
+    margin: 0 0 5px;
+    font-size: 14px;
+
+    @include vp-390 {
+      font-size: calc(14px / $vp-390 * 100vw);
+    }
+
+    @include vp-768 {
+      font-size: calc(14px / $vp-768 * 100vw);
+    }
+
+    @include vp-1024 {
+      font-size: 25px;
+    }
+
+    @include vp-1366 {
+      min-height: 126px;
+      font-size: 35px;
+    }
+  }
+
+  &-details {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0;
+
+    @include vp-1024 {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      margin: auto 0 5px;
+    }
+  }
+
+  &-link {
+    font-size: 14px;
+
+    @include vp-1366 {
+      font-size: 18px;
+    }
+  }
+}
