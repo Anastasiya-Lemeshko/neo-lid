@@ -98,6 +98,14 @@
       display: inline;
     }
   }
+
+  br {
+    display: none;
+
+    @include vp-768 {
+      display: block;
+    }
+  }
 }
 
 .form--modal .form__title {

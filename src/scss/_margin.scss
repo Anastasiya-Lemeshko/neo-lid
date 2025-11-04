@@ -572,10 +572,10 @@
   }
 }
 
-// services
+// services-used
 
-.services-page {
-  &__services {
+.services-used-page {
+  &__services-used {
     margin: 15px 0 26px;
 
     @include vp-1024 {
@@ -596,6 +596,42 @@
 
     @include vp-1024 {
       margin: 0 0 30px;
+    }
+  }
+}
+
+// services-used
+
+.services-used-page {
+  &__services-used {
+    margin: 15px 0 26px;
+
+    @include vp-1024 {
+      margin: 0 0 41px;
+    }
+  }
+
+  &__callback-form-with-file {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 50px;
+    }
+  }
+
+  &__service-others {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 13px;
+
+    @include vp-1024 {
+      margin: 0 0 20px;
     }
   }
 }

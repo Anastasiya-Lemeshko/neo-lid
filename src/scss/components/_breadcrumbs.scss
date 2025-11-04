@@ -1,42 +1,47 @@
 @use "index" as *;
 
 .breadcrumbs {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0 9px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-
-  @include vp-1024 {
-    gap: 12px;
-  }
+  font-size: 12px;
+  line-height: 1.2;
 }
 
 .breadcrumbs__item {
   position: relative;
+  display: inline;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
 }
 
 .breadcrumbs__item:not(:last-child) {
+  margin-right: 6px;
+
+  @include vp-1024 {
+    margin-right: 9px;
+  }
+
   &::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -4px;
+    right: -2px;
     content: "";
     width: 1px;
-    height: calc(100% - 4px);
+    height: calc(100% - 3px);
     background-color: var(--grey-middle);
 
     @include vp-1024 {
-      right: -6px;
+      right: -3px;
+      height: calc(100% - 1px);
     }
   }
 }
 
 .breadcrumbs__link {
-  display: block;
+  display: inline;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.2;

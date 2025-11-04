@@ -1,0 +1,176 @@
+@use "index" as *;
+
+.services-type__title {
+  @include title-h1;
+
+  @include vp-1024 {
+    margin: 0 0 15px;
+  }
+}
+
+.services-type__breadcrumbs {
+  margin: 0 0 21px;
+
+  @include vp-1024 {
+    margin: 0 0 11px;
+  }
+}
+
+.services-type__img {
+  aspect-ratio: 333 / 183;
+  width: 100%;
+  margin: 0 0 13px;
+
+  @include vp-768 {
+    aspect-ratio: unset;
+  }
+
+  @include vp-1024 {
+    margin: 0 0 20px;
+  }
+}
+
+.services-type__img img {
+  @include img-cover;
+}
+
+.services-type__description {
+  margin: 0 0 30px;
+
+  @include vp-1024 {
+    margin: 0 0 78px;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include vp-1024 {
+      font-size: 25px;
+      line-height: 1.2;
+    }
+  }
+
+  p + p {
+    margin-top: 20px;
+  }
+}
+
+.services-type__advantages {
+  margin: 0 0 10px;
+
+  @include vp-768 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 0 20px;
+  }
+
+  @include vp-1024 {
+    margin: 0 0 43px;
+  }
+}
+
+.services-type__advantages-title {
+  @include title;
+
+  margin: 0 0 10px;
+
+  @include vp-768 {
+    grid-column: 1 / 3;
+  }
+
+  @include vp-1024 {
+    margin: 0 0 30px;
+  }
+}
+
+.services-type__advantages-group {
+  padding: 10px;
+  background-color: var(--grey-light);
+
+  @include vp-768 {
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+  }
+
+  @include vp-1024 {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 10px;
+
+    @include vp-768 {
+      margin: 0;
+    }
+  }
+}
+
+.services-type__advantages-item {
+  padding: 10px 10px 20px;
+  color: var(--white);
+  background-color: var(--bg-primary);
+
+  @include vp-1024 {
+    padding: 18px 20px 31px;
+  }
+
+  &:not(:last-child) {
+    margin: 0 0 10px;
+
+    @include vp-768 {
+      margin: 0;
+    }
+  }
+
+  h3 {
+    max-width: 90%;
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include vp-768 {
+      max-width: 380px;
+    }
+
+    @include vp-1024 {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 1.2;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+
+    @include vp-768 {
+      max-width: 560px;
+    }
+
+    @include vp-1024 {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+  }
+}
+
+.services-type__text p {
+  max-width: 550px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  @include vp-1024 {
+    max-width: 1170px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
