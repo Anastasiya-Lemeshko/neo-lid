@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html')
+  <main class="page__main services-programs-page">
+    <div class="services-programs-page__services-programs">
+      @include('partials/pages/services-programs-page.html')
+    </div>
+    <div class="services-programs-page__service-others">
+      @include('partials/service-others.html')
+    </div>
+    <div class="services-programs-page__latest">
+      @include('partials/latest.html')
+    </div>
+    <div class="services-programs-page__callback-form-with-file">
+      @include('partials/callback-form-with-file.html', {
+      "titleTop": "Приобретайте наше ",
+      "titleBottom": "оборудование с&nbsp;гарантией",
+      "formText": "Заполните форму ниже, наши менеджеры с&nbsp;радостью подскажут лучший вариант и&nbsp;помогут оформить всё на&nbsp;месте или онлайн."
+      })
+    </div>
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>

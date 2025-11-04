@@ -22,7 +22,7 @@
   margin: 0 0 13px;
 
   @include vp-768 {
-    aspect-ratio: unset;
+    aspect-ratio: 1520 / 515;
   }
 
   @include vp-1024 {
@@ -87,14 +87,11 @@
 }
 
 .services-type__advantages-group {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 10px;
   padding: 10px;
   background-color: var(--grey-light);
-
-  @include vp-768 {
-    display: grid;
-    grid-auto-rows: 1fr;
-    gap: 10px;
-  }
 
   @include vp-1024 {
     gap: 20px;
@@ -111,20 +108,14 @@
 }
 
 .services-type__advantages-item {
-  padding: 10px 10px 20px;
+  min-height: 162px;
+  padding: 10px;
   color: var(--white);
   background-color: var(--bg-primary);
 
   @include vp-1024 {
+    min-height: 217px;
     padding: 18px 20px 31px;
-  }
-
-  &:not(:last-child) {
-    margin: 0 0 10px;
-
-    @include vp-768 {
-      margin: 0;
-    }
   }
 
   h3 {
@@ -145,13 +136,10 @@
   }
 
   p {
+    max-width: 560px;
     margin: 0;
     font-weight: 400;
     font-size: 12px;
-
-    @include vp-768 {
-      max-width: 560px;
-    }
 
     @include vp-1024 {
       font-size: 18px;
@@ -160,17 +148,58 @@
   }
 }
 
-.services-type__text p {
+.services-type__text {
   max-width: 550px;
+
+  @include vp-1024 {
+    max-width: 1170px;
+  }
+}
+
+.services-type__text p {
   margin: 0;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
 
   @include vp-1024 {
-    max-width: 1170px;
     font-weight: 500;
     font-size: 25px;
     line-height: 1.2;
+  }
+}
+
+.services-type__text-link {
+  @include interactive-link-dark;
+
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--black);
+
+  @include vp-1024 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+}
+
+.services-type__download {
+  @include interactive-link-dark;
+
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--black);
+
+  @include vp-1024 {
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+
+  span {
+    color: var(--accent-dark);
   }
 }
