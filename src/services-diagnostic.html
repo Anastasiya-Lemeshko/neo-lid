@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html')
+  <main class="page__main services-diagnostic-page">
+    <div class="services-diagnostic-page__services-diagnostic">
+      @include('partials/pages/services-diagnostic-page.html')
+    </div>
+    <div class="services-diagnostic-page__callback-form-with-file">
+      @include('partials/callback-form-with-file.html', {
+      "titleTop": "Оставьте заявку ",
+      "titleBottom": "и мы&nbsp;подберём <br>решение под&nbsp;вашу задачу",
+      "formText": "Оставьте заявку&nbsp;&mdash; наши специалисты предложат подходящую услугу под ваши задачи и&nbsp;помогут быстро оформить всё онлайн или лично."
+      })
+    </div>
+    <div class="services-diagnostic-page__service-others">
+      @include('partials/service-others.html')
+    </div>
+    <div class="services-diagnostic-page__latest">
+      @include('partials/latest.html')
+    </div>
+
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>
