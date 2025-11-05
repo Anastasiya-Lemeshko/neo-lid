@@ -715,23 +715,7 @@
     margin: 15px 0 16px;
 
     @include vp-1024 {
-      margin: 0 0 41px;
-    }
-  }
-
-  &__service-others {
-    margin: 0 0 34px;
-
-    @include vp-1024 {
-      margin: 0 0 20px;
-    }
-  }
-
-  &__latest {
-    margin: 0 0 13px;
-
-    @include vp-1024 {
-      margin: 0 0 65px;
+      margin: 0 0 94px;
     }
   }
 
@@ -740,6 +724,22 @@
 
     @include vp-1024 {
       margin: 0 0 50px;
+    }
+  }
+
+  &__service-others {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 13px;
+
+    @include vp-1024 {
+      margin: 0 0 30px;
     }
   }
 }

@@ -184,10 +184,9 @@
   }
 }
 
-.services-type__download {
-  @include interactive-link-dark;
-
-  display: block;
+.services-type__download,
+.services-type__download-button {
+  margin: 0;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
@@ -198,10 +197,15 @@
     line-height: 1.2;
     letter-spacing: 0.01em;
   }
+}
 
-  span {
-    color: var(--accent-dark);
-  }
+.services-type__download-button {
+  @include interactive-link-light;
+
+  padding: 0;
+  color: var(--accent-dark);
+  border: none;
+  background-color: var(--transparent);
 }
 
 .services-type__installation-title {
@@ -212,6 +216,7 @@
   text-transform: uppercase;
 
   @include vp-1024 {
+    margin: 0 0 32px;
     font-size: 50px;
   }
 
@@ -242,6 +247,10 @@
   padding: 10px;
   background-color: var(--bg-light);
 
+  @include vp-1024 {
+    padding: 35px 36px 24px 20px;
+  }
+
   &--additional {
     display: none;
 
@@ -256,7 +265,8 @@
 
     @include vp-768 {
       display: grid;
-      padding: 10px;
+      grid-template-rows: 1fr auto;
+      padding: 0 15px;
     }
   }
 
@@ -285,6 +295,12 @@
   font-weight: 500;
   font-size: 18px;
   color: var(--accent-dark);
+
+  @include vp-1024 {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.2;
+  }
 }
 
 .services-type__installation-text p,
@@ -294,22 +310,39 @@
   font-size: 14px;
   text-transform: uppercase;
   color: var(--black);
+
+  @include vp-1024 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
 }
 
 .services-type__installation-text--big p,
 .services-type__installation-text--big a {
+  font-weight: 500;
   font-size: 18px;
   line-height: 1.23;
   letter-spacing: 0.01em;
+
+  @include vp-1024 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
 }
 
 .services-type__installation-list {
+  max-width: 515px;
   margin: 0;
   padding: 0 0 0 11px;
   list-style-type: none;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.2;
+
+  @include vp-1024 {
+    padding: 0 0 0 17px;
+    font-size: 18px;
+  }
 
   li {
     position: relative;

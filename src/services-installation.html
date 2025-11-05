@@ -9,18 +9,18 @@
     <div class="services-installation-page__services-installation">
       @include('partials/pages/services-installation-page.html')
     </div>
+    <div class="services-installation-page__callback-form-with-file">
+      @include('partials/callback-form-with-file.html', {
+      "titleTop": "Приобретайте наше ",
+      "titleBottom": "оборудование с&nbsp;комфортом",
+      "formText": "Заполните форму ниже, наши менеджеры с&nbsp;радостью подскажут лучший вариант и&nbsp;помогут оформить всё на&nbsp;месте или онлайн."
+      })
+    </div>
     <div class="services-installation-page__service-others">
       @include('partials/service-others.html')
     </div>
     <div class="services-installation-page__latest">
       @include('partials/latest.html')
-    </div>
-    <div class="services-installation-page__callback-form-with-file">
-      @include('partials/callback-form-with-file.html', {
-      "titleTop": "Приобретайте наше ",
-      "titleBottom": "оборудование с&nbsp;гарантией",
-      "formText": "Заполните форму ниже, наши менеджеры с&nbsp;радостью подскажут лучший вариант и&nbsp;помогут оформить всё на&nbsp;месте или онлайн."
-      })
     </div>
   </main>
   @include('partials/footer.html')
