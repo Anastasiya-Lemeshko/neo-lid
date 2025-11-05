@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html')
+  <main class="page__main services-briefing-page">
+    <div class="services-briefing-page__services-briefing">
+      @include('partials/pages/services-briefing-page.html')
+    </div>
+    <div class="services-briefing-page__callback-form-with-file">
+      @include('partials/callback-form-with-file.html', {
+      "titleTop": "Узнайте ",
+      "titleBottom": "об&nbsp;обучении больше",
+      "formText": "Заполните форму ниже, наши менеджеры с&nbsp;радостью подскажут вам все по&nbsp;форме обучения и&nbsp;помогут оформить всё на&nbsp;месте или онлайн."
+      })
+    </div>
+    <div class="services-briefing-page__service-others">
+      @include('partials/service-others.html')
+    </div>
+    <div class="services-briefing-page__latest">
+      @include('partials/latest.html')
+    </div>
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>
