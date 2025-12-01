@@ -15,7 +15,10 @@
 
   &-link,
   &-button {
+    --content: "";
+
     box-sizing: border-box;
+    position: relative;
     display: block;
     min-width: 40px;
     min-height: 40px;
@@ -39,6 +42,38 @@
       background-color: var(--accent-dark-opacity);
     }
 
+    &--first,
+    &--prev,
+    &--next,
+    &--last {
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: var(--content);
+        font-size: 14px;
+        line-height: 30px;
+        color: var(--color);
+      }
+    }
+
+    &--first {
+      --content: "|<";
+    }
+
+    &--prev {
+      --content: "<";
+    }
+
+    &--next {
+      --content: ">";
+    }
+
+    &--last {
+      --content: ">|";
+    }
+
     &--current {
       color: var(--white);
       background-color: var(--accent-dark);
@@ -46,6 +81,10 @@
       @include hover-focus {
         background-color: var(--accent-dark);
       }
+    }
+
+    &.hidden {
+      display: none;
     }
   }
 }

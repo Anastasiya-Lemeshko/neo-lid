@@ -20,6 +20,7 @@ import { setNavigationSwiper } from './components/_navigation-swiper.js';
 import { setCompareSwiper } from './components/_compare-swiper.js';
 import { setStickyCards } from './components/_compare-sticky.js';
 import { setFileInputs } from './components/_file-input.js';
+import { hideLabel } from './components/_hide-label.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
@@ -46,4 +47,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setCompareSwiper();
   setStickyCards();
   setFileInputs();
+  hideLabel();
 });
