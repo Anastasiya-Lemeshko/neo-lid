@@ -87,6 +87,9 @@
 }
 
 .services-type__advantages-group {
+  --item-display: block;
+  --text-width: 90%;
+
   display: grid;
   grid-auto-rows: 1fr;
   gap: 10px;
@@ -105,9 +108,15 @@
       margin: 0;
     }
   }
+
+  &--center {
+    --item-display: grid;
+  }
 }
 
 .services-type__advantages-item {
+  display: var(--item-display);
+  align-items: center;
   min-height: 162px;
   padding: 10px;
   color: var(--white);
@@ -123,10 +132,6 @@
     margin: 0 0 20px;
     font-weight: 500;
     font-size: 18px;
-
-    @include vp-768 {
-      max-width: 380px;
-    }
 
     @include vp-1024 {
       font-weight: 600;
@@ -146,41 +151,87 @@
       line-height: 1.2;
     }
   }
+
+  ul {
+    margin: 0;
+    padding: 0 0 10px 20px;
+    list-style-type: none;
+  }
+
+  li {
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+
+    &::before {
+      position: absolute;
+      top: 7px;
+      left: -9px;
+      content: "";
+      width: 2px;
+      height: 2px;
+      background-color: var(--white);
+      border-radius: 50%;
+
+      @include vp-1024 {
+        top: 10px;
+        left: -15px;
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
 }
 
 .services-type__text {
   max-width: 550px;
-
-  @include vp-1024 {
-    max-width: 1170px;
-  }
-}
-
-.services-type__text p {
-  margin: 0;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
 
   @include vp-1024 {
-    font-weight: 500;
+    max-width: 1170px;
     font-size: 25px;
     line-height: 1.2;
   }
+
+  &--underline {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  &--companies {
+    @include vp-1024 {
+      font-size: 18px;
+    }
+  }
+}
+
+.services-type__text p {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
 }
 
 .services-type__text-link {
   @include interactive-link-dark;
 
   display: inline-block;
-  font-weight: 500;
-  font-size: 14px;
-  text-transform: uppercase;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
   color: var(--black);
+  text-decoration: inherit;
 
-  @include vp-1024 {
-    font-size: 25px;
-    line-height: 1.2;
+  &--accent {
+    @include interactive-link-light;
+
+    color: var(--accent-dark);
   }
 }
 
@@ -373,4 +424,88 @@
 
 .services-type__installation-download {
   margin: auto 0 0;
+}
+
+.services-type__companies-title {
+  @include title;
+
+  margin: 0 0 23px;
+}
+
+.services-type__companies-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.services-type__companies-item {
+  &:not(:last-child) {
+    margin: 0 0 24px;
+
+    @include vp-1024 {
+      margin: 0 0 37px;
+    }
+  }
+}
+
+.services-type__companies-wrapper {
+  display: grid;
+  min-height: 169px;
+  margin: 0 0 20px;
+  padding: 10px 15px 20px;
+  background-color: var(--grey-light);
+
+  @include vp-768 {
+    padding: 18px 20px 30px;
+  }
+
+  @include vp-1366 {
+    margin: 0 0 40px;
+    padding: 18px 20px 51px;
+  }
+}
+
+.services-type__companies-subtitle {
+  margin: 0 0 10px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--bg-primary);
+
+  @include vp-768 {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  @include vp-1024 {
+    font-size: 25px;
+  }
+
+  @include vp-1366 {
+    margin: 0 0 3px;
+  }
+}
+
+.services-type__companies-image {
+  align-self: end;
+  height: 90px;
+
+  @include vp-768 {
+    height: 150px;
+  }
+
+  @include vp-1024 {
+    height: 233px;
+  }
+
+  img {
+    @include img-contain;
+  }
+}
+
+.services-type__companies .services-type__advantages {
+  @include vp-1024 {
+    margin: 0 0 18px;
+  }
 }

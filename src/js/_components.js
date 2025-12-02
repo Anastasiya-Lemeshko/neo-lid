@@ -48,4 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
   setStickyCards();
   setFileInputs();
   hideLabel();
+
+
+// const imgs = document.querySelectorAll('picture');
+// imgs.forEach((img) => {
+//   img.innerHTML = '<img src="../img/test2.jpg">';
+// });
+
 });

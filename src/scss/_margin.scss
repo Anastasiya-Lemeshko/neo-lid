@@ -851,3 +851,39 @@
     }
   }
 }
+
+// services-credit
+
+.services-credit-page {
+  &__services-credit {
+    margin: 15px 0 26px;
+
+    @include vp-1024 {
+      margin: 0 0 62px;
+    }
+  }
+
+  &__service-others {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 13px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form-with-file {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 50px;
+    }
+  }
+}
