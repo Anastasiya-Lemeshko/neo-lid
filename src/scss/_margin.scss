@@ -572,6 +572,34 @@
   }
 }
 
+// services
+
+.services-page {
+  &__services {
+    margin: 15px 0 26px;
+
+    @include vp-1024 {
+      margin: 0 0 41px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 13px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form-with-file {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 30px;
+    }
+  }
+}
+
 // services-used
 
 .services-used-page {
@@ -876,6 +904,42 @@
 
     @include vp-1024 {
       margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form-with-file {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 50px;
+    }
+  }
+}
+
+// services-china
+
+.services-china-page {
+  &__services-china {
+    margin: 15px 0 26px;
+
+    @include vp-1024 {
+      margin: 0 0 61px;
+    }
+  }
+
+  &__service-others {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 42px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 13px;
+
+    @include vp-1024 {
+      margin: 0 0 121px;
     }
   }
 

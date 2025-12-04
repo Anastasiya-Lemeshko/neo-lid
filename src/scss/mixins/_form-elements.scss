@@ -613,3 +613,39 @@
     cursor: default;
   }
 }
+
+@mixin field-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 50px;
+  height: 40px;
+  padding: 10px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--grey-middle);
+  background-color: var(--bg-light);
+
+  @include vp-768 {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  @include vp-1024 {
+    height: 60px;
+    font-size: 18px;
+  }
+
+  &-controls {
+    color: var(--black);
+  }
+
+  .change-quantity__count {
+    font-size: 20px;
+    line-height: 1;
+
+    @include vp-1024 {
+      font-size: 35px;
+    }
+  }
+}

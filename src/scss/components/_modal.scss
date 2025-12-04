@@ -24,7 +24,7 @@
   box-sizing: border-box;
   width: calc(100% - 20px);
   max-width: 500px;
-  padding: 15px;
+  padding: 4px 15px 15px;
   margin: auto;
   background-color: var(--bg-primary);
 
@@ -45,4 +45,8 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.modal__title {
+  max-width: calc(100% - 30px);
 }

@@ -10,7 +10,10 @@ const moveForm = () => {
       const socials = form.querySelector('.form__socials');
       const textarea = form.querySelector('textarea');
       contacts.appendChild(socials);
-      textarea.setAttribute('rows', '8');
+
+      if (textarea) {
+        textarea.setAttribute('rows', '8');
+      }
     });
 
     isFormMoved = true;
@@ -22,7 +25,10 @@ const moveForm = () => {
       const socials = form.querySelector('.form__socials');
       const textarea = form.querySelector('textarea');
       contacts.prepend(socials);
-      textarea.setAttribute('rows', '4');
+
+      if (textarea) {
+        textarea.setAttribute('rows', '4');
+      }
     });
 
 

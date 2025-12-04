@@ -6,7 +6,12 @@
     <div class="form form--modal">
       <div class="form__container">
         <div class="form__wrapper">
-          <p class="form__title">Оставьте заявку и&nbsp;мы&nbsp;ответим Вам на&nbsp;все&nbsp;интересующие вопросы</p>
+          @if (typeof modalTitle !== 'undefined') {
+          <p class="form__title modal__title">@modalTitle</p>
+          }
+          @if (typeof modalTitle === 'undefined') {
+          <p class="form__title modal__title">Оставьте заявку и&nbsp;мы&nbsp;ответим Вам на&nbsp;все&nbsp;интересующие вопросы</p>
+          }
           <p class="form__text">Свяжитесь с&nbsp;нами любым удобным для&nbsp;Вас&nbsp;способом либо заполните форму ниже и&nbsp;мы&nbsp;вам&nbsp;перезвоним</p>
           <form class="form__form" action="" method="post">
             <fieldset class="form__group">
@@ -32,7 +37,12 @@
                 </li>
                 <li class="form__item">
                   <label class="form__field form__field--textarea">
+                    @if (typeof textareaLabel !== 'undefined') {
+                    <span class="form__label">@textareaLabel</span>
+                    }
+                    @if (typeof textareaLabel === 'undefined') {
                     <span class="form__label">Текст вопроса</span>
+                    }
                     <textarea class="form__input" name="message" rows="4"></textarea>
                   </label>
                 </li>

@@ -1,0 +1,76 @@
+<div class="modal modal--close" data-modal="cheaper-form">
+  <div class="modal__container">
+    <button class="modal__close-button" type="button">
+      <span class="visually-hidden">Закрыть.</span>
+    </button>
+    <div class="form form--modal">
+      <div class="form__container">
+        <div class="form__wrapper">
+          <p class="form__title modal__title">Нашли дешевле? оставьте заявку и&nbsp;мы&nbsp;подберем для вас выгодное предложение</p>
+          <p class="form__text">Свяжитесь с&nbsp;нами любым удобным для&nbsp;Вас&nbsp;способом либо заполните форму ниже и&nbsp;мы&nbsp;вам&nbsp;перезвоним</p>
+          <form class="form__form" action="" method="post">
+            <fieldset class="form__group">
+              <legend class="visually-hidden">Форма обратной связи.</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__field">
+                    <span class="form__label">Имя<span class="form__required">*</span></span>
+                    <input class="form__input" type="text" name="name" required>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__field">
+                    <span class="form__label">Телефон<span class="form__required">*</span></span>
+                    <input class="form__input" type="tel" name="phone" required>
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__field">
+                    <span class="form__label">Почта</span>
+                    <input class="form__input" type="email" name="email">
+                  </label>
+                </li>
+                <li class="form__item">
+                  <label class="form__field form__field--textarea">
+                    @if (typeof textareaLabel !== 'undefined') {
+                    <span class="form__label">@textareaLabel</span>
+                    }
+                    @if (typeof textareaLabel === 'undefined') {
+                    <span class="form__label">Текст вопроса</span>
+                    }
+                    <textarea class="form__input" name="message" rows="4"></textarea>
+                  </label>
+                </li>
+                <li class="form__item form__item--control">
+                  <label class="form__control">
+                    <span class="form__label">Я&nbsp;подтверждаю ознакомление с&nbsp;Политикой обработки персональных данных и&nbsp;даю согласие на&nbsp;обработку персональных данных в&nbsp;порядке и&nbsp;на&nbsp;условиях, указанных в&nbsp;Политике.</span>
+                    <input class="visually-hidden" type="checkbox" name="accept" required>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="form__button button" type="submit">Отправить</button>
+          </form>
+        </div>
+        <div class="form__contacts">
+          <ul class="form__socials">
+            <li class="form__socials-item">
+              <a class="form__socials-link form__socials-link--tg" href="#" target="_blank" rel="noreferrer noopener">
+                <span class="visually-hidden">Телеграм.</span>
+              </a>
+            </li>
+            <li class="form__socials-item">
+              <a class="form__socials-link form__socials-link--whatsapp" href="#" target="_blank" rel="noreferrer noopener">
+                <span class="visually-hidden">Вотсап.</span>
+              </a>
+            </li>
+          </ul>
+          <address class="form__address">
+            <a class="form__contacts-link" href="mailto:info@neolid.ru">info@neolid.ru</a>
+            <a class="form__contacts-link" href="tel:+79080857360">+7&nbsp;908&nbsp;085&nbsp;73&nbsp;60</a>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

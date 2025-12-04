@@ -304,3 +304,7 @@
 .form--modal .form__contacts-link {
   @include interactive-link-light;
 }
+
+.form__quantity {
+  @include field-quantity;
+}

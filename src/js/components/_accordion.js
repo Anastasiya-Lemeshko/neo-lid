@@ -13,7 +13,10 @@ const openCardDetails = (evt) => {
   evt.preventDefault();
 
   const currentButton = evt.target.closest('button');
-  const currentContent = currentButton.parentElement.querySelector('.accordion-content');
+  const currentAccordion = currentButton.closest('.accordion');
+  const currentContent = currentAccordion ? currentAccordion.querySelector('.accordion-content') : currentButton.parentElement.querySelector('.accordion-content');
+
+  if (!currentContent) return;
 
   currentContent.classList.toggle('accordion-content--opened');
   currentButton.classList.toggle('accordion-button--active');

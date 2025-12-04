@@ -1028,6 +1028,14 @@
   }
 
   &-subtitle {
+    margin: 0;
+
+    @include vp-1366 {
+      margin: 0 0 5px;
+    }
+  }
+
+  &-subtitle-button {
     @include interactive-link-dark;
 
     margin: 0;
@@ -1044,7 +1052,6 @@
     }
 
     @include vp-1366 {
-      margin: 0 0 5px;
       font-weight: 600;
       font-size: 35px;
       line-height: 1.2
@@ -1052,11 +1059,17 @@
   }
 
   &-details {
+    --opacity: 0;
+
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: end;
     gap: 5px;
     margin: auto 0 5px;
+  }
+
+  &-details.accordion-content--opened {
+    --opacity: 1;
   }
 
   &-details p {
@@ -1065,6 +1078,8 @@
     font-size: 12px;
     line-height: 1.2;
     color: var(--black);
+    opacity: var(--opacity);
+    transition: opacity 0.3s 0.3s;
 
     @include vp-1024 {
       font-size: 14px;
@@ -1079,5 +1094,7 @@
     @include link-more;
 
     padding: 5px 0;
+    opacity: var(--opacity);
+    transition: opacity 0.3s 0.3s;
   }
 }
