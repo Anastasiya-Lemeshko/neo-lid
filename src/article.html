@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html')
+  <main class="page__main article-page">
+    <div class="article-page__article">
+      @include('partials/pages/article-page.html')
+    </div>
+    <div class="article-page__gallery-preview">
+      @include('partials/gallery-preview.html')
+    </div>
+    <div class="article-page__related">
+      @include('partials/related.html')
+    </div>
+    <div class="article-page__latest">
+      @include('partials/latest.html')
+    </div>
+    <div class="article-page__callback-form">
+      @include('partials/callback-form.html')
+    </div>
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>

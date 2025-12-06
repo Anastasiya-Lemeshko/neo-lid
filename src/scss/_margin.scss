@@ -951,3 +951,143 @@
     }
   }
 }
+
+// blog
+
+.blog-page {
+  &__blog {
+    margin: 15px 0 26px;
+
+    @include vp-1024 {
+      margin: 0 0 78px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 37px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 40px;
+
+    @include vp-1024 {
+      margin: 0 0 63px;
+    }
+  }
+}
+
+// article
+
+.article-page {
+  &__article {
+    margin: 15px 0 20px;
+
+    @include vp-1024 {
+      margin: 0 0 49px;
+    }
+  }
+
+  &__gallery-preview {
+    margin: 0 0 16px;
+
+    @include vp-1024 {
+      margin: 0 0 24px;
+    }
+  }
+
+  &__related {
+    margin: 0 0 20px;
+
+    @include vp-1024 {
+      margin: 0 0 49px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 23px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 40px;
+
+    @include vp-1024 {
+      margin: 0 0 57px;
+    }
+  }
+}
+
+// brand
+
+.brand-page {
+  &__brand {
+    margin: 15px 0 10px;
+
+    @include vp-1024 {
+      margin: 0;
+    }
+  }
+
+  &__catalog-filters {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 41px;
+    }
+  }
+
+  &__faq {
+    margin: 0 0 12px;
+
+    @include vp-1024 {
+      margin: 0 0 71px;
+    }
+  }
+
+  &__reviews {
+    margin: 0 0 5px;
+
+    @include vp-1024 {
+      margin: 0 0 19px;
+    }
+  }
+
+  &__news {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 33px;
+    }
+  }
+
+  &__brands {
+    margin: 0 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 72px;
+    }
+  }
+
+  &__latest {
+    margin: 0 0 18px;
+
+    @include vp-1024 {
+      margin: 0 0 61px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 34px;
+
+    @include vp-1024 {
+      margin: 0 0 79px;
+    }
+  }
+}

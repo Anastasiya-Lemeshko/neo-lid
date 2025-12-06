@@ -4,7 +4,7 @@
 @use "swiper-elements" as *;
 @use "interactive-states" as *;
 @use "visually-hidden" as *;
-@use "vars" as *;
+@use "../vars" as *;
 @use "tags" as *;
 @use "close-button" as *;
 @use "links" as *;
@@ -997,104 +997,5 @@
 
   &-details {
     display: none;
-  }
-}
-
-// карточка услуг
-
-@mixin service-card {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 10px 5px;
-  background-color: var(--bg-light);
-  color: var(--bg-primary);
-
-  @include vp-1366 {
-    padding: 20px 30px 0;
-  }
-
-  &-img {
-    aspect-ratio: 313 / 327;
-    margin: 0 0 16px;
-
-    @include vp-1366 {
-      aspect-ratio: 440 / 480;
-      margin: 0 0 19px;
-    }
-  }
-
-  &-img img {
-    @include img-cover
-  }
-
-  &-subtitle {
-    margin: 0;
-
-    @include vp-1366 {
-      margin: 0 0 5px;
-    }
-  }
-
-  &-subtitle-button {
-    @include interactive-link-dark;
-
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: left;
-    color: inherit;
-    background-color: var(--transparent);
-    border: none;
-
-    @include vp-768 {
-      font-size: 25px;
-    }
-
-    @include vp-1366 {
-      font-weight: 600;
-      font-size: 35px;
-      line-height: 1.2
-    }
-  }
-
-  &-details {
-    --opacity: 0;
-
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: end;
-    gap: 5px;
-    margin: auto 0 5px;
-  }
-
-  &-details.accordion-content--opened {
-    --opacity: 1;
-  }
-
-  &-details p {
-    margin: 0;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.2;
-    color: var(--black);
-    opacity: var(--opacity);
-    transition: opacity 0.3s 0.3s;
-
-    @include vp-1024 {
-      font-size: 14px;
-    }
-  }
-
-  &-details p + p {
-    margin-top: 5px;
-  }
-
-  &-link {
-    @include link-more;
-
-    padding: 5px 0;
-    opacity: var(--opacity);
-    transition: opacity 0.3s 0.3s;
   }
 }

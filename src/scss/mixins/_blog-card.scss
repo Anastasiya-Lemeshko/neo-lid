@@ -1,0 +1,114 @@
+@use "breakpoint" as *;
+@use "img-position" as *;
+@use "interactive-states" as *;
+
+@mixin blog-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 328px;
+  padding: 7px 7px 23px;
+  color: var(--white);
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s;
+
+  @include vp-768 {
+    min-height: unset;
+    height: 100%;
+  }
+
+  @include vp-1366 {
+    padding: 20px 10px 27px;
+  }
+
+  &-img {
+    height: 212px;
+    margin: 0 0 10px;
+
+    @include vp-500 {
+      aspect-ratio: 500 / 212;
+      height: unset;
+      margin: 0 0 16px;
+    }
+
+    @include vp-768 {
+      aspect-ratio: 452 / 307;
+    }
+
+    @include vp-1366 {
+      margin: 0 0 10px;
+    }
+
+    img {
+      @include img-cover;
+    }
+  }
+
+  &-content {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px 50px;
+
+    @include vp-768 {
+      gap: 10px 20px;
+    }
+  }
+
+  &-title {
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--white);
+
+    @include vp-500 {
+      font-size: 22px;
+    }
+
+    @include vp-768 {
+      align-self: start;
+      font-size: 18px;
+    }
+
+    @include vp-1366 {
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+
+    @include vp-1640 {
+      font-size: 25px;
+    }
+  }
+
+  &-date {
+    justify-self: end;
+    align-self: end;
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--grey);
+
+    @include vp-500 {
+      font-size: 18px;
+    }
+
+    @include vp-768 {
+      font-size: 14px;
+    }
+
+    @include vp-1366 {
+      margin: 0 3px 2px 0;
+      font-size: 18px;
+    }
+  }
+
+  @include hover-focus {
+    background-color: var(--accent-dark);
+  }
+
+  @include active {
+    background-color: var(--accent-dark-opacity);
+  }
+}

@@ -1,6 +1,6 @@
 @use "interactive-states" as *;
 @use "breakpoint" as *;
-@use "vars" as *;
+@use "../vars" as *;
 
 @mixin tag-link {
   @include interactive-button-dark;

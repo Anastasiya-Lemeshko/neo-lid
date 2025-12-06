@@ -1,4 +1,4 @@
-@use "index" as *;
+@use "../index" as *;
 
 .about__title {
   @include title-h1;

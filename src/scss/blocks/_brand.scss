@@ -1,0 +1,9 @@
+@use "../index" as *;
+
+.brand__title {
+  @include title-h1;
+}
+
+.brand__title-accent {
+  @include title-h1-accent;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  @include('partials/header.html')
+  <main class="page__main brand-page">
+    <div class="brand-page__brand">
+      @include('partials/pages/brand-page.html')
+    </div>
+    <div class="brand-page__catalog-filters">
+      @include('partials/catalog-filters.html')
+    </div>
+    <div class="brand-page__faq">
+      @include('partials/faq.html')
+    </div>
+    <div class="brand-page__reviews">
+      @include('partials/reviews.html')
+    </div>
+    <div class="brand-page__news">
+      @include('partials/news.html')
+    </div>
+    <div class="brand-page__brands">
+      @include('partials/brands.html')
+    </div>
+    <div class="brand-page__latest">
+      @include('partials/latest.html')
+    </div>
+    <div class="brand-page__callback-form">
+      @include('partials/callback-form.html')
+    </div>
+  </main>
+  @include('partials/footer.html')
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-@use "index" as *;
+@use "../index" as *;
 
 .contacts__title {
   @include title-h1;

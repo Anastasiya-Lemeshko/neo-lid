@@ -1,4 +1,4 @@
-@use "index" as *;
+@use "../index" as *;
 
 .categories-list__title {
   @include title-h1;

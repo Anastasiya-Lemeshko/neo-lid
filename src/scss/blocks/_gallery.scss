@@ -1,4 +1,4 @@
-@use "index" as *;
+@use "../index" as *;
 
 .gallery {
   @include block-padding;
@@ -111,24 +111,20 @@
   }
 }
 
-.gallery__video img,
-.gallery__img img {
-  @include img-cover;
-}
-
-.gallery__video-img {
-  grid-area: 1 / 1 / 2 / 2;
-  aspect-ratio: 333 / 304;
-
-  @include vp-768 {
-    aspect-ratio: 500 / 447;
+.gallery__list--preview .gallery__item {
+  &:nth-child(n + 4) {
+    @include vp-768 {
+      display: none;
+    }
   }
 }
 
-.gallery__video-img img {
+.gallery__img img,
+.gallery__video img {
   @include img-cover;
 }
 
+.gallery__video,
 .gallery__video-iframe-wrap {
   grid-area: 1 / 1 / 2 / 2;
 }

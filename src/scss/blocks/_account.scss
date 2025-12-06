@@ -1,4 +1,4 @@
-@use "index" as *;
+@use "../index" as *;
 
 .account__title {
   @include title-h1;
