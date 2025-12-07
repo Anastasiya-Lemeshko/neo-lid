@@ -1,0 +1,32 @@
+@use "../index" as *;
+
+.sale__title {
+  @include title-h1;
+}
+
+.sale__controls {
+  @include vp-768 {
+    // margin: 0 0 40px; расскоментировать
+    margin: 0 0 28px;
+  }
+}
+
+.filters__list--grid .sale__card {
+  @include card-transformer-full;
+}
+
+.filters__list--list .sale__card {
+  @include card-transformer-full;
+
+  @include vp-1024 {
+    @include card-with-details-full;
+  }
+}
+
+.filters__list--short .sale__card {
+  @include card-transformer-full;
+
+  @include vp-1024 {
+    @include card-short-full;
+  }
+}

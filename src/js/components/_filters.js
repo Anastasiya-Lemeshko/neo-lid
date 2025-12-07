@@ -36,13 +36,6 @@ if (filterButton && filterPanel) {
 const setFilterToggles = () => {
   if (!filterView || !filterList) return;
 
-  const animateToggle = () => {
-    filterList.classList.add('filters__list--hidden');
-    setTimeout(() => {
-      filterList.classList.remove('filters__list--hidden');
-    }, 500);
-  };
-
   filterView.addEventListener('click', (evt) => {
     const button = evt.target.closest('button');
 
