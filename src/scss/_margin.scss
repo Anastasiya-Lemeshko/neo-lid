@@ -1111,3 +1111,23 @@
     }
   }
 }
+
+// search
+
+.search-page {
+  &__search {
+    margin: 15px 0 10px;
+
+    @include vp-1024 {
+      margin: 0 0 60px;
+    }
+  }
+
+  &__callback-form {
+    margin: 0 0 40px;
+
+    @include vp-1024 {
+      margin: 0 0 88px;
+    }
+  }
+}

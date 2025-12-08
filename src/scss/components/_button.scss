@@ -39,11 +39,17 @@
   }
 
   &--grey {
+    @include interactive-button-light;
     color: var(--black);
     background-color: var(--grey-middle);
 
     @include hover-focus {
       background-color: var(--grey-dark);
+    }
+
+    @include active {
+      background-color: var(--grey-dark);
+      color: var(--grey-light);
     }
   }
 

@@ -568,7 +568,7 @@
       width: 548px;
     }
 
-    &--hidden {
+    &.hidden {
       display: none;
     }
   }
@@ -776,6 +776,7 @@
   font-size: 18px;
   color: var(--grey-middle);
   z-index: 1;
+  cursor: pointer;
 }
 
 .nav__popup-input {

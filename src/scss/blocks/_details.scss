@@ -492,7 +492,7 @@
 
 .details__user-button {
   @include vp-768 {
-    padding: 15px 15px 14px;
+    padding: 14px 15px;
     font-size: 18px;
   }
 
@@ -1020,10 +1020,6 @@
 
 .details__video-iframe-wrap {
   grid-area: 1 / 1 / 2 / 2;
-}
-
-.details__video-iframe-wrap.hidden {
-  display: none;
 }
 
 .details__video-button-play {

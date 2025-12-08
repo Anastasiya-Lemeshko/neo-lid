@@ -1,0 +1,20 @@
+@use "../index" as *;
+
+.search__title {
+  @include title-h1;
+
+  @include vp-1024 {
+    margin: 0 0 5px;
+  }
+}
+
+.search__breadcrumbs {
+  @include vp-1024 {
+    margin: 0 0 10px;
+  }
+}
+
+.search__wrapper {
+  padding: 0;
+}
+

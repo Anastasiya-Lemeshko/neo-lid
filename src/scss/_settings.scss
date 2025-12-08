@@ -80,6 +80,10 @@ a:not([href]) {
   clip: rect(0 0 0 0);
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset-small);

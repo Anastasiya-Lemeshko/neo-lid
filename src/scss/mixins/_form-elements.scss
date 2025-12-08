@@ -171,6 +171,36 @@
   }
 }
 
+@mixin input-with-border {
+  display: block;
+
+  input {
+    width: 100%;
+    height: 46px;
+    padding: 10px 20px;
+    background-color: var(--white);
+    border: 2px solid var(--bg-primary);
+    transition: border 0.3s;
+    cursor: pointer;
+
+    &::placeholder {
+      color: var(--grey-middle);
+    }
+
+    @include hover-focus {
+      border: 2px solid var(--accent-dark);
+    }
+
+    @include hover-focus {
+      border: 2px solid var(--accent-dark-opacity);
+    }
+  }
+
+  &--error {
+    --color: var(--accent);
+  }
+}
+
 @mixin input-number-reset {
 
   &::-webkit-outer-spin-button,
@@ -391,10 +421,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
-    .hidden {
-      display: none;
-    }
   }
 
   &-item {

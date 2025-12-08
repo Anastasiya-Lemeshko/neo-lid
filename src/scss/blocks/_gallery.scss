@@ -129,10 +129,6 @@
   grid-area: 1 / 1 / 2 / 2;
 }
 
-.gallery__video-iframe-wrap.hidden {
-  display: none;
-}
-
 .gallery__video-button-play {
   @include video-button;
 }

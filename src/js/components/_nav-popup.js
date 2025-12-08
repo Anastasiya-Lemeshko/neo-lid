@@ -11,7 +11,7 @@ let isAddListener = false;
 let isFocusIn = false;
 
 const onAuthButtonClick = () => {
-  loginFormPopup.classList.remove('nav__popup--hidden');
+  loginFormPopup.classList.remove('hidden');
 };
 
 const onPopupLeave = (evt) => {
@@ -31,7 +31,7 @@ const onPopupLeave = (evt) => {
 
   if (popup === accountItem && ((evt.target === accountItem) || (evt.target === closeButton))) {
     authButton.removeEventListener('click', onAuthButtonClick);
-    loginFormPopup.classList.add('nav__popup--hidden');
+    loginFormPopup.classList.add('hidden');
   }
 
   isFocusIn = false;

@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Scrollbar, Thumbs } from 'swiper/modules';
+import { Scrollbar, Thumbs, EffectFade } from 'swiper/modules';
 import { getSwiperClass } from '../_utils.js';
 
 const sections = document.querySelectorAll('[data-swiper="thumb"]');
@@ -31,12 +31,17 @@ const setThumbSwiper = () => {
       if (!mainSwiper) return;
 
       mainSwiperContainer = new Swiper(mainSwiper, {
-        modules: [Scrollbar, Thumbs],
+        modules: [Scrollbar, Thumbs, EffectFade],
         direction: 'horizontal',
         speed: 500,
         allowTouchMove: true,
         slidesPerView: 1,
         spaceBetween: 10,
+
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
 
         scrollbar: {
           el: `.${sectionClass}scrollbar`,

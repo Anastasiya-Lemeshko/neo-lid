@@ -96,7 +96,11 @@
 
 .catalog__img {
   aspect-ratio: 142 / 105;
-  width: calc(142px / $vp-390 * 100vw);
+  width: 142px;
+
+  @include vp-390 {
+    width: calc(142px / $vp-390 * 100vw);
+  }
 
   @include vp-768 {
     aspect-ratio: 273 / 247;
