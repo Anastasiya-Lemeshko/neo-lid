@@ -41,7 +41,7 @@
 
   @include vp-768 {
     display: grid;
-    grid-template-columns: 48% 52%;
+    grid-template-columns: 46% 1fr;
     grid-auto-flow: dense;
     gap: 9px 25px;
   }
@@ -68,7 +68,7 @@
     font-size: 14px;
     line-height: 1.2;
 
-    @include vp-1024 {
+    @include vp-1366 {
       font-size: 18px;
     }
   }
@@ -82,6 +82,10 @@
     text-transform: uppercase;
 
     @include vp-1024 {
+      font-size: 16px;
+    }
+
+    @include vp-1366 {
       font-size: 25px;
       letter-spacing: 0;
     }

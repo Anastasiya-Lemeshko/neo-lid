@@ -2,12 +2,10 @@
 
 .map {
   display: grid;
-  height: 320px;
   padding: 10px;
   background-color: var(--bg-light);
 
   @include vp-768 {
-    height: 527px;
     padding: 20px;
   }
 }
@@ -16,7 +14,11 @@
   grid-area: 1 / 1 / 2 / 2;
   margin: auto;
   width: 100%;
-  height: 100%;
+  height: 300px;
+
+  @include vp-768 {
+    height: 487px;
+  }
 }
 
 .map__image img {
@@ -31,5 +33,7 @@
 }
 
 .map__iframe iframe {
+  width: 100%;
   height: 100%;
+  border: none;
 }

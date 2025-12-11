@@ -36,12 +36,6 @@
   }
 }
 
-.filters__results .filters__controls {
-  @include vp-768 {
-    margin: 0 0 20px;
-  }
-}
-
 .filters__selects {
   margin: 0 0 15px;
 
@@ -100,131 +94,6 @@
 
   @include vp-1366 {
     min-width: 200px;
-  }
-}
-
-.filters__form-title {
-  display: none;
-
-  @include vp-768 {
-    display: block;
-    margin: 0 0 10px;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 1.2;
-  }
-}
-
-.filters__search {
-  margin: 0 0 20px;
-
-  @include vp-1024 {
-    display: grid;
-    grid-template-columns: minmax(0, 15fr) minmax(0, 7fr);
-    gap: 0 24px;
-    margin: 0 0 43px;
-  }
-
-  .filters__form-title {
-    grid-column: 1 / -1;
-  }
-}
-
-.filters__search-field {
-  @include input-with-border;
-
-  margin: 0 0 18px;
-
-  @include vp-1024 {
-    margin: 0 0 23px;
-  }
-}
-
-.filters__search-checkboxes {
-  margin: 0 0 11px;
-
-  @include vp-1024 {
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px 44px;
-    margin: 0 0 22px;
-  }
-}
-
-.filters__search-checkbox {
-  @include control;
-
-  --color: var(--text-basic);
-
-  align-items: center;
-  min-height: 25px;
-  padding-left: 30px;
-
-  &::before,
-  &::after {
-    top: 2px;
-    width: 22px;
-    height: 22px;
-  }
-
-  &::after {
-    mask-size: 15px 15px;
-  }
-
-  span {
-    margin: 2px 0 0;
-    font-weight: 500;
-    font-size: 14px;
-    color: var(--color);
-  }
-
-  &:not(:last-child) {
-    margin: 0 0 5px;
-
-    @include vp-1024 {
-      margin: 0;
-    }
-  }
-
-  &--light {
-    --color: var(--grey-middle);
-  }
-}
-
-.filters__search-select {
-  @include select-standard;
-
-  height: 46px;
-  margin: 0 0 8px;
-
-  @include vp-1024 {
-    margin: 0 0 23px;
-  }
-
-  &-button {
-    height: 100%;
-  }
-}
-
-.filters__search-button {
-  width: 100%;
-
-  @include vp-768 {
-    width: fit-content;
-    min-width: 220px;
-  }
-}
-
-.filters__no-result {
-  padding: 20px 0;
-
-  p {
-    margin: 0;
-    font-weight: 500;
-    font-size: 14px;
-    color: var(--grey-middle);
   }
 }
 
@@ -418,7 +287,6 @@
   @include vp-768 {
     align-self: start;
     gap: 21px 11px;
-    margin: 0;
   }
 
   @include vp-1024 {
@@ -451,14 +319,6 @@
 
   &--hidden {
     opacity: 0;
-  }
-}
-
-.filters__card:nth-child(n + 7) {
-  display: none;
-
-  @include vp-768 {
-    display: unset;
   }
 }
 

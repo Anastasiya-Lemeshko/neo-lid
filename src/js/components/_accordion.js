@@ -1,6 +1,7 @@
 const accordionButtons = document ? document.querySelectorAll('.accordion-button') : null;
+const contentLinks = new WeakMap();
 
-const openVisibleFontCardContent = () => {
+const openVisibleAccordionContent = () => {
   if (!accordionButtons.length) return;
 
   const visibleFontCardContent = document.querySelectorAll('.accordion-content--opened');
@@ -9,7 +10,7 @@ const openVisibleFontCardContent = () => {
   });
 };
 
-const openCardDetails = (evt) => {
+const openAccordionContent = (evt) => {
   evt.preventDefault();
 
   const currentButton = evt.target.closest('button');
@@ -32,8 +33,8 @@ const setAccordeonToggles = () => {
   if (!accordionButtons.length) return;
 
   accordionButtons.forEach((button) => {
-    button.addEventListener('click', openCardDetails);
+    button.addEventListener('click', openAccordionContent);
   });
 };
 
-export { openVisibleFontCardContent, setAccordeonToggles };
+export { openVisibleAccordionContent, setAccordeonToggles };

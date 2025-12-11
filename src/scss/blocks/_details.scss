@@ -582,7 +582,7 @@
   }
 }
 
-.details__brend {
+.details__brand {
   display: none;
 
   @include vp-1366 {
@@ -592,18 +592,22 @@
   }
 }
 
-.details__brend-img {
+.details__brand-img {
   grid-row: 1 / 3;
+
+  img {
+    @include img-contain;
+  }
 }
 
-.details__brend-text {
+.details__brand-text {
   margin: 0;
   font-weight: 500;
   font-size: 14px;
   color: var(--grey-middle);
 }
 
-.details__brend-name {
+.details__brand-name {
   margin: 0 0 10px;
   font-weight: 600;
   font-size: 35px;

@@ -84,7 +84,6 @@
 
 .gallery__item {
   display: grid;
-  aspect-ratio: 157 / 141;
   padding: 6px;
   background-color: var(--bg-light);
 
@@ -111,17 +110,13 @@
   }
 }
 
-.gallery__list--preview .gallery__item {
-  &:nth-child(n + 4) {
-    @include vp-768 {
-      display: none;
-    }
-  }
-}
+.gallery__img,
+.gallery__video {
+  aspect-ratio: 157 / 141;
 
-.gallery__img img,
-.gallery__video img {
-  @include img-cover;
+  img {
+    @include img-cover;
+  }
 }
 
 .gallery__video,

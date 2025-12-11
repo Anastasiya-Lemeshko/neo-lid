@@ -178,6 +178,14 @@
     line-height: 1.2;
     color: var(--white);
 
+    @include vp-768 {
+      font-size: 14px;
+    }
+
+    @include vp-1024 {
+      font-size: 18px;
+    }
+
     @include vp-1366 {
       font-size: 25px;
     }
@@ -186,6 +194,7 @@
   &-prices {
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     margin: 0 0 13px;
 
     @include vp-768 {
@@ -445,7 +454,7 @@
       gap: 10px;
     }
 
-    @include vp-1366 {
+    @include vp-1640 {
       margin: 0 0 65px;
     }
   }
@@ -544,9 +553,13 @@
 
     @include vp-1366 {
       margin: 0 0 19px;
-      font-size: 25px;
+      font-size: 22px;
       line-height: 1.2;
       letter-spacing: 0.01em;
+    }
+
+    @include vp-1640 {
+      font-size: 25px;
     }
   }
 
@@ -566,7 +579,7 @@
       text-decoration: none;
     }
 
-    @include vp-1366 {
+    @include vp-1640 {
       font-size: 25px;
     }
 
@@ -575,7 +588,7 @@
         font-size: 25px;
       }
 
-      @include vp-1366 {
+      @include vp-1640 {
         font-size: 35px;
       }
     }
@@ -596,7 +609,7 @@
       grid-column: unset;
     }
 
-    @include vp-1366 {
+    @include vp-1640 {
       padding: 14px 10px 13px;
       font-size: 18px;
     }
@@ -661,7 +674,7 @@
   }
 
   &-header {
-    margin: 0;
+    margin: 0 0 10px;
   }
 
   &-tag {
@@ -1030,7 +1043,7 @@
   }
 
   &-tag {
-    @include vp-1366 {
+    @include vp-768 {
       min-width: 137px;
       min-height: 36px;
       font-size: 14px;
@@ -1038,20 +1051,20 @@
   }
 
   &-user-button {
-    @include vp-1366 {
+    @include vp-768 {
       width: 36px;
       height: 36px;
     }
 
     &::before {
-      @include vp-1366 {
+      @include vp-768 {
         width: 36px;
         height: 36px;
       }
     }
 
     &::after {
-      @include vp-1366 {
+      @include vp-768 {
         width: 31px;
         height: 30px;
         mask-size: 31px 30px;
@@ -1071,9 +1084,49 @@
     }
   }
 
+  &-title {
+    @include vp-768 {
+      margin: 0 0 19px;
+      font-size: 20px;
+    }
+
+    @include vp-1366 {
+      font-size: 22px;
+    }
+
+    @include vp-1640 {
+      font-size: 25px;
+    }
+  }
+
   &-prices {
+    @include vp-768 {
+      display: flex;
+    }
+
     @include vp-1366 {
       margin: 0 0 14px;
+    }
+  }
+
+  &-price {
+    @include vp-768 {
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    @include vp-1640 {
+      font-size: 25px;
+    }
+
+    &--new {
+      @include vp-768 {
+        font-size: 25px;
+      }
+
+      @include vp-1640 {
+        font-size: 35px;
+      }
     }
   }
 }

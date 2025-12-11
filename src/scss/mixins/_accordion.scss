@@ -3,9 +3,13 @@
   overflow: hidden;
   transition: opacity 0.4s, max-height 0.3s;
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
   &--opened {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
@@ -13,6 +17,7 @@
   --before-transform: translate(-50%, -50%);
   --after-transform: translate(-50%, -50%) rotate(90deg);
   --after-opacity: 1;
+  --bg-color: var(--white);
 
   position: relative;
 
@@ -25,7 +30,7 @@
     content: "";
     width: 1px;
     height: 18px;
-    background-color: var(--white);
+    background-color: var(--bg-color);
     transition: transform 0.3s, background-color 0.3s;
   }
 

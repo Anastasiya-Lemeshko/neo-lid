@@ -773,6 +773,10 @@
   background-color: var(--accent-dark);
   transition: background-color 0.3s;
 
+  @include vp-768 {
+    height: 100%;
+  }
+
   @include hover-focus {
     background-color: var(--bg-primary);
   }
