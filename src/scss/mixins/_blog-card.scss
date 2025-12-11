@@ -55,8 +55,7 @@
   }
 
   &-title {
-    justify-self: start;
-    align-self: center;
+    place-self: center start;
     margin: 0;
     font-weight: 500;
     font-size: 14px;
@@ -83,8 +82,7 @@
   }
 
   &-date {
-    justify-self: end;
-    align-self: end;
+    place-self: end;
     margin: 0;
     font-weight: 500;
     font-size: 14px;

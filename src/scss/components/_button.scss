@@ -40,6 +40,7 @@
 
   &--grey {
     @include interactive-button-light;
+
     color: var(--black);
     background-color: var(--grey-middle);
 
