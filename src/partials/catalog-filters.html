@@ -33,17 +33,28 @@
     <div class="filters__wrapper">
       <div class="filters__controls">
         <div class="filters__selects">
-          <div class="filters__select select">
-            <label class="filters__select-label" for="select-sort">Сортировка</label>
+          <div class="filters__select dropdown">
             <button class="filters__select-button select__button" type="button" aria-label="Выполнить сортировку.">По умолчанию</button>
-            <select class="select__original" id="select-sort" name="sort" aria-label="Варианты сортировки">
-              <option value="default">По умолчанию</option>
-              <option value="a-z">А-Я</option>
-              <option value="z-a">Я-А</option>
-              <option value="cheap">Дешевле</option>
-              <option value="expensive">Дороже</option>
-              <option value="rating">С высоким рейтингом</option>
-            </select>
+            <ul class="select__list js-select-list">
+              <li class="select__item">
+                <a class="select__item-link js-select-link" href="#" data-dir="" data-sort="">По умолчанию</a>
+              </li>
+              <li class="select__item">
+                <a class="select__item-link js-select-link" href="#" data-dir="" data-sort="resource|pagetitle:asc">А-Я</a>
+              </li>
+              <li class="select__item">
+                <a class="select__item-link js-select-link" href="#" data-dir="" data-sort="resource|pagetitle:desc">Я-А</a>
+              </li>
+              <li class="select__item">
+                <a class="select__item-link js-select-link" href="#" data-dir="" data-sort="ms|price:asc">Дешевле</a>
+              </li>
+              <li class="select__item">
+                <a class="select__item-link js-select-link" href="#" data-dir="" data-sort="ms|price:desc">Дороже</a>
+              </li>
+              <li class="select__item">
+                <a class="select__item-link js-select-link" href="#" data-dir="" data-sort="ms|remains:desc">С высоким рейтингом</a>
+              </li>
+            </ul>
           </div>
           <div class="filters__select filters__select--additional select">
             <label class="filters__select-label" for="select-number">Сортировка</label>

@@ -97,11 +97,19 @@
     cursor: pointer;
   }
 
-  &.select--open .select__button::after {
+  .select__item-link {
+    @include interactive-link-dark;
+
+    color: inherit;
+  }
+
+  &.select--open .select__button::after,
+  &.dropdown--open .select__button::after {
     transform: scaleY(-1);
   }
 
-  &.select--open .select__list {
+  &.select--open .select__list,
+  &.dropdown--open .select__list {
     transform: scaleY(1);
     opacity: 1;
   }

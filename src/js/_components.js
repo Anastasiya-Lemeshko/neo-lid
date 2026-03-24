@@ -1,4 +1,5 @@
 import { renderCustomSelect } from './components/_custom-select.js';
+import { setDropdown } from './components/_dropdown.js';
 import { toggleBurgerMenu } from './components/_open-nav-menu.js';
 import { moveNav } from './components/_move-nav.js';
 import { openPopup } from './components/_nav-popup.js';
@@ -24,6 +25,7 @@ import { hideLabel } from './components/_hide-label.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderCustomSelect();
+  setDropdown();
   toggleBurgerMenu();
   moveNav();
   openPopup();
