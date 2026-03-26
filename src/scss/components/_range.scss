@@ -1,10 +1,11 @@
 @use "../index" as *;
 
 .range__container {
-  margin: 23px 0 16px;
+  min-height: 8px;
+  margin: 23px 20px 16px 7px;
 }
 
-.ui-widget.ui-widget-content {
+.ui-slider-horizontal.ui-widget.ui-widget-content {
   border: none;
 }
 
@@ -12,7 +13,7 @@
   height: 6px;
 }
 
-.ui-widget-content {
+.ui-slider-horizontal.ui-widget-content {
   background: var(--grey-extra-light);
 }
 
