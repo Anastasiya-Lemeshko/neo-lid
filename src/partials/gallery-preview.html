@@ -4,13 +4,13 @@
       <h2 class="gallery__title">Галерея</h2>
       <ul class="gallery__tablinks">
         <li class="gallery__tablinks-item">
-          <button class="gallery__tablink button gallery__tablink--active" type="button">Все</button>
+          <button class="gallery__tablink button gallery__tablink--active" type="button" data-tab="all">Все</button>
         </li>
         <li class="gallery__tablinks-item">
-          <button class="gallery__tablink button" type="button">Фото</button>
+          <button class="gallery__tablink button" type="button" data-tab="photo">Фото</button>
         </li>
         <li class="gallery__tablinks-item">
-          <button class="gallery__tablink button" type="button">Видео</button>
+          <button class="gallery__tablink button" type="button" data-tab="video">Видео</button>
         </li>
       </ul>
     </div>
@@ -18,7 +18,7 @@
 
       <!-- Для видео класс gallery__video, для фото gallery__img. На первом пункте поставила класс с video для наглядности -->
 
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--video">
         <div class="gallery__video">
           <picture>
             <source width="459" height="414" type="image/webp" media="(min-width: 768px)" srcset="img/gallery/img-1-tablet@1x.webp 1x, img/gallery/img-1-tablet@2x.webp 2x">
@@ -35,7 +35,7 @@
           <span class="visually-hidden">Начать воспроизведение видео.</span>
         </button>
       </li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--img">
         <div class="gallery__img">
           <picture>
             <source width="459" height="414" type="image/webp" media="(min-width: 768px)" srcset="img/gallery/img-2-tablet@1x.webp 1x, img/gallery/img-2-tablet@2x.webp 2x">
@@ -45,7 +45,7 @@
           </picture>
         </div>
       </li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--img">
         <div class="gallery__img">
           <picture>
             <source width="459" height="414" type="image/webp" media="(min-width: 768px)" srcset="img/gallery/img-3-tablet@1x.webp 1x, img/gallery/img-3-tablet@2x.webp 2x">
@@ -55,7 +55,7 @@
           </picture>
         </div>
       </li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--img">
         <div class="gallery__img">
           <picture>
             <source width="459" height="414" type="image/webp" media="(min-width: 768px)" srcset="img/gallery/img-4-tablet@1x.webp 1x, img/gallery/img-4-tablet@2x.webp 2x">

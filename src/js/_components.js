@@ -16,6 +16,7 @@ import { showAllTags } from './components/_filter-tags.js';
 import { setThumbSwiper } from './components/_thumb-swiper.js';
 import { moveDetails } from './components/_move-details.js';
 import { setTabs } from './components/_tabs.js';
+import { setGalleryTabs } from './components/_tabs-gallery.js';
 import { setGridColumnLayout } from './components/_grid-layout-columns.js';
 import { setNavigationSwiper } from './components/_navigation-swiper.js';
 import { setCompareSwiper } from './components/_compare-swiper.js';
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setThumbSwiper();
   moveDetails();
   setTabs();
+  setGalleryTabs();
   setGridColumnLayout();
   setNavigationSwiper();
   setCompareSwiper();

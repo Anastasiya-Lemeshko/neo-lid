@@ -13,7 +13,12 @@
   &[href] {
     @include interactive-opacity;
   }
+
+  &:not([href]) {
+    cursor: default;
+  }
 }
+
 
 .logo-image img {
   display: block;
