@@ -13,6 +13,7 @@
   text-align: center;
   color: var(--white);
   background-color: var(--accent-dark);
+  border: none;
 
   @include vp-1024 {
     font-size: calc(18px / $vp-1920 * 100vw);
@@ -44,6 +45,7 @@
   background-color: var(--grey-light);
 
   @include vp-1366 {
+    width: 100%;
     padding: 10px 5px;
   }
 

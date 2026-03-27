@@ -12,6 +12,7 @@ import { addScrollButton } from './components/_button-scroll-top.js';
 import { addSideNav } from './components/_side-nav.js';
 import { openVisibleAccordionContent, setAccordeonToggles } from './components/_accordion.js';
 import { moveFilters, setFilterToggles } from './components/_filters.js';
+import { showAllTags } from './components/_filter-tags.js';
 import { setThumbSwiper } from './components/_thumb-swiper.js';
 import { moveDetails } from './components/_move-details.js';
 import { setTabs } from './components/_tabs.js';
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setAccordeonToggles();
   moveFilters();
   setFilterToggles();
+  showAllTags();
   setThumbSwiper();
   moveDetails();
   setTabs();
